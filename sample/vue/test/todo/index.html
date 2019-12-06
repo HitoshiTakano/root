@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<div id="js-todoList">
+  <form>
+    <input type="text" v-model="newItem">
+    <button v-on:click="addItem">追加</button>
+  </form>
+  <ul>
+    <li v-for="todo in todos">
+      {{todo.item}}
+      <button v-on:click="deleteItem(todo)">削除</button>
+    </li>
+  </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="./vuetest.js"></script>
+</body>
+</html>
