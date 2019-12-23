@@ -1,4 +1,9 @@
-
+body{
+	overflow: visible;
+}
+body.active{
+	overflow: hidden;
+}
 /* HEADER */
 header{
 	position: fixed;
@@ -8,7 +13,7 @@ header{
 	padding: 5px 0;
 	line-height: 80px;
 	display: flex;
-	background-color:#ffffffd6;
+	background-color:#fffffff0;
 	justify-content: center;
 	align-items: center;
 	z-index: 3000;
@@ -28,6 +33,7 @@ header img{
 nav{
 	width: 70%;
 	height: 70px;
+	z-index: 9999;
 }
 nav > ul{
 	display: flex;
@@ -80,14 +86,14 @@ nav > ul > li > a:hover > ruby > rb, nav > ul > li > a:hover > ruby > rt{
 	position: fixed;
 	right: 10px;
 	top: 10px;
-	border: 1px solid #ffffff;
+	border: 1px solid #444444;
 	border-radius: 5px;
 	padding: 5px;
 }
 .menu_btn > span{
 	position: absolute;
 	height: 2px;
-	background-color: #ffffff;
+	background-color: #444444;
 	width: 30px;
 	box-shadow: 1px 0 1px #999999;
 	transition: all 0.5s ease;
@@ -171,6 +177,7 @@ main > section#top > div.slider-wrapper .slick-dots{
 	z-index: 4000;
 	height: 30px;
 	width: 30px;
+	display: none;
 }
 .slick-next{
 	right: 0;
@@ -189,6 +196,7 @@ section#vision > div.two-col{
 	background-image: url(../img/ryuusen2.png);
 	background-size: cover;
 	background-position: bottom;
+	margin: 0 auto;
 }
 section#vision > div.two-col > div{
 	width: 50%;
@@ -199,6 +207,7 @@ section#vision > div.two-col > div > div.inner{
 section#vision > div.two-col > div img{
 	width: 100%;
 	height: 100%;
+	opacity: 0.8;
 }
 section#vision > div.two-col > div h2{
 	font-size: 50px;
@@ -251,31 +260,98 @@ section#info > div > h1{
 	margin:	0 auto;
 }
 section#info > div > div.info{
-	overflow-y: scroll;
 	height: 300px;
-	width: 80%;
+	width: 50%;
 	margin:	10px auto;
 	font-size: 25px;
 	line-height: 2.0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* TABLET SMALL DISPLAY */
+table{
+	width: 80%;
+	margin: 0 auto;
+}
+table tr > td{
+	vertical-align: top;
+}
+table tr > td:first-child{
+	width: 25%;
+}
+table tr > td:last-child{
+	width: 70%;
+}
+/* FOOTER */
+footer{
+	width: 100%;
+	margin-top: 10px;
+	border-top: 1px dashed #777777;
+	background-color: #333333;
+	color: #ffffff;
+}
+footer > div{
+	width: 90%;
+	padding: 10px;
+	margin: 0 auto;	
+}
+footer > div > div{
+	width: 90%;
+	padding: 10px;
+	margin:	0 auto;
+	color: #ffffff;
+}
+footer > div > div > h3{
+	font-size: 18px;
+	font-weight: bolder;
+	padding-bottom: 5px;
+	color: #ffffff;
+	text-shadow: 0px 0px 3px #000000;
+}
+footer > div > div > ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+footer > div > div > ul > li{
+	padding: 5px 2px;
+	border-right: 1px dashed #777777;
+	width: 14%;
+}
+footer > div > div > ul > li > a{
+	font-size: 16px;
+}
+footer > div > div > ul > li > a:hover{
+	padding-bottom: 2px;
+	text-decoration: underline;
+}
+/*footer > div > div > ul > li > a:before{
+	content: ">"
+}*/
+footer > div > div > ul > li > ul > li > a{
+	text-indent: 10px;
+	font-size: 12px;
+}
+footer > div > div > ul > li > ul > li > a:hover{
+	text-decoration: underline;
+}
+footer > div > div > ul > li > ul > li > a:before{
+	content: "・";
+	font-size: 16px;
+	text-indent: 2px;
+}
+footer h2{
+	font-size: 12px;
+	text-align: center;
+	padding: 10px;
+}
+footer h2 > span{
+	font-size: 12px;
+}
+/* TABLET SIZE */
 @media screen and (max-width: 1000px) {
 	header{
 		height: auto;
 		padding-top: 10px;
-		flex-direction: column;
+		flex-direction: column!important;
 	}
 	header > div.logo{
 		width: auto;
@@ -285,9 +361,14 @@ section#info > div > div.info{
 		margin-top: 10px;
 	}
 	nav{
-		height: auto;
+		height: 0px;
 		width: 100%;
 		padding-bottom: 10px;
+		overflow: hidden;
+		transition: all 0.5s ease;
+	}
+	nav.scroll{
+		height: 70px;
 	}
 	section#top > div.slider-wrapper a{
 		bottom: 10%;
@@ -313,10 +394,64 @@ section#info > div > div.info{
 		border-radius: 10px;
 		width: 90%;
 		background-color: #edf1f15e;
-
+	}
+	section#info > div > div.info{
+		width: 90%;
+	}
+	table{
+		width: 100%;
+	}
+	footer > div > div > ul{
+		flex-flow: column;
+	}
+	footer > div > div > ul > li{
+		width: 100%;
+		border: none;
+		border-bottom: 1px dashed #999999;
 	}
 }
+/* SP SIZE */
 @media screen and (max-width: 750px) {
+	.menu_btn{
+		display: block;
+	}
+	nav, nav.scroll{
+		height: 0vh;
+		width: 100%;
+		padding-bottom: 0px;
+		overflow:hidden;
+		transition: all 0.7s cubic-bezier(0,.62,.42,.98);
+		background-color: #fbfcff;
+	}
+	nav.active, nav.scroll.active{
+		height: 100vh;
+		padding-bottom: 10px;
+	}
+	nav > ul{
+		flex-flow: column;
+		width: 100%;
+		margin: 0 auto;
+	}
+	nav > ul > li{
+		width: 100%;
+		border-bottom: 1px dashed #777777;
+	}
+	nav > ul > li > a{
+		padding: 10px 0;
+	}
+	/* SLICK */
+	main > section#top > div.slider-wrapper h1{
+		font-size: 40px;
+	}
+	main > section#top > div.slider-wrapper a{
+		font-size: 30px;
+		border: 1px solid #777777;
+		background-color: #aaaaaa;
+		color: #ffffff;
+		padding: 10px 7px;
+		border-radius: 7px;
+	}
+
 }
 
 
