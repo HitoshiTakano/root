@@ -64,10 +64,10 @@ var news = new Vue({
 		news:[
 			{date:'2018/10/27', content:'株式会社KAgent設立'},
 			{date:'2018/10/27', content:'SES事業開始'},
-			{date:'2018/11/1', content:'IT事務教育事業開始'},
-			{date:'2019/6/1', content:'事務所移転'},
-			{date:'2018/7/1', content:'フロントエンジニア教育事業開始'},
-			{date:'2019/10/1', content:'受託業務開始'},
+			{date:'2018/11/01', content:'IT事務教育事業開始'},
+			{date:'2019/06/01', content:'事務所移転'},
+			{date:'2018/07/01', content:'フロントエンジニア教育事業開始'},
+			{date:'2019/10/01', content:'受託業務開始'},
 		],
 	},
 	methods:{

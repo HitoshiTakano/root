@@ -186,7 +186,7 @@ main > div.title > h1{
 	color: #ffffff;
 	text-shadow: 0px 0px 4px #000000;
 	z-index: 1000;
-	animation: 2.0s slideInTitle cubic-bezier(0.13,-0.52, 0.31, 2.1);
+	animation: 1.5s slideInTitle cubic-bezier(0.13,-0.52, 0.31, 2.1);
 	animation-fill-mode: forwards;
 }
 main > div.title > .balls{
@@ -275,6 +275,7 @@ footer{
 	border-top: 1px dashed #777777;
 	background-color: #333333;
 	color: #ffffff;
+    overflow: hidden
 }
 footer > div{
 	width: 100%;
@@ -383,6 +384,9 @@ footer h2 > span{
 }
 /* SP SIZE */
 @media screen and (max-width: 750px) {
+	header img{
+		height: 50px;
+	}
 	.menu_btn{
 		display: block;
 	}
@@ -415,7 +419,14 @@ footer h2 > span{
 	}
 	main > section > table{
 		width: 95%;
-		padding: 20px 0;
+		padding: 10px 0;
+	}
+	main > section > table tr > td{
+		padding-left: 6px;
+		font-size: 14px;
+	}
+	main > section > table tr > td p{
+		font-size: 14px;
 	}
 	.map{
 		width: 95%;

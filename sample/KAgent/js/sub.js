@@ -7,6 +7,7 @@ $(function(){
 	balls.init();
 	mapSize.init();
 });
+// BACKGROUND CIRCLE ANIMATION
 var balls = {
 	maxQuantity:15,		// 生成する円の個数
 	quantity:3,
@@ -60,9 +61,10 @@ var balls = {
 			var top = balls.randHeight(size);
 			var left = balls.randWidth(size);
 			var opacity = 0.1 * balls.randNum(10,1);
-			var animation = balls.randNum(20,5);
+			var animation = balls.randNum(30,3);
+			var direction = (i % 2) ? 'normal' : 'reverse';
 			// 各要素を連想配列に格納
-			var arr = {'top':top, 'left':left, 'width':size, 'height':size, 'opacity': opacity, 'animation': animation + 's rounding linear 0s infinite'};
+			var arr = {'top':top, 'left':left, 'width':size, 'height':size, 'opacity': opacity, 'animation': animation + 's rounding linear 0s infinite ' + direction};
 
 			// 配列要素に追加
 			balls.ballArray.push(arr);
@@ -72,7 +74,6 @@ var balls = {
 		$('.balls > div').each(function(i,e){
 			var thisDiv = $(this);
 			$.each( balls.ballArray[i], function( index, value ) {
-				//console.log($(this));
 				thisDiv.css(index,value);
 			});
 		});
@@ -97,6 +98,7 @@ var balls = {
 		return Math.floor( Math.random() * (max + 1 - min) ) + min;
 	},
 }
+// MAP SIZE ADJUST
 var mapSize = {
 	ratio:0.6,
 	width:1000,
@@ -125,11 +127,8 @@ var mapSize = {
 	},
 	mapResize:function(){
 		var height = mapSize.width * mapSize.ratio;
-		console.log(height);
-		console.log(mapSize.width);
 		$('.map').css('height', height);
 	},
-
 }
 // MENU
 // SCROLL EVENT（windowサイズ)
