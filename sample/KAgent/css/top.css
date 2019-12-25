@@ -95,6 +95,10 @@ nav > ul > li > a:hover > ruby > rb, nav > ul > li > a:hover > ruby > rt{
 	border: 1px solid #444444;
 	border-radius: 5px;
 	padding: 5px;
+	box-shadow: 0 0 3px #777777;
+}
+.menu_btn:active{
+	box-shadow: 0 0 0px #777777;
 }
 .menu_btn > span{
 	position: absolute;
@@ -164,6 +168,9 @@ main > section#top > div.slider-wrapper h1{
 	font-size: 60px;
 	transform: translate(-50%,-50%);
 	letter-spacing: 8px;
+	color: #ffffff;
+	text-shadow: 0px 0px 5px #000000;
+	letter-spacing: 0.4em;
 }
 main > section#top > div.slider-wrapper a{
 	position: absolute;
@@ -171,6 +178,13 @@ main > section#top > div.slider-wrapper a{
 	left: 50%;
 	font-size: 60px;
 	transform: translateX(-50%);
+	border: 1px solid #071b79;
+	background-color: #0781c7;
+	color: #ffffff;
+	padding: 10px 7px;
+	border-radius: 7px;
+	box-shadow: 0 0 3px #ffffff;
+	text-align: center;
 }
 /* SLICK ARROW */
 main > section#top > div.slider-wrapper .slick-dots{
@@ -602,11 +616,6 @@ footer h2 > span{
 	}
 	main > section#top > div.slider-wrapper a{
 		font-size: 30px;
-		border: 1px solid #777777;
-		background-color: #aaaaaa;
-		color: #ffffff;
-		padding: 10px 7px;
-		border-radius: 7px;
 	}
 	table{
 		padding: 30px 5px;
