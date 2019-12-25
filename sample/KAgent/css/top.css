@@ -4,6 +4,12 @@ body{
 body.active{
 	overflow: hidden;
 }
+p{
+	letter-spacing: 4.5px;
+}
+a{
+	letter-spacing: 3px;	
+}
 /* HEADER */
 header{
 	position: fixed;
@@ -157,6 +163,7 @@ main > section#top > div.slider-wrapper h1{
 	left: 50%;
 	font-size: 60px;
 	transform: translate(-50%,-50%);
+	letter-spacing: 8px;
 }
 main > section#top > div.slider-wrapper a{
 	position: absolute;
@@ -207,7 +214,16 @@ section#vision > div.two-col > div > div.inner{
 section#vision > div.two-col > div img{
 	width: 100%;
 	height: 100%;
-	opacity: 0.8;
+	opacity: 0.9;
+	animation: 4.0s fadeAnimation cubic-bezier(0.37, 0.14, 0.1, 1.05) 0s infinite alternate;
+}
+@keyframes fadeAnimation{
+	from{
+		opacity: 0.1;
+	}
+	to{
+		opacity: 1;
+	}
 }
 section#vision > div.two-col > div h2{
 	font-size: 50px;
@@ -215,6 +231,7 @@ section#vision > div.two-col > div h2{
 	line-height: 1.5;
 	text-shadow: 1px 1px 3px #777777;
 	text-align: center;
+	letter-spacing: 5px;
 }
 section#vision > div.two-col > div p{
 	font-size: 25px;
@@ -248,7 +265,80 @@ section#vision > div.two-col > div p.pick:after{
 		color: #2c8bc7;
 	}
 }
-
+section#pickup{
+	width: 100%;
+	position: relative;
+}
+section#pickup > h1{
+	width: 95%;
+	font-size: 30px;
+	margin: 10px auto;
+	letter-spacing: 10px;
+}
+section#pickup > div.three-col {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row;
+	flex-wrap: nowrap;
+	margin: 0 auto;
+}
+section#pickup > div.three-col > div{
+	width: 33%;
+	cursor: pointer;
+	position: relative;
+	transform: translate(0,0);
+	transition: all 0.3s ease;
+	box-shadow: 0px 0px 0px #333333;
+	margin: 5px;
+}
+section#pickup > div.three-col > div:hover, section#pickup > div.three-col > div:active{
+	transform: translate(-5px,-5px);
+	box-shadow: 5px 5px 3px #333333;
+}
+section#pickup > div.three-col > div > img{
+	width: 100%;
+	transition: all 0.3s cubic-bezier(0.49, 0.26, 0.49, 0.76);
+	filter: brightness(0.8) blur(1px);
+}
+section#pickup > div.three-col > div:hover > img{
+	opacity: 0.7;
+	filter: brightness(1.2) blur(2px);
+}
+section#pickup > div.three-col > div > h2{
+	font-size: 18px;
+	position: absolute;
+	top: 5px;
+	left: 8px;
+	color: #ffffff;
+	font-weight: bolder;
+	text-shadow: 0px 0px 3px #000000;
+	letter-spacing: 5px;
+}
+section#pickup > div.three-col > div > h2 > span{
+	font-size: 18px;
+	color: #ffffff;
+	text-shadow: 0px 0px 3px #000000;
+	font-weight: bolder;
+	letter-spacing: 5px;
+}
+section#pickup > div.three-col > div > a{
+	font-size: 14px;
+	position: absolute;
+	bottom: 10px;
+	right: 5px;
+	color: #ffffff;
+	text-shadow: 0px 0px 3px #000000;
+	transition: all 0.2s ease;
+	font-weight: bold;
+	letter-spacing: 8px;
+	padding-bottom: 3px;
+}
+section#pickup > div.three-col > div > a:hover{
+	border-bottom: 1px dashed #ffffff;
+	padding-bottom: 2px;
+	opacity: 0.7;
+}
 section#info > div{
 	width: 90%;
 	margin:	0 auto;
@@ -258,6 +348,7 @@ section#info > div > h1{
 	font-size: 50px;
 	color: #444444;
 	margin:	0 auto;
+	letter-spacing: 10px;
 }
 section#info > div > div.info{
 	height: 300px;
@@ -288,7 +379,7 @@ footer{
 	color: #ffffff;
 }
 footer > div{
-	width: 90%;
+	width: 100%;
 	padding: 10px;
 	margin: 0 auto;	
 }
@@ -310,11 +401,16 @@ footer > div > div > ul{
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0 auto;
+	width: 100%;
 }
 footer > div > div > ul > li{
 	padding: 5px 2px;
-	border-right: 1px dashed #777777;
-	width: 14%;
+	border-left: 1px dashed #777777;
+	width: 15%;
+	padding-left: 10px;
+}
+footer > div > div > ul > li:first-child{
+	border-left: none;
 }
 footer > div > div > ul > li > a{
 	font-size: 16px;
@@ -323,9 +419,13 @@ footer > div > div > ul > li > a:hover{
 	padding-bottom: 2px;
 	text-decoration: underline;
 }
-/*footer > div > div > ul > li > a:before{
-	content: ">"
-}*/
+footer > div > div > ul > li > a:before{
+	content: "▼";
+	font-size: 12px;
+	line-height: 16px;
+	vertical-align: middle;
+	margin-right: 3px;
+}
 footer > div > div > ul > li > ul > li > a{
 	text-indent: 10px;
 	font-size: 12px;
@@ -334,7 +434,7 @@ footer > div > div > ul > li > ul > li > a:hover{
 	text-decoration: underline;
 }
 footer > div > div > ul > li > ul > li > a:before{
-	content: "・";
+	content: "";
 	font-size: 16px;
 	text-indent: 2px;
 }
@@ -397,6 +497,24 @@ footer h2 > span{
 	}
 	section#info > div > div.info{
 		width: 90%;
+	}
+	section#pickup > div.three-col{
+		flex-flow: column;
+		margin: 0 auto;
+	}
+	section#pickup > div.three-col > div{
+		width: 85%;
+		margin: 0 auto;
+	}
+	section#pickup > div.three-col > div > h2{
+		font-size: 20px;
+		top: 10px;
+		left: 15px;
+	}
+	section#pickup > div.three-col > div > a{
+		font-size: 18px;
+		bottom: 10px;
+		right: 8px
 	}
 	table{
 		width: 100%;

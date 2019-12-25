@@ -1,4 +1,9 @@
 $(function(){
+	// 遷移用
+	$('a').on('click', function(){
+		location.href="./sample_sub.html";
+	});
+
 	// SLICK SLIDER ANIMATION
 	$('.slick-slider').slick({
 			infinite: true, //スライドをループさせるか
@@ -33,7 +38,9 @@ $(window).on('scroll', function(){
 	startPos = pos;	//スクロール開始地点の更新
 });
 $(window).on('resize', function(){
-	$('nav').removeClass('scroll');
+	var h = $(window).scrollTop();
+	(h > 0) ? $('nav').removeClass('scroll') : $('nav').addClass('scroll');
+	
 });
 // vue console dev warning remove
 Vue.config.devtools = false;
