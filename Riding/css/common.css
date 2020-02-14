@@ -1,0 +1,420 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NotoSansJP';
+  src: url(./font/NotoSansJP/NotoSansJP-Regular.otf) format('opentype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NotoSansSC';
+  src: url(./font/NotoSansSC/NotoSansSC-Regular.otf) format('opentype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sawarabi';
+  src: url(./font/SawarabiGothic/SawarabiGothic-Regular.ttf) format('truetype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+	font-family: 'Hannari font';
+	src: url('./font/Hannari/Hannari-Regular.eot'); /* IE9 Compat Modes */
+	src: url('./font/Hannari/Hannari-Regular.eot?#iefix') format('embedded-opentype'),
+	     url('./font/Hannari/Hannari-Regular.woff') format('woff'),
+	     url('./font/Hannari/Hannari-Regular.ttf')  format('truetype')
+}
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://themes.googleusercontent.com/static/fonts/kaushanscript/v1/qx1LSqts-NtiKcLw4N03IFhlQWQpSCpzb2Peu3I-Q34.woff) format('woff');
+}
+/* MATERIAL ICON SET */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/icon/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(./font/icon/MaterialIcons-Regular.woff2) format('woff2'),
+    url(./font/icon/MaterialIcons-Regular.woff) format('woff'),
+    url(./font/icon/MaterialIcons-Regular.ttf) format('truetype');
+}
+/* font-family class set */
+.font-kaushan {
+  font-family:'Kaushan Script';
+  font-size:16px;
+}
+
+.font-hannari {
+	font-family: 'Hannari font';
+	font-size: 16px;
+}
+/* material icon set */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+/* COMMON CSS */
+*{
+	margin:0;
+	padding: 0;
+	color: #777777;
+  box-sizing: border-box;
+	font-size: 16px;
+	font-family: 'NotoSansJP',YuGothic,'Yu Gothic','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+}
+a{
+	text-decoration: none;
+}
+ul,ol,li{
+	content: "";
+	list-style: none;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 2px #777; 
+}
+::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 10px;
+  box-shadow: none;
+}
+/* Header */
+header{
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
+  z-index: 5000;
+  box-shadow: 5px 0 10px #000000;
+}
+header > div#header_container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+header > div#header_container > div.logo{
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  cursor: pointer;
+}
+header > div#header_container > div.logo > img{
+  width: 100%;
+  height: 100%;
+}
+/* MAIN */
+main{
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+/* FOOTER */
+footer{
+  width: 100%;
+  color: #ffffff;
+  background-color: #222222;
+  box-shadow: -3px 0 3px #000000;
+  margin-top: 200px;
+  padding: 30px;
+}
+footer > div > ul{
+  width: 100%;
+  padding: 20px;
+}
+footer > div > ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer > div > ul > li{
+  border-left: 1px dashed #aaaaaa;
+  width: calc(100% / 6);
+  text-align: center;
+}
+footer > div > ul > li:first-child{
+  border-left: none;
+}
+
+footer > div > ul > li > a{
+  color: #ffffff;
+  padding: 20px;
+  text-shadow: 0 0 1px #ffffff;
+  font-size: 18px;
+  display: block;
+}
+footer > div > ul > li > a:hover{
+  background-color: #aaaaaa;
+  text-shadow: 0 0 1px #000000;
+  color: #444444;
+}
+
+.foot{
+  padding-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+/* Navigation */
+nav{
+  width: calc(100% - 300px);
+  height: 100px;
+}
+nav > ul{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+nav > ul > li{
+  width: 100%;
+  height: 100%;
+  border-right: 1px dashed #777777;
+  text-align: center;
+}
+nav > ul > li:last-child{
+  border-right: none;
+}
+nav > ul > li > a{
+  padding: 10px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  transition: all .3s linear;
+}
+nav > ul > li > a:hover{
+  background-color: #6aa4d5;
+}
+nav > ul > li > a > ruby > rb{
+  font-size: 25px;
+}
+nav > ul > li > a:hover > ruby > rb{
+  color: #ffffff;
+}
+nav > ul > li > a > ruby > rt{
+  font-size: 12px;
+}
+nav > ul > li > a:hover > ruby > rt{
+  color: #ffffff;
+}
+#menu_bar{
+  display: none;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* TABLE CSS */
+
+.table{
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #777777;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaaaaa;
+}
+.table > p{
+  margin: 5px;
+  padding: 10px 5px;
+  border-bottom: 1px dashed #aaaaaa;
+  display: flex;
+}
+.table > p:last-child{
+  border-bottom: none;
+}
+.table > p > span{
+  font-size: 20px;
+  vertical-align: top;
+  text-align: left;
+  display: block;
+}
+.table > p > span:nth-child(1){
+  width: 200px;
+}
+.table > p > span:nth-child(2){
+  width: calc(100% - 210px);
+}
+
+@media screen and (max-width: 850px){
+  header > div#header_container{
+    flex-direction: column;
+  }
+  header > div#header_container > div.logo{
+    margin: 0 auto;
+  }
+  nav{
+    width: 100%;
+    background-color: #ffffff;
+/*    height: calc(100vh - 100px);*/
+  }
+  nav > ul{
+    flex-direction: column;
+    justify-content: end;
+  }
+  nav > ul > li{
+    border-right: none;
+  }
+  nav > ul{
+    
+  }
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 3px 0 5px #000000;
+  }
+  #menu_bar{
+    display: block;
+    z-index: 9999;
+  }
+  #menu_bar > span{
+    position: absolute;
+    height: 2px;
+    width: 90%;
+    left: 0;
+    background-color: #444444;
+    box-shadow: 0 0 5px #ffffff;
+    transition: all .4s ease-out;
+    z-index: 9999;
+  }
+  #menu_bar > span:nth-child(1){
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu_bar > span:nth-child(2){
+    top: 50%;
+    transform: translateX(0);
+  }
+  #menu_bar > span:nth-child(3){
+    bottom: 0;
+    transform: rotate(0);
+  }
+  #menu_bar.active > span{
+    left: 0;
+  }
+  #menu_bar.active > span:nth-child(1){
+    transform: rotate(405deg);
+    top: 50%;
+  }
+  #menu_bar.active > span:nth-child(2){
+    transform: translateX(300px);
+  }
+  #menu_bar.active > span:nth-child(3){
+    transform: rotate(-405deg);
+    top: 50%;
+  }
+  #menu_bar + nav{
+    position: fixed;
+    top: 100px;
+    height: 0px;
+    transition: all .3s ease-out;
+    z-index: 8000;
+  }
+  #menu_bar + nav > ul > li{
+    overflow: hidden;
+    height: 0;
+    transition: all .3s ease-out;
+  }
+  #menu_bar.active + nav{
+    height: calc(100vh - 100px);
+  }
+  #menu_bar.active + nav > ul > li{
+    height: auto;
+  }
+  footer > div{
+    width: 100%;
+    padding: 5px;
+  }
+  footer > div > ul{
+    padding: 0;
+  }
+  footer > div > ul > li{
+    width: 100%;
+    text-align: left;
+    border-left: none;
+    border-bottom: 1px dashed #aaaaaa;
+  }
+  .table{
+    width: 98%;
+  }
+  .table > p > span{
+    font-size: 16px;
+  }
+  .table > p > span:nth-child(1){
+    width: 25%;
+  }
+  .table > p > span:nth-child(2){
+    width: 75%;
+  }
+  footer > div > ul{
+    flex-direction: column;
+  }
+  main{
+    margin-top: 100px;
+  }
+}
+
+
+@media screen and (max-width: 429px){
+  header > div#header_container > div.logo{
+    width: calc(100% - 90px);
+    margin-left: 0;
+  }
+
+}

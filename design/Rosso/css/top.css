@@ -1,0 +1,385 @@
+/* BackGround Image*/
+.bgImg{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-image: url(../img/forest.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: blur(2px) brightness(95%);
+	z-index: -999;
+}
+/* SECTION */
+/* COMMON */
+main{
+	width: 100%;
+}
+main > section{
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	z-index: 0;
+}
+.col-two{
+	display: flex;
+}
+.col-two > div{
+	width: 50%;
+}
+/* TOP */
+main > section#top > div.theme{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	/*padding-right: 50px;*/
+	z-index: -1;
+}
+@media screen and (max-width: 1200px){
+	main > section#top > div.theme{
+		width: 80%;
+	}
+}
+main > section#top > div.theme > h2{
+	font-size: 40px;
+	color: #ffffff;
+	text-shadow: 0 0 3px #000000;
+	text-align: right;
+	font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+main > section#top > div.theme > p{
+	text-align: right;
+	font-size: 20px;
+	color: #eeeeee;
+	text-shadow: 0 0 3px #000000;
+	font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+main > section#top > div.news{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 30px;
+	height: 60px;
+	line-height: 30px;
+	background-color: #ffffff;
+	display: flex;
+}
+main > section#top > div.news > span{
+	height: 60px;
+	line-height: 55px;
+	color: #000000;
+	border: 1px dashed #8cdcf3;
+}
+main > section#top > div.news > span.title{
+	width: 30%;
+	text-align: center;
+	background-color: #8cdcf3;
+	color: #ffffff;
+	font-size: 35px;
+	font-weight: lighter;
+	text-shadow: 0 0 2px #0a1398;
+}
+main > section#top > div.news > span.date{
+	width: 20%;
+	padding-left: 20px;
+	text-align: left;
+}
+main > section#top > div.news > span.content{
+	width: 50%;
+	padding-left: 20px;
+	text-align: left;
+}
+/* ABOUT */
+main > section#about{
+	background-color: rgba(255, 255, 255, 0.9);
+}
+main > section#about > div{
+	height: calc(100vh / 3 * 2);
+	margin-top: calc(100vh / 3 / 2);
+}
+main > section#about > div:first-child{
+	width: 30%;
+	background-color: #00c44ecc;
+	padding: 20px;
+	border-radius: 3px;
+}
+main > section#about > div:last-child{
+	width: 70%;
+	padding: 0px 5px;
+}
+main > section#about > div:first-child > h4{
+	font-size: 25px;
+	letter-spacing: 0.2em;
+	color: #ffffff;
+	text-shadow: 0 0 3px #000000;
+}
+main > section#about > div:first-child > p{
+	padding-top: 10px;
+	letter-spacing: 0.1em;
+	color: #ffffff;
+}
+main > section#about > div:last-child > div{
+	height: 100%;
+	width: 100%;
+}
+main > section#about > div:last-child > div > div{
+	height: calc(100% / 3 - 10px);
+	margin: 8px 10px;
+	display: flex;
+	border-radius: 5px;
+	overflow: hidden;
+}
+main > section#about > div:last-child > div > div > div:first-child{
+	width: 200px;
+	height: 100%;
+	background-color: #87edad;
+	overflow: hidden;
+}
+main > section#about > div:last-child > div > div > div:first-child > img{
+	width: 100%;
+	height: 100%;
+    filter: contrast(1.5);
+}
+main > section#about > div:last-child > div > div > div:last-child{
+	width: calc(100% - 200px);
+	height: 100%;
+	background-color: #00c44ecc;
+	padding: 10px;
+}
+main > section#about > div:last-child > div > div > div:last-child > h4{
+	font-size: 20px;
+	font-weight: lighter;
+	color: #ffffff;
+	text-shadow: 0 0 2px #000000;
+	position: relative;
+	left: 20px;
+}
+main > section#about > div:last-child > div > div > div:last-child > h4::before{
+	content: "▶";
+	position: absolute;
+	top: 0;
+	left: -20px;
+}
+main > section#about > div:last-child > div > div > div:last-child > p{
+	font-size: 14px;
+	color: #ffffff;
+}
+/* BUSINESS */
+main > section#business:before{
+	content: "";
+	background-color: #ffffff;
+	top: -20px;
+	left: 0;
+	width: 100vw;
+	height: 50px;
+}
+main > section#business {
+	background-color: #ffffff;
+	padding-top: 30px;
+}
+main > section#business > div {
+	width: 95%;
+	margin: 0 auto;
+	padding: 20px;
+}
+main > section#business > p{
+	width: 70%;
+	padding: 30px;
+	font-size: 45px;
+	height: 135px;
+	letter-spacing: 0.5em;
+	font-weight: bolder;
+	color: #ffffff;
+	text-shadow: 0 0 2px #ffffff;
+	background-color: blue;
+	font-family: 'メイリオ', Meiryo,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3''ＭＳ ゴシック',sans-serif;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 100px;
+	position: relative;
+}
+main > section#business > p::after{
+	content: "";
+	position: absolute;
+	top: 135px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 25px solid transparent;
+	border-top: 25px solid blue;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+}
+main > section#business  > h4 {
+	width: 100%;
+	text-align: left;
+	padding: 20px;
+	font-size: 30px;
+	text-shadow: 0 0 2px #000000;
+	background-color: #0b3a4b;
+}
+main > section#business > div > div {
+	display: flex;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+main > section#business > div > div > a{
+	width: calc( 100% / 3 - 20px);
+	margin: 30px 10px;
+	background-color: #0090c4cc;
+	padding: 30px 20px;
+	transition: all .5s ease;
+}
+main > section#business > div > div > a:hover, main > section#business > div > div > a:active{
+	opacity: 0.7;
+}
+main > section#business > div > div > a > h3{
+	font-size: 25px;
+	padding-bottom: 10px;
+	text-shadow: 0 0 2px #000000;
+	letter-spacing: 0.2em;
+	height: 85px;
+}
+main > section#business > div > div > a > p{
+	font-size: 18px;
+	line-height: 1.7em;
+    letter-spacing: 0.5em;
+}
+
+main > section#form{
+	position: relative;
+	background-color: #000229;
+	height: 100vh;
+}
+main > section#form > h2{
+	font-size: 30px;
+	text-align: center;
+	padding-top: 40px;
+}
+main > section#form > form{
+	width: 80%;
+	margin: 0 auto;
+}
+main > section#form > form > p{
+	width: 100%;
+	padding: 20px;
+	display: flex;
+}
+main > section#form > form > p > label{
+	width: calc(300px);
+	font-size: 20px;
+}
+main > section#form > form > p > input, main > section#form > form > p > textarea{
+	width: calc(100% - 300px);
+	padding: 10px 5px;
+}
+main > section#form > form > p > input[type="submit"]{
+	margin: 0 auto;
+	width:300px;
+	background-color: #777777;
+	border: none;
+	box-shadow: 2px 2px 2px #000000;
+}
+main > section#form > form > p > div{
+	width: calc(100%);
+	display: flex;
+	justify-content: space-between;
+}
+main > section#form > form > div > span{
+	font-size: 30px;
+	width: calc(100% / 3);
+	padding: 10px 30px;
+}
+
+main > section#form > form > div > span > input{
+	width: 30px;
+	height: 30px;
+}
+@media screen and (max-width: 750px){
+	main > section{
+		height: auto;
+	}
+	main > section#top{
+		height: 100vh;
+	}
+	main > section#about > div{
+		height: auto;
+	}
+	header > h2{
+		font-size: 10px;
+		color: #888888;
+		height: 15px;
+		line-height: 10px;
+	}
+	header > div > div:first-child{
+		width: calc( 100% - 60px );
+		padding: 5px;
+		padding-left: 20px;
+	}
+	header > div > div:last-child{
+		width: 0;
+	}
+	header h3{
+		width: 100%;
+		font-size: 13px;
+		text-align: left;
+	}
+	header h1{
+		width: 100%;
+		font-size: 30px;
+		letter-spacing: 0.2em;
+		text-align: left;
+	}
+	main > section#top > div.news{
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+	}
+	main > section#top > div.news > span{
+		height: 50px;
+	    line-height: 45px;
+	}
+	main > section#top > div.news > span.title{
+		width: 100%;
+		padding: 5px 10px;
+		text-align: center;
+	}
+	main > section#top > div.news > span.date{
+		width: 100%;
+		text-align: center;
+	}
+	main > section#top > div.news > span.content{
+		width: 100%;
+		text-align: center;
+	}
+	main > section#business > div > div{
+		flex-direction: column;
+	}
+	main > section#business > div > div > a{
+		width: calc( 100% - 20px);
+		margin: 15px 10px;
+	}
+	.col-two{
+		flex-direction: column;
+	}
+	main > section#about > div{
+		margin-top: 100px;
+	}
+	main > section#about > div:first-child{
+		width: 100%;
+	}
+	main > section#about > div:last-child{
+		width: 100%;
+	}
+	main > section#about > div:last-child > div > div{
+		height: 200px;
+	}
+	main > section#about > div:last-child > div > div > div:last-child{
+		height: auto;
+	}
+}

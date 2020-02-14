@@ -1,0 +1,300 @@
+header{
+	height: 140px;
+}
+main{
+	width: 100%;
+}
+main > section{
+	width: 100%;
+	position: relative;
+	min-height: 800px;
+}
+main > section:last-child{
+	min-height: calc(100vh + 150px);
+}
+main > section#top{
+	min-height: 1000px;
+}
+main > section#top > div{
+	width: 100%;
+	min-width: calc(100% - 140px);
+	height: calc(100% - 140px);
+	position: absolute;
+	top: 140px;
+	left: 0;
+}
+main > section#top > div > img.bg{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	filter: blur(3px);
+}
+main > section#top > div > img.person{
+    bottom: 0;
+    width: 30%;
+    right: 0;
+    position: absolute;
+    filter: contrast(1.8);
+}
+main > section#top > div > h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 35px;
+	font-weight: bolder;
+	text-shadow: 0 0 3px #000000;
+}
+main > section#top > div > p{
+	position: absolute;
+}
+main > section#top > div > p > span{
+	font-size: 30px;
+	height: 45px;
+	position: relative;
+	padding-left: 50px;
+	color: #ffffff;
+}
+main > section#top > div > p > span > i{
+	font-size: 35px;
+	height: 50px;
+	line-height: 25px;
+	padding-top: 7px;
+	position: absolute;
+	left: 10px;
+	top: 3px;
+	color: #ffffff;
+}
+.m_1{
+	top: 20px;
+	left: 20px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 0 3px #000000;
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	text-align: center;
+}
+.m_1 > span{
+	font-size: 30px;
+	color: #777777;
+	width: calc(100% / 2);
+	text-align: left;
+	letter-spacing: 0.3em;
+}
+.m_1 > span:first-child{
+	border-right: solid 2px #777777;
+	background-color: #0b35bf;
+	color: #ffffff;
+	text-shadow: 0 0 2px #000000;
+}
+.m_1 > span:last-child{
+	background-color: #3776db;
+}
+.m_1 > span > .material-icons{
+	color: #777777;
+	font-size: 20px;
+}
+.m_2{
+	top: 75px;
+	left: 20px;
+	display: inline;
+	font-size: 35px;
+	padding: 0;
+	letter-spacing: 0.5em;
+	color: yellow;
+	text-shadow: 0 0 4px #000000;
+	border-bottom: 3px solid yellow;
+}
+.m_3{
+	top: 140px;
+	left: 20px;
+	display: inline;
+	font-size: 35px;
+	padding: 0;
+	letter-spacing: 0.5em;
+	background-color: #0b35bf;
+	box-shadow: 0 0 3px blue;
+	text-align: center;
+	padding: 10px;
+	border-radius: 20px;
+	text-shadow: 0 0 3px white;
+}
+.m_pr_point{
+	position: absolute;
+	bottom: 70px;
+	left: 20px;
+	padding: 30px;
+}
+.m_pr_point > span{
+	font-size: 30px;
+	color: #000000;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 2px 2px 3px yellow;
+	background: #fceabb; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #fceabb 0%, #f8b500 42%, #fccd4d 50%, #f8b500 57%, #fbdf93 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #fceabb 0%,#f8b500 42%,#fccd4d 50%,#f8b500 57%,#fbdf93 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #fceabb 0%,#f8b500 42%,#fccd4d 50%,#f8b500 57%,#fbdf93 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	margin: 0 10px;
+}
+.m_serif{
+	position: absolute;
+	top: 65px;
+	right: 25px;
+	width: 200px;
+	height: 200px;
+	font-size: 30px;
+	background-color: #ffffff99;
+	border-radius: 50%;
+	box-shadow: 0 0 3px #000000;
+}/*
+.m_serif:after{
+	content: "";
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 100px;
+	border: 10px solid transparent;
+	border-top: 50px  solid #ffffff;
+}*/
+.m_serif > p{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: 70%;
+	color: #000000;
+	text-align: center;
+}
+
+main > section#plan{
+	position: relative;
+	height: 100vh;
+	padding-top: 20px;
+}
+main > section#plan > h2{
+	position: relative;
+	text-align: center;
+	font-size: 50px;
+	width: 50%;
+	margin: 10px auto;
+	margin-top: 100px;
+	color: #000000;
+	padding: 20px;
+	border-radius: 20px;
+	background-color: #79b3fc;
+}
+main > section#plan > h2::after{
+	content: "";
+	position: absolute;
+	bottom: -45px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 30px;
+	height: 30px;
+	border: 15px solid transparent;
+	border-top: 30px solid #79b3fc;
+	box-sizing: border-box;
+}
+main > section#plan > div.row_three{
+	margin-top: 30px;
+	padding: 60px 20px;
+	/*background-color: #000000;*/
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+main > section#plan > div.row_three > div{
+	width: calc(90% / 3);
+	padding: 30px 20px;
+	background-color: #79b3fc;
+	border-radius: 10px;
+	box-shadow: 0 2px 2px #777777;
+}
+main > section#plan > div.row_three > div > h3{
+	font-size: 30px;
+	text-shadow: 0 0 2px #ffffff;
+	text-align: center;
+	padding: 10px 0;
+}
+main > section#plan > div.row_three > div > p{
+	font-size: 20px;
+	letter-spacing: 0.2em;
+}
+main > section#form{
+	position: relative;
+	background-color: #000229;
+	height: 100vh;
+}
+main > section#form > h2{
+	font-size: 30px;
+	text-align: center;
+	padding-top: 40px;
+}
+main > section#form > form{
+	width: 80%;
+	margin: 0 auto;
+}
+main > section#form > form > p{
+	width: 100%;
+	padding: 20px;
+	display: flex;
+}
+main > section#form > form > p > label{
+	width: calc(300px);
+	font-size: 20px;
+}
+main > section#form > form > p > input, main > section#form > form > p > textarea{
+	width: calc(100% - 300px);
+	padding: 10px 5px;
+}
+main > section#form > form > p > input[type="submit"]{
+	margin: 0 auto;
+	width:300px;
+	background-color: #777777;
+	border: none;
+	box-shadow: 2px 2px 2px #000000;
+}
+main > section#form > form > p > div{
+	width: calc(100%);
+	display: flex;
+	justify-content: space-between;
+}
+main > section#form > form > div > span{
+	font-size: 30px;
+	width: calc(100% / 3);
+	padding: 10px 30px;
+}
+
+main > section#form > form > div > span > input{
+	width: 30px;
+	height: 30px;
+}
+
+@media screen and (max-width: 750px){
+	header > div > div:first-child{
+		width: calc(100% - 80px);
+	}
+	header > div > div:last-child{
+		width: 80px;
+	}
+	.m_1{
+		display: none;
+	}
+	.m_serif{
+		display: none;
+	}
+	.m_2{
+		display: none;
+	}
+	.m_3{
+		display: none;
+	}
+}
