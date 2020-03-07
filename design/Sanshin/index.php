@@ -1,5 +1,6 @@
 <?php
-	
+	$title = 'top';
+	$page = 'top';
 ?>
 <!DOCTYPE html>
 <html lang="ja">

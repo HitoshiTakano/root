@@ -92,7 +92,6 @@ var main = new Vue({
 			this.scrollY = window.scrollY;
 			this.headerEvent(this.scrollY);
 			this.scrollEvent(this.scrollY);
-			console.log(this.scrollY);
 		},
 		scrollEvent: function(posY){
 			for (var i = 0; i < this.sections.length; i++) {
@@ -103,7 +102,6 @@ var main = new Vue({
 		headerEvent:function(py){
 			var elem = document.getElementsByTagName('header');
 			var header = elem[0];
-			console.log('chk');
 			(py>50) ? header.classList.add('active') : header.classList.remove('active') ;
 		}
 	},
@@ -113,7 +111,7 @@ var main = new Vue({
 		axios.get("./php/data.php")
 		.then(response => {
 			this.results = response.data
-		})
+		});
 	},
 	updated(){
 		// this.scrollEvent(this.scrollY);

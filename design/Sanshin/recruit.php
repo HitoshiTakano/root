@@ -23,5 +23,6 @@
 	</main>
 	<!-- FOOTER -->
 	<?php include_once dirname(__FILE__) . '/html/footer.html'; ?>
+	
 </body>
 </html>
