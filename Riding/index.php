@@ -6,6 +6,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="msvalidate.01" content="9363D56BB434437844E7341EF98D58A1" />
+	<meta name="description" content="株式会社Ridingでは、最先端の情報や時代の波を、スキルやツールといった「乗り物」で越えていくことをコンセプトとし、">
+	<meta name="keywords" content="株式会社, Riding, ライディング, SES">
+	<meta name="robots" content="index">
+
+
 	<title>株式会社Riding(ライディング) || Riding.inc Corporate Site</title>
 	<link rel="stylesheet" type="text/css" href="./css/common.css">
 	<link rel="stylesheet" type="text/css" href="./css/top.css">
@@ -14,6 +20,15 @@
 	<script type="text/javascript" src="./js/lib/perlin.js"></script>
 	<script type="text/javascript" src="./js/draw.js"></script>
 	<script type="text/javascript" src="./js/top.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142502581-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-142502581-2');
+	</script>
 </head>
 <body>
 	<header>
@@ -47,7 +62,8 @@
 		</section>
 		<section id="business">
 			<div>
-				<h2 id="anime1" class="anime">株式会社 Riding とは<span>BUSINESS</span></h2>
+				<h2 id="anime1" class="anime">株式会社 Riding とは</h2>
+				<span class="bg">BUSINESS</span>
 				<div class="col_two">
 					<div class="text">
 						<h3 class="anime">BUSINESS</h3>
@@ -64,7 +80,7 @@
 				<h2 class="anime">事業紹介</h2>
 				<div class="col_thr">
 					<div class="anime">
-						<h3>SES<span>(システムエンジニアリングサービス)</span><br>事業</h3>
+						<h3>SES<span>(システムエンジニアリングサービス)</span>事業</h3>
 						<a href="">
 							<div>
 								<img src="./img/engineer.jpg">

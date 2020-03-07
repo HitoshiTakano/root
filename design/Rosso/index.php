@@ -79,7 +79,7 @@
 						<h3>不用品回収（店舗・事業所）</h3>
 						<p>店舗・事務所の移転に伴い発生した、不用品やごみなどを回収処分いたします。</p>
 					</a>
-					<a href="#clean">
+					<a href="./sub3.php">
 						<h3>バッカン業務</h3>
 						<p>samplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesample</p>
 					</a>
@@ -174,7 +174,7 @@
 	<!-- FOOTER -->
 	<footer>
 		<div class="info">
-			<p class="pr">粗大ごみ回収のパイオニア</p>
+			<!-- <p class="pr">粗大ごみ回収のパイオニア</p> -->
 			<div>
 				<h2>有限会社セイシン興産</h2>
 				<p>大阪府エリア全域対応</p>	

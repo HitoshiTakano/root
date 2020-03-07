@@ -75,6 +75,14 @@ section > div > p{
 .col_thr > div{
 	width: calc(100% / 3);
 }
+.col_two{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.col_two > div{
+	width: calc(100% / 2);
+}
 .circle {
 	margin-top: 35px;
 	width: 850px;
@@ -91,6 +99,15 @@ section > div > p{
 	font-size: 30px;
 	text-shadow: 2px 2px 2px #000000;
 	text-align: center;
+}
+.circle > div:nth-of-type(1) > h3{
+	color: #5fc4ff;
+}
+.circle > div:nth-of-type(2) > h3{
+	color: #ef3569;
+}
+.circle > div:nth-of-type(3) > h3{
+	color: #49ef35;
 }
 .circle > div > h4{
 	font-size: 20px;
@@ -126,6 +143,9 @@ table tr > td{
 	margin: 10px auto;
 	width: 850px;
 	justify-content: space-around;
+}
+.image > div > img{
+	width: 100%;
 }
 .bg_gray{
 	background-color: #999999;
@@ -188,6 +208,12 @@ table tr > td{
 @media screen and (max-width: 850px){
 	.col_thr{
 		flex-direction: column;
+	}
+	.col_two{
+		flex-direction: column;
+	}
+	.col_two > div{
+		width: 100%;
 	}
 	table{
 		width: 100%;

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+main > section#info > div > p, main > section#free > div > p, main > section#partner > div > p{
+	width: 800px;
+	margin: 10px auto;
+}
+main > section#free > div > p > a, main > section#partner > div > p > a {
+	color: blue;
+	text-decoration: underline;
+	transition: all .3s ease;
+}
+main > section#free > div > p > a:hover, main > section#partner > div > p > a:hover{
+	opacity: .7;
+}
+
+@media screen and (max-width: 800px){
+	main > section#info > div > h2, main > section#free > div > h2, main > section#partner > div > h2{
+		text-align: center;
+	}
+	main > section#info > div > p, main > section#free > div > p, main > section#partner > div > p{
+		width: 100%;
+		padding: 10px 20px;
+	}
+}

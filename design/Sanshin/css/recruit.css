@@ -1,0 +1,89 @@
+@charset "UTF-8";
+section#recruit{
+	width: 100%;
+}
+section#recruit > div{
+	width: 800px;
+	margin: 20px auto;
+	padding: 30px 10px;
+}
+section#recruit > div > h2{
+	font-size: 30px;
+	text-align: center;
+	color: #333333;
+	text-shadow: 0 0 2px #aaaaaa,
+				 0 0 2px #aaaaaa;
+	word-break: keep-all;
+}
+section#recruit > div > div{
+	display: flex;
+	width: 100%;
+	padding: 20px 5px;
+}
+section#recruit > div > div > h3{
+	width: 200px;
+}
+section#recruit > div > div > p{
+	width: calc(100% - 200px);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+.contact{
+	width: 800px;
+	margin: 10px auto;
+}
+.contact > a{
+	width: 100%;
+	font-size: 20px;
+	color: white;
+	text-shadow: 0 0 2px blue,
+				 0 0 2px blue;
+	text-align: center;
+	display: block;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: skyblue;
+	box-shadow: 2px 2px 2px #333333;
+}
+.contact > a:hover{
+	box-shadow: 0px 0px 2px #333333;
+}
+.contact > p{
+	margin-top: 30px;
+	font-size: 20px;
+	color: #333333;
+	text-align: center;
+	height: 30px;
+	position: relative;
+}
+.contact > p > a{
+	width: 60px;
+	padding: 5px 2px;
+	font-size: 16px;
+	background-color: red;
+	border-radius: 6px;
+	color: white;
+	position: absolute;
+	right: 20px;
+	top: 0;
+	display: none;
+	text-align: center;
+}
+@media screen and (max-width: 800px){
+	section#recruit > div{
+		width: 100%;
+	}
+	section#recruit > div > div > h3{
+		width: 90px;
+	}
+	section#recruit > div > div > p{
+		width: calc(100%  - 90px);
+	}
+	.contact > p{
+		padding-left: 30px;
+		text-align: left;
+	}
+	.contact > p > a{
+		display: block;
+	}
+}

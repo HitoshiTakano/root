@@ -1,0 +1,5 @@
+AuthUserFile /home/users/2/boy.jp-ryoukiteki/web/KAgentHP/portfolios/.htpasswd
+AuthGroupFile /dev/null
+AuthName "ポートフォリオサイト|ユーザー認証(KAgent)"
+AuthType Basic
+require valid-user

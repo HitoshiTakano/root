@@ -51,29 +51,29 @@
 	<main>
 		<section id="title">
 			<div>
-				<h1>法人・店舗のお客様</h1>
-				<p>事業者向けのサービスです。</p>		
+				<h1>SAMPLE</h1>
+				<p>sample1</p>		
 			</div>
 		</section>
 
 		<section>
 			<div>
-				<h2>セイシン興産のサービスの特徴</h2>
+				<h2>sample2</h2>
 				<p>sample sample sample sample sample sample sample sample sample sample sample</p>
 				<div class="circle col_thr">
 					<div>
-						<h3>特徴１</h3>
-						<h4>地域密着</h4>
+						<h3>Sample3-1</h3>
+						<h4>Sample3-1-1</h4>
 						<p>sample sample sample sample sample</p>
 					</div>
 					<div>
-						<h3>特徴２</h3>
-						<h4>お客様目線</h4>
+						<h3>Sample3-2</h3>
+						<h4>Sample3-2-1</h4>
 						<p>sample sample sample sample sample</p>
 					</div>
 					<div>
-						<h3>特徴３</h3>
-						<h4>安心・安全・環境</h4>
+						<h3>Sample3-3</h3>
+						<h4>Sample3-3-1</h4>
 						<p>sample sample sample sample sample</p>
 					</div>
 				</div>	
@@ -114,16 +114,16 @@
 		</section>
 		<section>
 			<div class="bg_gray">
-				<h2>セイシン興産のサービスへのお問い合わせ</h2>
-				<div class="col_thr contact">
+				<h2>お問い合わせ</h2>
+				<div class="col_two contact">
 					<div>
 						<h3>サービス全般のご相談</h3>
 						<div><i class="material-icons">chat_bubble_outline</i><span>お問い合わせ</span></div>
 					</div>
-					<div>
+					<!-- <div>
 						<h3>サービス全般のご相談</h3>
 						<div><i class="material-icons">directions_car</i><span>お問い合わせ</span></div>
-					</div>
+					</div> -->
 					<div>
 						<h4>お電話でのご依頼</h3>
 						<a href="tel:#">012-345-6789</a>

@@ -1,0 +1,164 @@
+@charset "UTF-8";
+main{
+	overflow: hidden;
+	position: relative;
+}
+main > div.bgSkew{
+	position: absolute;
+	top: 145px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #083ab9a1;
+	transform: skewX(35deg);
+	z-index: -999;
+}
+main > section:first-child{
+	margin-top: 10px;
+}
+main > section > div{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+main > section > div > h2{
+	color: #ffffff;
+	text-shadow: 0 0 3px #000000,
+				 0 0 3px #000000;
+
+}
+main > section.title > div > h2{
+	text-shadow: none;
+}
+main > section > div > div{
+	width: 800px;
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+}
+main > section > div > div > img{
+	width: 400px;
+	height: 266.5px;
+}
+main > section > div > div > p{
+	width: 50%;
+	padding: 10px;
+	color: #ffffff;
+	text-shadow: 0 0 2px #000000,
+				 0 0 2px #000000;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+main > section > div > div > p > span{
+	color: #ffffff;
+	text-shadow: 0 0 2px #000000,
+				 0 0 2px #000000;
+	font-size: 20px;
+}
+main > section:nth-child(odd){
+	transform: translateX(-100vw);
+	opacity: 0.2;
+	transition: all .3s ease;
+}
+main > section.active:nth-child(odd){
+	transform: translateX(0);
+	opacity: 1.0;
+}
+main > section:nth-child(even){
+	transform: translateX(100vw);
+	opacity: 0.2;
+	transition: all .3s ease;
+}
+main > section.active:nth-child(even){
+	transform: translateX(0);
+	opacity: 1.0;
+}
+main > section{
+	min-height: 500px;
+}
+main > section > div{
+	min-height: auto;
+	max-height: 500px;
+}
+/* DEFAULT */
+main > section.title, main > section.bread{
+	transform: translateX(0);
+	opacity: 1;
+}
+main > section div.square_blue{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #2e53b1;
+	transform: skewX(180deg);
+	transition: transform 0.5s ease; 
+	transition-delay: .3s;
+}
+main > section.active div.square_blue{
+	transform: skewX(90deg);
+}
+main > section div.circle_tra{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300%;
+	height: 300%;
+	transform: translate(-50%,-50%);
+	background-color: #2e53b1;
+	transition: all 0.5s cubic-bezier(0.50, 0.00, 0.50, 1.00);
+	transition-delay: 0.3s;
+	opacity: 1;
+}
+main > section.active div.circle_tra{
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+main > section div.donut{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1500px;
+	height: 1500px;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+	border: 1000px solid #2e53b1;
+	transition: all 2s ease; 
+	transition-delay: .3s;
+}
+main > section.active div.donut{
+	width: 15000px;
+	height: 15000px;
+}
+@media screen and (max-width: 800px){
+	main > section > div > div{
+		width: 100%;
+	}
+	main > div.bgSkew{
+		transform: skewX(20deg);
+	}
+	main > section > div > div > img{
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: auto;
+		z-index: -100;
+		opacity: 0.3;
+		filter: brightness(0.65);
+	}
+	main > section > div > div > p{
+		padding: 20px 10px;
+		width: 100%;
+	}
+	main > section#develop{
+		min-height: 660px;
+	}
+	main > section#ses{
+		min-height: 510px;
+		padding-top: 30px;
+		margin-top: 20px; 
+	}
+}

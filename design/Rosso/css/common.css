@@ -424,14 +424,30 @@ nav > ul > li > ul > li:hover{
     top: 19px;
     transform: rotate(45deg);
   }
+  header > div > div:first-child{
+    padding: 5px;
+  }
+  header h1{
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
+  header h3{
+    font-size: 10px;
+  }
   footer > div.info{
     display: none;
   }
   footer > div.mail{
     width: 50%;
   }
+  footer > div.mail > a > div > p{
+    font-size: 10px;
+  }
   footer > div.mail > a > div > p:last-child{
-    font-size: 21px;
+    font-size: 18px;
+  }
+  footer > div.mail > a > span{
+    font-size: 16px;
   }
   footer > div.tel{
     width: 50%;
@@ -440,7 +456,10 @@ nav > ul > li > ul > li:hover{
     font-size: 12px;
   }
   footer > div.tel > a > h3{
-    font-size: 25px;
-    margin-top: 8px;
+    font-size: 15px;
+    margin-top: 2px;
+  }
+  footer > div.tel > a > p > span{
+    font-size: 10px;
   }
 }

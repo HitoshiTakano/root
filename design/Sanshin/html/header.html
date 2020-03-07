@@ -1,0 +1,25 @@
+<header v-bind:class="{active:isActive}">
+	<!-- LOGO -->
+	<div class="logo">
+		<a href="./">
+			<img src="img/sanshin_logo.png" alt="三伸工業株式会社LOGO">
+			<h1>三伸工業株式会社</h1>
+		</a>
+	</div>
+	<!-- Responsive Menu -->
+	<div v-bind:class="{active:isActive, menu_btn:true}" v-on:click="menuBtn">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<!-- MENU LIST -->
+	<nav>
+		<ul>
+			<li><a href="./works.php">業務内容</a></li>
+			<li><a href="./example.php">施工事例</a></li>
+			<li><a href="./about.php">会社概要</a></li>
+			<li><a href="./recruit.php">採用情報</a></li>
+			<li><a href="./contact.php">お問い合わせ</a></li>
+		</ul>
+	</nav>
+</header>
