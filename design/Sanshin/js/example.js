@@ -9,22 +9,33 @@ var example = {
 	getElements:function(){
 		$('section#career > div > div > a').each(function(i,e){
 			var id = $(this).attr('href');
-			var el = $(id).height();
+			var h = $(id).height();
 
-			console.log(id);
-			console.log(el);
-			// example.toggleElements.push()
-		})
+			var arr = {
+				id:id,
+				height:h,
+			};
+			example.toggleElements.push(arr);
+			(i==0) ? $(id).css({'height':h}) : $(id).css({'height':'0px'});
+			if(i==0) $(this).addClass('active');
+		});
 	},
 
 }
 
 $(function(){
+	example.init();
 	$('section#career > div > div > a').on('click', function(){
 		var id = $(this).attr('href');
-		$(id).hasClass('active') ? $(id).removeClass('active') : $(id).addClass('active');
+		var _this = $(this);
+		_this.hasClass('active') ? _this.removeClass('active') : _this.addClass('active');
+		$.each(example.toggleElements, function(i,e){
+			if(id==e.id){
+				_this.hasClass('active') ? $(e.id).css({'height':e.height}) : $(id).css({'height':0});
+			}
+		});
 		return false;
 	});
-	example.init();
+	
 });
 

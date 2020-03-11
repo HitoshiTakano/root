@@ -34,10 +34,10 @@ section#company > div > div > p > span{
 	width: 100%;
 }
 section#company > div > div > p > span > span:first-child{
-	width: 30%;
+	width: 40%;
 }
 section#company > div > div > p > span > span:last-child{
-	width: 70%;
+	width: 60%;
 	padding-left: 10px;
 }
 /* Company History */

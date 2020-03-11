@@ -25,12 +25,12 @@
 					<div class="col_two">
 						<div class="works_img"></div>
 						<div>
+							<h3>化学工場・火力発電所</h3>
 							<ol>
-								<li>回転機点検・整備</li>
+								<li>ガス点検・整備</li>
 								<li>ポンプ点検・整備</li>
 								<li>コンプレッサー点検・整備</li>
-								<li>タービン点検・整備</li>
-								<li>発電機点検・整備</li>
+								<li>タービン発電機点検・整備</li>
 							</ol>
 						</div>
 					</div>
@@ -39,14 +39,22 @@
 		</section>
 		<section id="trade">
 			<div>
-				<h2>取引先一覧</h2>
+				<h2>取引先一覧<span>（敬称略）</span></h2>
 				<div>
-					
+					<p>宇部興産</p>
+					<p>三井デュポンポリケミカル</p>
+					<p>コスモ石油</p>
+					<p>東京電力</p>
+					<p>君津共同火力</p>
+					<p>住友化学</p>
+					<p>JR川崎発電所</p>
+					<p class="etc">etc...</p>
 				</div>
 			</div>
 		</section>
 	</main>
 	<!-- FOOTER -->
 	<?php include_once dirname(__FILE__) . '/html/footer.html'; ?>
+	<?php include_once dirname(__FILE__) . '/html/jquery.html'; ?>
 </body>
 </html>

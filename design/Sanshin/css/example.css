@@ -3,12 +3,14 @@ section#career{
 }
 section#career > div{
 	width: 800px;
-	padding: 20px 0;
+	padding: 30px 0;
 	margin: 0 auto;
 }
 section#career > div > h2{
-	font-size: 30px;
+	font-size: 25px;
 	text-align: center;
+	margin-bottom: 10px;
+	padding: 10px 0;
 }
 section#career > div > div{
 	padding: 10px;
@@ -26,6 +28,7 @@ section#career > div > div > a{
 	padding-left: 20px;
 	height: 40px;
 	line-height: 40px;
+	margin: 10px 0;
 }
 section#career > div > div > a:after{
 	content: "+";
@@ -39,16 +42,20 @@ section#career > div > div > a:after{
 	width: 30px;
 	height: 30px;
 	text-align: center;
-	line-height: 30px;
+	line-height: 25px;
 	box-shadow: 0 0 2px #ffffff;
 }
 section#career > div > div > a.active:after{
 	content: "-";
 }
 section#career > div > div > a + div{
-	
-	transition: all .5s ease;
+	/*height: 0;*/
+
+	overflow: hidden;
+	transition: all .7s ease;
 }
+
+
 section#career > div > div > a + div > p{
 	padding: 10px 0;
 }

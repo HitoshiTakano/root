@@ -2,7 +2,7 @@ section#works{
 	width: 100%;
 }
 section#works > div{
-	width: 80%;
+	width: 800px;
 	margin: 0px auto;
 	padding: 30px 10px;
 }
@@ -10,13 +10,21 @@ section#works > div{
 section#works > div > h2{
 	width: 100%;
 	text-align: center;
-	font-size: 45px;
+	font-size: 25px;
+	padding: 10px 5px;
+    border-bottom: 3px solid #777777;
+    margin-bottom: 30px;
 }
-
+section#works > div > div{
+	width: 100%;
+	padding-bottom: 50px;
+	border-bottom: 1px dashed #aaaaaa;
+	margin-bottom: 20px;
+}
 .col_two{
 	display: flex;
 	width: 100%;
-	padding: 10px;
+	/*padding: 10px;*/
 }
 .works_img{
 	background-image: url(../img/noimage.png);
@@ -25,10 +33,83 @@ section#works > div > h2{
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+.works_img + div > h3{
+	font-size: 25px;
+	text-align: center;
+	/*font-weight: normal;*/
+}
 ol{
-	padding-left: 45px;
+	padding-left: 60px;
 }
 ol > li{
 	list-style: circle;
-	font-size: 25px;
+	font-size: 20px;
+	padding: 5px 0;
+}
+
+section#trade{
+	width: 100%;
+	padding: 10px;
+}
+section#trade > div{
+	width: 800px;
+	margin: 0 auto;
+}
+section#trade > div > h2{
+	display: table;
+	border-bottom: 3px solid #777777;
+	padding: 10px;
+	text-align: center;
+	margin: 10px auto;
+	font-size: 30px;
+}
+section#trade > div > h2 > span{
+	font-size: 16px;
+	font-weight: normal;
+}
+section#trade > div > div{
+	padding: 15px 5px;
+	width: 80%;
+	margin: 10px auto;
+}
+section#trade > div > div > p{
+	padding: 5px 0;
+}
+section#trade > div > div > p.etc{
+	text-align: right;
+	font-size: 12px;
+}
+@media screen and (max-width: 800px){
+	section#works > div{
+		width: 100%;
+		padding: 10px 0px;
+	}
+	section#trade > div{
+		width: 100%;
+		padding: 5px 10px;
+	}
+	section#trade > div > div{
+		padding: 15px 10px;
+	}
+	.col_two > div{
+		padding: 5px 0px;
+		/*padding-left: 50px;*/
+	}
+	.works_img + div > h3{
+		padding: 10px 0;
+	}
+	ol{
+		width: calc(100% - 50px);
+		margin-left: auto;
+		padding-left: 50px;
+	}
+}
+@media screen and (max-width: 500px){
+	ol{
+		padding: 0;
+	}
+	section#trade > div > div{
+		padding: 15px 5px;
+		width: 100%;
+	}
 }

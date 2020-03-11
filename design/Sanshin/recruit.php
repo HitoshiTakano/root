@@ -23,6 +23,6 @@
 	</main>
 	<!-- FOOTER -->
 	<?php include_once dirname(__FILE__) . '/html/footer.html'; ?>
-	
+	<?php include_once dirname(__FILE__) . '/html/jquery.html'; ?>
 </body>
 </html>
