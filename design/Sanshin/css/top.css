@@ -505,15 +505,17 @@ section#works > div > div > a{
 	overflow: hidden;
 }
 section#works > div > div > a > h3{
-	font-size: 25px;
+	font-size: 45px;
 	display: inline;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	text-shadow: 0 0 4px #cffffe,
-				 0 0 4px #cffffe;
-	color: #4d5fdf;
+	text-shadow: 0 0 2px #100fba,
+				 0 0 2px #100fba;
+	color: #a7ccf9;
+	width: 100%;
+	text-align: center;
 }
 section#works > div > div > a > img{
 	position: absolute;
@@ -553,14 +555,14 @@ section#contact > div > div:first-child{
 section#contact > div > div:first-child::after{
 	content: "";
 	position: absolute;
-	top: 50%;
+	top: 0;
 	left: 0;
 	width: 100%;
-	height: 0;
+	height: 100%;
 	border-right: 1px solid #000000;
 }
 section#contact > div:hover > div:first-child::after{
-	animation: borderLineAnime 2s linear infinite alternate;
+	/*animation: borderLineAnime 2s linear infinite alternate;*/
 }
 @keyframes borderLineAnime{
 	0%{
@@ -589,12 +591,12 @@ section#contact > div > div > a{
 	position: absolute;
 	text-align: left;
 	left: 100px;
-	font-size: 20px;
+	font-size: 25px;
 	top: calc(50% - 20px);
 	transform: translate(100vw, -50%);
 	transition: all .5s ease;
 	transition-delay: .1s;
-	color: #a0d8ef;
+	color: #1cb3f1;
 	text-shadow: 0 0 1px #000000,
 				 0 0 1px #000000;
 }
@@ -631,12 +633,13 @@ section#contact > div > div > p{
 	transition-delay: .3s;
 }
 section#contact.active > div > div > p{
+	font-size: 25px;
 	transform: translate(0, -50%);
 }
 section#contact > div > div > p > a{
-	font-size: 20px;
+	font-size: 30px;
 	position: relative;
-	color: #a0d8ef;
+	color: #1cb3f1;
 	text-shadow: 0 0 1px #000000,
 				 0 0 1px #000000;
 }
@@ -785,7 +788,7 @@ section#contact > div > div > p > a:hover::after{
 		width: 95%;
 	}
 	section#works > div > div > a > h3{
-		font-size: 35px;
+		font-size: 45px;
 		width: 75%;
 		text-align: center;
 	}

@@ -10,11 +10,16 @@ section#company > div{
 section#company > div > h2{
 	font-size: 25px;
 	text-align: center;
+	padding: 10px 0;
 }
 section#company > div > div{
 	display: flex;
 	width: 100%;
 	padding: 15px 5px;
+	border-top: 1px dashed #777777;
+}
+section#company > div > div:last-child{
+	border-bottom: 1px dashed #777777;
 }
 section#company > div > div > h3{
 	width: 150px;
@@ -47,11 +52,16 @@ section#history > div{
 section#history > div > h2{
 	font-size: 25px;
 	text-align: center;
+	padding: 10px 0;
 }
 section#history > div > p{
 	display: flex;
 	width: 100%;
 	padding: 10px 3px;
+	border-top: 1px dashed #aaaaaa;
+}
+section#history > div > p:last-child{
+	border-bottom: 1px dashed #aaaaaa;
 }
 section#history > div > p > span:first-child{
 	width: 150px;
@@ -99,6 +109,9 @@ section#map > div > iframe{
 	}
 	section#history > div{
 		width: 100%;
+	}
+	section#history > div > p{
+		padding-left: 10px;
 	}
 	section#history > div > p > span:first-child{
 		width: 105px;
