@@ -16,10 +16,11 @@
 	<?php include_once dirname(__FILE__) . '/html/header.html'; ?>
 	<!-- MAIN -->
 	<main id="main">
+		<div>
 		<?php include_once dirname(__FILE__) . '/html/common.html'; ?>
 		
 		<?php include_once dirname(__FILE__) . '/html/example.html'; ?>
-		
+		</div>
 	</main>
 	<!-- FOOTER -->
 	<?php include_once dirname(__FILE__) . '/html/footer.html'; ?>

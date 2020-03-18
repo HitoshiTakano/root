@@ -16,10 +16,12 @@
 	<?php include_once dirname(__FILE__) . '/html/header.html'; ?>
 	<!-- MAIN -->
 	<main id="main">
+		<div>
 		<?php include_once dirname(__FILE__) . '/html/common.html'; ?>
 		
 		<!-- Kinds section -->
 		<?php include_once dirname(__FILE__) . '/html/recruit.html'; ?>
+		</div>
 	</main>
 	<!-- FOOTER -->
 	<?php include_once dirname(__FILE__) . '/html/footer.html'; ?>

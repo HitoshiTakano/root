@@ -14,6 +14,9 @@ section#recruit > div > h2{
 	text-shadow: 0 0 2px #aaaaaa,
 				 0 0 2px #aaaaaa;
 	word-break: keep-all;
+	word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
 }
 section#recruit > div > div{
 	display: flex;
@@ -27,6 +30,7 @@ section#recruit > div > div > p{
 	width: calc(100% - 200px);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
+	margin: 0 auto;
 }
 .contact{
 	width: 800px;
@@ -48,24 +52,25 @@ section#recruit > div > div > p{
 .contact > a:hover{
 	box-shadow: 0px 0px 2px #333333;
 }
-.contact > p{
-	margin-top: 30px;
+.contact > div{
+	width: 100%;
+}
+.contact > div> p{
 	font-size: 20px;
 	color: #333333;
 	text-align: center;
 	height: 30px;
 	position: relative;
 }
-.contact > p > a{
+.contact > div > a{
 	width: 60px;
+	height: 30px;
+	line-height: 16px;
 	padding: 5px 2px;
 	font-size: 16px;
 	background-color: red;
 	border-radius: 6px;
 	color: white;
-	position: absolute;
-	right: 20px;
-	top: 0;
 	display: none;
 	text-align: center;
 }
@@ -78,12 +83,13 @@ section#recruit > div > div > p{
 	}
 	section#recruit > div > div > p{
 		width: calc(100%  - 90px);
+		margin: 0;
 	}
-	.contact > p{
+	.contact > div > p{
 		padding-left: 30px;
 		text-align: left;
 	}
-	.contact > p > a{
+	.contact > div > a{
 		display: block;
 	}
 }

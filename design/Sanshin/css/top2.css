@@ -1,0 +1,131 @@
+section#top > div > div{
+	overflow: hidden;
+	width: 100%;
+	min-height: 750px;
+	height: calc(100vh - 200px);
+}
+section#top.active > div > div > video{
+	top: 200px;
+}
+section#top > div > div > video{
+	width: 100%;
+	min-height: 750px;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: -9999;
+	filter: brightness(0.5);
+}
+section#top > div > div > video > source{
+	z-index: -9999;
+}
+section{
+	background-color: #4290ead9;
+}
+main > div > section{
+	z-index: 4500;
+}
+section:first-child{
+	background-color: transparent;
+}
+footer{
+	z-index: 9999;
+}
+section.noscrolled{
+	z-index: 9999;
+}
+section.scrolled:first-child{
+	z-index: -9999;
+}
+.col_two.news > div:last-child{
+	border: 1px dashed #0f15d3;
+}
+section#recruit > div > div.text > p::before{
+	border-top: 2px solid #343af0;
+}
+section#recruit > div > div.text > p::after{
+	border-bottom: 2px solid #343af0;
+}
+section#top ~ section#contact{
+	background-color: #4290ead9;
+}
+section#contact > div > div > a{
+	color: #f9fdff;
+}
+section#contact > div > div > p > a{
+	color: #f9fdff;
+}
+
+main *{
+	border-color: #ffffff;
+	color: #ffffff;
+}
+section#top > div > h1 > p{
+	color: #ffffff;
+    text-shadow: 0 0 3px #000000,
+    			 0 0 3px #000000;
+}
+section#top > div > p{
+    color: #f4f4f4;
+    text-shadow: 0 0 4px #151515, 0 0 4px #151515;
+}
+.text > div > h2{
+	color: #ffffff;
+}
+.text > div > a{
+	background-color: #121468;
+}
+section#recruit > div > div.text > a{
+	background-color: #121468;
+}
+section#recruit > div > div.text > p{
+	color: #030e92;
+	text-shadow: 0 0 1px #9f9b9b, 0 0 1px #9f9b9b;
+}
+section#works > div > h2::before{
+	border-top: 5px solid #0f88f1;
+}
+section#works > div > h2::after{
+	border-bottom: 5px solid #0f88f1;	
+}
+section#works > div > div > div{
+	border-radius: 5px;
+}
+section#works > div > a{
+	background-color: #121468;
+}
+.shadow{
+	color: #0e1736;
+}
+.shadow::before{
+	color: #ececed;
+}
+section#works > div > h2{
+	text-shadow: 0 0 2px #03259e, 0 0 2px #03259e;
+}
+section#works{
+	background-color: #fdfeffeb;
+}
+@media screen and (max-width: 800px){
+
+	section#top > div > div > video{
+		width: auto;
+		height: 100vh;
+		top: 0;
+	}
+	section#top.active > div > div > video{
+		top: 100px;
+	}
+	section#recruit > div > div.text > p{
+		color: #efefef;
+	}
+	section#works{
+		padding-top: 50px;
+	}
+	section#contact > div > div:first-child::before{
+		border-right: 20px solid #1d23ff;
+	}
+	section#contact > div > div:first-child::after{
+	    border-left: 20px solid #1d23ff;
+	}
+}

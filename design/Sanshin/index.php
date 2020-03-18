@@ -18,6 +18,5 @@
 	<?php include_once dirname(__FILE__) . '/html/top.html'; ?>
 	<!-- FOOTER -->
 	<?php include_once dirname(__FILE__) . '/html/footer.html'; ?>
-	<script type="text/javascript" src="./js/top.js"></script>
 </body>
 </html>

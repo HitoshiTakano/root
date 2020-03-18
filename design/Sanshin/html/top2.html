@@ -1,0 +1,100 @@
+<main id="main">
+	<div v-scroll="handleScroll">	
+		<section id="top" ref="top">
+			<div id="slide">
+				<div>
+					<!-- <img src="img/cloud.jpg" alt="top">	 -->
+					<video id="topvideo" preload="none" autoplay loop muted playsinline>
+						<source src="img/top.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<h1><p>技術・信頼</p><p>社会貢献を行う企業</p></h1>
+				<p>安心して働ける企業<br>福利厚生も充実</p>
+			</div>
+			<!-- <a class="sideTab" href="#contact">お問い合わせ</a> -->
+		</section>
+		<section id="news" ref="news">
+			<div>
+				<div id="topics" class="col_two news">
+					<div>
+						<h3>News</h3>
+					</div>
+					<div>
+						<div v-for="info in results" v-bind:key="info.id">
+							<a v-if="info.url != ''" :href="info.url">
+								<span>{{ info.date }}</span>
+								<span>{{ info.content }}</span>
+							</a>
+							<p v-else>
+								<span>{{ info.date }}</span>
+								<span>{{ info.content }}</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="business" ref="business">
+			<div>
+				<div class="images">
+					<img src="img/sample.jpg">
+				</div>
+				<div class="text">
+					<div>
+						<h2>業務内容</h2>
+						<p>機械メンテナンス「タービン・発電機・ポンプ・コンプレッサー等」の機械メンテナンス<br>主に、京浜・京葉地区（神奈川県・東京都・千葉県一円）の化学工場での作業がメイン</p>
+						<a href="works.php">業務内容</a>
+					</div>
+				</div>
+				<h3 class="shadow">BUSINESS</h3>
+			</div>
+		</section>
+		<section id="recruit" ref="recruit">
+			<div>
+				<div class="bg_images">
+					<img src="img/recruit.jpg">
+				</div>
+				<div class="text">
+					<h2>採用情報</h2>
+					<p>未経験者歓迎<br>福利厚生充実・赴任費用支給有<br>借上住宅有・家賃補助有</p>
+					<a href="recruit.php">採用情報へ</a>
+				</div>
+			</div>
+		</section>
+		<section id="works" ref="works">
+			<div>
+				<h2>主な事例</h2>
+				<div>
+					<div>
+						<h3>タービン</h3>
+						<img src="img/noimage.png">
+					</div>
+					<div>
+						<h3>発電機</h3>
+						<img src="img/noimage.png">
+					</div>
+					<div>
+						<h3>ポンプ</h3>
+						<img src="img/noimage.png">
+					</div>
+					<div>
+						<h3>コンプレッサー</h3>
+						<img src="img/noimage.png">
+					</div>
+				</div>
+				<a href="example.php">施行事例</a>
+			</div>
+		</section>
+		<section id="contact" ref="contact">
+			<div>
+				<div>
+					<h2>お問い合わせ</h2>
+				</div>
+				<div>
+					<a href="contact.php">メールフォームはこちら</a>
+					<p>電話：<a href="tel:0455732399">045-573-2399</a></p>
+				</div>
+			</div>
+		</section>
+	</div>
+</main>
