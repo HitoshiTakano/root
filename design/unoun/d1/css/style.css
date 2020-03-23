@@ -137,7 +137,6 @@ section > div{
 section#top{
 	min-height: calc( 800px + 205px );
 	height: calc(100vh * ( 1005 / 800 ));
-	max-height: 
 	width: 100%;
 	position: absolute;
 	top: 0;
@@ -291,13 +290,23 @@ section#promotion > div > div.bubble{
 	padding-left: calc(75px + 20px);
 	margin-bottom: 10px;
 	margin-left: auto;
+	position: relative;
 }
-section#promotion > div > div.bubble > p{
+
+section#promotion > div > div.bubble > div{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 60%;
+}
+section#promotion > div > div.bubble > div > p{
 	font-size: 20px;
 	color: #fff;
 	position: relative;
 }
-section#promotion > div > div.bubble > p:before{
+section#promotion > div > div.bubble > div > p:before{
 	content: "・";
 	position: absolute;
 	left: -20px;
@@ -353,13 +362,14 @@ section#about > div > div:last-child > h2{
 .big{
 	font-size: 2.0em;
 	font-weight: bolder;
-	line-height: 50px;
+	line-height: 2.0em;
 	color: #EF7D4B;
+	white-space: nowrap;
 }
 .midBig{
 	font-size: 1.5em;
 	font-weight: bolder;
-	line-height: 50px;
+	line-height: 1.5em;
 }
 section#about > div > div:last-child > p{
 	color: #F9C479;
@@ -466,6 +476,17 @@ section#benefit > div > ul::before{
 	top: -25px;
 	left: 50%;
 	transform: translateX(-50%);
+}
+section#benefit > div > ul::after{
+	content: "など";
+	text-align: right;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	color: #EF7D4B;
+	font-weight: bold;
+
+
 }
 section#benefit > div > ul > li{
 	width: calc(100% / 3);
@@ -696,6 +717,11 @@ section#voice > div > div > div > div.voice{
 section#voice > div > div > div > div.voice > p{
 	font-weight: bold;
 	color: #EF7D4B;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
 }
 section#voice > div > div > div > div.voice.left:after{
 	content: "";
@@ -832,6 +858,8 @@ section#faq > div > ul > li > a.open > span:after{
 section#faq > div > ul > li > a + p{
 	height: 0px;
 	width: 100%;
+	font-weight: bold;
+	color: #EF7D4B;
 	overflow: hidden;
 	transition: all .4s ease;
 }
@@ -911,6 +939,287 @@ footer > h2{
 }
 
 
+/* RESPONSIVE DESIGN CSS */
+@media screen and (max-width: 800px){
+	section > div{
+		width: 95%;
+	}
+	.bg_top{
+		border-radius: 30%;
+	}
+	section#top > div.bg_top > div.title{
+		width: 100vw;
+		padding: 75px 10px;
+		border-radius: 60px;
+		min-height: initial;
+		background-color: #ffffffe6;
+	}
+	div.title > div{
+		width: 75%;
+	}
+	div.title > h1{
+		font-size: 40px;
+		line-height: 40px;
+	}
+	div.title > h2{
+		font-size: 25px;
+		line-height: 25px;
+		padding: 0 20px;
+	}
+	div.title > p{
+		font-size: 18px;
+	}
+	div.title > p > span{
+		font-size: 25px;
+	}
+	img.logo {
+		width: 60px;
+		height: 60px;
+	}
+	img.name{
+		padding-left: 20px;
+		width: calc(100% - 80px);
+		height: 35px;
+		margin: 10px 0;
+		margin-right: auto;
+	}
+	section#promotion > h2{
+		font-size: 30px;
+		margin-top: 20px;
+		line-height: 50px;
+	}
+	section#promotion > h2::before, section#promotion > h2::after{
+		height: 50px;
+	}
+	section#promotion > h2::before{
+		left: -25px;
+	}
+	section#promotion > h2::after{
+		right: -25px;
+	}
+	section#promotion > div{
+		flex-flow: column-reverse;
+		height: auto;
+	}
+	section#promotion > div > div.bubble{
+		margin-left: 0;
+		width: 95%;
+		padding: 0;
+		height: 300px;
+	}
+	section#promotion > div > div.bubble > div > p{
+		font-size: 16px;
+	}
+	section#promotion > div > div.char_1{
+		margin: 0 auto;
+		width: 70%;
+		height: 300px;
+	}
+	section#arrow_down{
+		height: 150px;
+		padding: 28px;
+	}
+	section#arrow_down > div{
+		width: 200px;
+		border-right: 100px solid transparent;
+		border-left: 100px solid transparent;
+		border-bottom: 0 solid transparent;
+		border-top: 100px solid #F9C479;
+	}
+	section#arrow_down > div > p{
+		top: -80px;
+		font-size: 30px;
+		color: #ec7f50;
+		text-shadow: 0 0 2px #ec7f50;
+		width: 230px;
+	}
+	section#about > div > div:first-child{
+		width: 90%;
+	}
+	section#about > div > div:last-child{
+		width: 90%;
+	}
+	section#about > div > div:last-child > h2{
+		font-size: 25px;
+		line-height: 30px;
+		margin-bottom: 20px;
+	}
+	section#about > div > div:last-child > p{
+		font-size: 16px;
+		line-height: 32px;
+	}
+	section#btn > a{
+		width: 80%;
+		height: 60px;
+		font-size: 30px;
+		line-height: 60px;
+	}
+	section#benefit > div > h2{
+		margin-left: 10px;
+		font-size: 30px;
+	}
+	section#benefit > div > ol{
+		width: 100%;
+	}
+	section#benefit > div > ol > li{
+		width: 95%;
+		padding-right: 20px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	section#benefit > div > ol > li:first-child{
+		line-height: 50px;
+	}
+	section#benefit > div > ol > li > span{
+		font-size: 22px;
+	}
+	section#benefit > div > ul{
+		width: 95%;
+		flex-flow: column;
+	}
+	section#benefit > div > ul > li{
+		width: 90%;
+	}
+	section#benefit > div > div.message{
+		width: 95%;
+		padding: 20px 10px;
+	}
+	section#benefit > div > div.campaign{
+		width: 90%;
+	}
+	section#benefit > div > div.campaign > p > span{
+		white-space: nowrap;
+	}
+	section#benefit > div > div.special{
+		width: 70%;
+	}
+	section#benefit > div > div.special > h2{
+		width: 95%;
+		margin: 0 auto;
+		font-size: 30px;
+	}
+	section#howto > div > h2{
+		font-size: 30px;
+	}
+	section#howto > div > div.way{
+		flex-flow: column;
+	}
+	section#howto > div > div.way > div{
+		width: 100%;
+		display: flex;
+		margin-bottom: 60px;
+	}
+	section#howto > div > div.way > div > div:first-child{
+		height: 135px;
+		width: 135px;
+	}
+	section#howto > div > div.way > div > div:first-child::after{
+		top: initial;
+		bottom: -50px;
+		right: -100%;
+		transform: translateX(-150%);
+		border-bottom: none;
+		border-right: 20px solid transparent;
+		border-left: 20px solid transparent;
+		border-top: 20px solid #EF7D4B;
+	}
+	section#howto > div > div.point{
+		height: 240px;
+	}
+	section#howto > div > div.point > h3{
+		font-size: 30px;
+		margin-bottom: 5px;
+	}
+	section#howto > div > div.point > p{
+		width: 95%;
+		margin: 0 auto;
+	}
+	section#howto > div > a{
+		width: 80%;
+		height: 60px;
+		font-size: 30px;
+		line-height: 60px;
+	}
+	section#voice > div > h2{
+		font-size: 32px;
+	}
+	section#voice > div > div > div:nth-child(odd){
+		flex-flow: column-reverse;
+	}
+	section#voice > div > div > div:nth-child(even){
+		flex-flow: column;
+	}
+	section#voice > div > div > div > div.voice{
+		width: 95%;
+		margin: 20px auto;
+	}
+	section#voice > div > div > div > div.voice.right:before{
+		top: initial;
+		left: calc( 50% + 22px);
+		bottom: -68px;
+		border-style: solid;
+		border-width: 50px 40px 0 10px;
+		border-color: #FFF transparent transparent transparent;
+		/*transform: translateX(-50%) rotate(45deg);*/
+	}
+	section#voice > div > div > div > div.voice.right:after{
+		top: initial;
+		left: calc( 50% + 20px);
+		bottom: -76px;
+		border-style: solid;
+		border-width: 50px 40px 0 10px;
+		border-color: #ef7d4b transparent transparent transparent;
+		/*transform: translateX(-50%) rotate(45deg);*/
+	}
+	section#voice > div > div > div > div.image.two{
+		margin-right: 0;
+		margin-left: auto;
+	}
+	section#voice > div > div > div > div.voice.left:before{
+		top: initial;
+		right: calc( 50% + 22px);
+		bottom: -68px;
+		border-style: solid;
+		border-width: 50px 10px 0 40px;
+		border-color: #fff transparent transparent transparent;
+	}
+	section#voice > div > div > div > div.voice.left:after{
+		top: initial;
+		right: calc( 50% + 20px);
+		bottom: -76px;
+		border-style: solid;
+		border-width: 50px 10px 0 40px;
+		border-color: #ef7d4b transparent transparent transparent;
+		/*transform: translateX(-50%) rotate(45deg);*/
+	}
+	section#faq > div > ul > li > a{
+		font-size: 16px;
+		line-height: 26px;
+	}
+	section#faq > div > ul > li:last-child > a{
+		line-height: 50px;
+	}
+	section#faq > div > ul > li > a.open + p{
+		border-top: 1px dashed #EF7D4B;
+	}
+	section#confirm > div > div > h3{
+		font-size: 30px;
+	}
+	section#confirm > div > div > p{
+		font-size: 30px;
+	}
+	section#confirm > div > a{
+		width: 80%;
+		height: 60px;
+		font-size: 30px;
+		line-height: 60px;
+	}
+}
+@media screen and (max-width: 370px){
+	section#faq > div > ul > li > a:last-child{
+		line-height: 26px;
+	}
+}
 
 
 
