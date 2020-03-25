@@ -370,6 +370,7 @@ section#about > div > div:last-child > h2{
 	font-size: 1.5em;
 	font-weight: bolder;
 	line-height: 1.5em;
+	white-space:nowrap;
 }
 section#about > div > div:last-child > p{
 	color: #F9C479;
@@ -947,12 +948,17 @@ footer > h2{
 	.bg_top{
 		border-radius: 30%;
 	}
+	section#top{
+		height: 100vh;
+		min-height: 100vh;
+	}
 	section#top > div.bg_top > div.title{
 		width: 100vw;
 		padding: 75px 10px;
 		border-radius: 60px;
 		min-height: initial;
 		background-color: #ffffffe6;
+		transform: translate( calc(-50% - 2px), -50%);
 	}
 	div.title > div{
 		width: 75%;
@@ -1112,6 +1118,7 @@ footer > h2{
 	section#howto > div > div.way > div > div:first-child{
 		height: 135px;
 		width: 135px;
+		margin-left: 10px;
 	}
 	section#howto > div > div.way > div > div:first-child::after{
 		top: initial;
@@ -1142,6 +1149,7 @@ footer > h2{
 	}
 	section#voice > div > h2{
 		font-size: 32px;
+		letter-spacing: 0;
 	}
 	section#voice > div > div > div:nth-child(odd){
 		flex-flow: column-reverse;
@@ -1196,9 +1204,6 @@ footer > h2{
 		font-size: 16px;
 		line-height: 26px;
 	}
-	section#faq > div > ul > li:last-child > a{
-		line-height: 50px;
-	}
 	section#faq > div > ul > li > a.open + p{
 		border-top: 1px dashed #EF7D4B;
 	}
@@ -1215,12 +1220,3 @@ footer > h2{
 		line-height: 60px;
 	}
 }
-@media screen and (max-width: 370px){
-	section#faq > div > ul > li > a:last-child{
-		line-height: 26px;
-	}
-}
-
-
-
-
