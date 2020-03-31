@@ -1,0 +1,377 @@
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															SUB TITLE																*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+section#title{
+	width: 100%;
+	height: 150px;
+	background-color: #00A7EA;
+	overflow: hidden;
+	display: flex;
+	margin-bottom: 70px;
+}
+section#title > div{
+	margin: 0;
+}
+section#title > div.text{
+	width: 300px;
+	height: 100%;
+	font-size: 36px;
+	color: #fff;
+	padding: 50px;
+	position: relative;
+}
+section#title.form > div.text{
+	font-size: 32px;
+}
+section#title > div.text::after{
+	content: "";
+	transform: skewX(-30deg);
+	background-color: #00A7EA;
+	width: 100px;
+	height: 150px;
+	position: absolute;
+	top: 0;
+	right: -50px;
+	z-index: 1000;
+}
+section#title > div.image{
+	width: calc(100% - 300px);
+}
+section#title > div.image > img{
+	width: 100%;
+	height: 150px;
+	filter: grayscale(1);
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*														SECTION TITLE																*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+section#content > div{
+	padding: 20px 0;
+}
+section#content > div > h2, section#works > div > h2{
+	font-size: 35px;
+	position: relative;
+	display: inline;
+	padding: 5px;
+	padding-right: 35px;
+	padding-top: 40px;
+	border-bottom: 2px solid #00A7EA;
+	margin-bottom: 30px;
+}
+section#content > div > h3{
+	font-size: 35px;
+	position: relative;
+	display: inline;
+	padding: 5px;
+	padding-right: 35px;
+	padding-top: 40px;
+	margin-bottom: 30px;
+}
+section#content > div > h2::after, section#works > div > h2::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 30px;
+	height: 2px;
+	transform: rotate(-45deg);
+	background-color: #00A7EA;
+	box-shadow: 8px 8px 0px #00A7EA;
+}
+section#content > div > div{
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-bottom: 50px;
+}
+section#content > div > div > p{
+	line-height: 40px;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															table																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+.table{
+	padding: 20px;
+}
+.table > div{
+	display: flex;
+	padding: 20px 0;
+	border-bottom: 1px solid #00A7EA;
+}
+.table > div:first-child{
+	/*border-top: 1px solid #00A7EA;*/
+}
+.table > div > h3{
+	width: 200px;
+	font-weight: normal;
+}
+.table.recruit{
+}
+.table.recruit > div{
+	padding: 0;
+	border: 1px solid #707070;
+}
+.table.recruit > div > h3{
+	background-color: #00a7ea38;
+	padding: 20px 0;
+	padding-left: 10px;
+	font-weight: bold;
+} 
+.table.recruit > div > div{
+	padding: 20px 0;
+	padding-left: 10px;
+}
+.table > div > div{
+	width: calc(100% - 200px);
+}
+.table > div > div > p{
+	display: flex;
+	width: 100%;
+}
+.table > div > div > p > span:first-child{
+	width: 40%;
+}
+.table > div > div > p > span:last-child{
+	width: 60%;
+}
+.table > div > div.long > p > span:first-child{
+	width: 70%;
+}
+.table > div > div.long > p > span:last-child{
+	width: 30%;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															map 																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+section#content > div > div.map{
+	padding-left: 0;
+	padding-right: 0;
+}
+.map iframe{
+	width: 100%;
+	height: 400px;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															list 																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+.col_two{
+	width: 100%;
+	display: flex;
+}
+.col_two > div,.col_two > ul{
+	width: 50%;
+}
+.col_two > div.img{
+}
+.col_two img{
+	width: calc(100vw / 2 - 20px);
+}
+.list{
+	padding: 30px 50px;
+}
+.list > li{
+	list-style: circle;
+	font-size: 23px;
+}
+.list > p{
+	text-align: right;
+	font-size: 23px;
+}
+section > div.col_two > div{
+	font-size: 25px;
+	text-align: center;
+}
+.contact{
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+	width: 300px;
+}
+.contact a.tel{
+	display: inline;
+	position: relative;
+	width: 260px;
+	font-size: 40px;
+	text-align: center;
+	margin-left: 40px;
+	margin: 0 auto;
+}
+.contact a.tel::before{
+	content: "";
+	position: absolute;
+	left: -40px;
+	top: 8px;
+	background-image: url(../img/tel.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 40px;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*														BUTTON																		*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+.btn{
+	display: inline-block;
+	height: 55px;
+	font-size: 28px;
+	color: #fff;
+	width: 300px;
+	background-color: #00A7EA;
+	padding: 6px 14px;
+	border-radius: 7px;
+	line-height: 43px;
+	text-align: center;
+	transform: translate(-2px, -2px);
+	box-shadow: 2px 2px 2px #000000;
+	transition: all .3s ease;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 70px;
+}
+.btn:hover{
+	transform: translate(0px, 0px);
+	box-shadow: 0px 0px 0px #000000;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*														WORKS																		*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+section#works{
+	width: 100%;
+}
+section#works > div > div{
+	padding: 10px;
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 70px;
+}
+section#works > div > div > a{
+	display: block;
+	font-size: 20px;
+	text-align: left;
+	position: relative;
+	width: 100%;
+	background-color: #999999;
+	color: #ffffff;
+	padding-left: 20px;
+	height: 40px;
+	line-height: 40px;
+	margin: 10px 0;
+}
+section#works > div > div > a:after{
+	content: "+";
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	background-color: #777777;
+	color: #ffffff;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	box-shadow: 0 0 2px #ffffff;
+}
+section#works > div > div > a.active:after{
+	content: "-";
+}
+section#works > div > div > a + div{
+	/*height: 0;*/
+	overflow: hidden;
+	transition: all .7s ease;
+}
+section#works > div > div > a.active + div{
+	/*height: 300px;*/
+}
+section#works > div > div > a + div > p{
+	padding: 10px 0;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*														RESPONSIVE																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+@media screen and (max-width: 800px){
+	section#title{
+		height: 100px;
+		margin-bottom: 50px;
+	}
+	section#title > div.text{
+		width: 130px;
+		font-size: 20px;
+		padding: 35px 15px;
+	}
+	section#title > div.text::after{
+		width: 65px;
+		right: -20px;
+	}
+	section#title > div.image{
+		padding: 0;
+		width: calc(100% - 130px);
+	}
+	section#content > div > h2,section#works > div > h2{
+		margin-left: 20px;
+		font-size: 28px;
+	}
+	section#content > div > div{
+		padding-right: 30px;
+	}
+	.table > div > h3{
+		width: 100px;
+	}
+	.table > div > div{
+		width: calc(100% - 100px);
+	}
+	.table > div > div > p{
+		width: 100%;
+	}
+	.table > div > div > p > span:first-child{
+		width: 60%;
+	}
+	.table > div > div > p > span:last-child{
+		width: 40%;
+	}
+	section#content > div > h3{
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 22px;
+	}
+	.col_two{
+		flex-flow: column;
+	}
+	.col_two > div,.col_two > ul{
+		width: 100%;
+	}
+	section#content > div > div.col_two{
+		padding: 10px;
+		padding-bottom: 50px;
+	}
+	.col_two img{
+		width: 100%;
+	}
+	section > p{
+		width: 95%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

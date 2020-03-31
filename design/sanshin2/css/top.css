@@ -1,0 +1,333 @@
+main > section#top{
+	width: 100%;
+	height: calc(100vh - 150px);
+	overflow: hidden;
+}
+main > section#top > div{
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+main > section#top video{
+	min-width: 100%;
+	width: auto;
+	height: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+main > section#top > div > h1{
+	position: absolute;
+	bottom: 50px;
+	right: 40px;
+	width: 500px
+}
+main > section#top > div > h1 > p{
+	font-size: 55px;
+	color: #ffffff;
+	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															COMMON																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+.btn{
+	display: block;
+	position: absolute;
+	height: 55px;
+	font-size: 28px;
+	color: #fff;
+	background-color: #00A7EA;
+	padding: 6px 14px;
+	border-radius: 7px;
+	line-height: 43px;
+	text-align: center;
+	transform: translate(-2px, -2px);
+	box-shadow: 2px 2px 2px #000000;
+	transition: all .3s ease;
+}
+.btn:hover{
+	transform: translate(0px, 0px);
+	box-shadow: 0px 0px 0px #000000;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															TOPIC																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+main > section#topic{
+	background-image: url(../img/bg_gra.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+main > section#topic > div{
+	padding: 50px 0;
+}
+main > section#topic > div *{
+	color: #fff;
+}
+main > section#topic > div > h2{
+	text-align: left;
+	font-size: 55px;
+}
+main > section#topic > div > p{
+	padding: 30px;
+	width: 600px;
+	margin-left: auto;
+	font-size: 23px;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															COMPANY																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+main > section#company{
+	width: 100%;
+	overflow: hidden;
+	min-height: 550px;
+	display: flex;
+}
+main > section#company > div{
+	margin: 0;
+	position: relative;
+}
+main > section#company > div.text{
+	background-color: #ffffff;
+	padding: 50px 20px;
+	width: 40%;
+	min-height: 550px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+main > section#company > div.text > h3{
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-left: 20px;
+	width: 300px;
+	z-index: 3333;
+}
+main > section#company > div.text > h3 > p{
+	font-size: 30px;
+	font-weight: bold;
+	text-shadow: 0 0 2px #ffffff, 0 0 2px #ffffff;
+}
+main > section#company > div.text > h3 > p:first-child{
+	text-align: left;
+}
+main > section#company > div.text > h3 > p:last-child{
+	text-align: right;
+}
+main > section#company > div.image{
+	background-image: url(../img/bg1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	min-width: 970px;
+	height: 550px;	
+	position: absolute;
+	top: 0;
+	right: -30px;
+	filter: grayscale(100%);
+}
+main > section#company > a{
+	bottom: 50px;
+	left: 120px;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															ELSE																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+section#else{
+	background-color: #00A7EA;
+	padding: 25px 0;
+}
+section#else > div{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+section#else > div > a{
+	display: block;
+	width: 40%;
+	padding: 10px;
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+	border: 5px solid #ffffff;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															RECRUIT																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+section#recruit{
+	position: relative;
+	min-height: 550px;
+	background-image: url(../img/bg2.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	overflow: hidden;
+	/*filter: brightness(2.3) contrast(0.8) blur(2px);*/
+}
+section#recruit > div{
+	position: absolute;
+	width: 600px;
+	right: -100px;
+	top: 0;
+	min-height: 550px;
+	transform: skewX(-10deg);
+	background-color: #ffffffd4;
+}
+section#recruit > div > p{
+	position: absolute;
+	top: 50%;
+	left: calc(50% - 30px);
+	text-align: center;
+	font-size: 35px;
+	transform: translate(-50%, -50%) skewX(10deg);
+}
+section#recruit a.btn{
+	bottom: 30px;
+	right: 30%;
+	transform: translateX(-25%) skewX(10deg);
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															RECRUIT																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+section#contact > div{
+	display: flex;
+	min-height: 370px;
+}
+section#contact > div > div{
+	width: calc(100% / 2);
+	padding: 30px 10px;
+	position: relative;
+}
+section#contact > div > div.left > h3{
+	padding: 30px 0;
+	position: relative;
+	font-size: 35px;
+	text-align: center;
+}
+section#contact > div > div.left > h3::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 2px;
+	background-color: #00A7EA;
+}
+section#contact > div > div.left > p{
+	padding: 20px 0;
+	text-align: center;
+	font-size: 20px;
+}
+section#contact > div > div.right > a.tel{
+	display: inline;
+	position: absolute;
+	left: 50%;
+	top: calc(50% - 100px);
+	transform: translate(-50%, -50%);
+	width: 260px;
+	font-size: 40px;
+	text-align: center;
+	margin-left: 40px;
+}
+section#contact > div > div.right > a.tel::before{
+	content: "";
+	position: absolute;
+	left: -40px;
+	top: 8px;
+	background-image: url(../img/tel.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 40px;
+}
+section#contact > div > div.right > a.btn{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+@media screen and (max-width: 800px){
+	main > section#top video{
+		height: 100vh;
+	}
+	main > section#top > div > h1{
+		width: 100%;
+		top: calc(50% + 35px);
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	main > section#top > div > h1 > p{
+		font-size: 30px;
+		text-align: center;
+		text-shadow: 0 0 3px #777777, 0 0 3px #777777;
+	}
+	main > section#topic > div > h2{
+		padding-left: 20px;
+		font-size: 30px;
+	}
+	main > section#topic > div > p{
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		font-size: 20px;
+		width: 100%;
+	}
+	main > section#company > div.text > h3 > p{
+		color: #fff;
+		text-shadow: 0 0 3px #777, 0 0 3px #777;
+	}
+	main > section#company > a{
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	section#else > div > a{
+		font-size: 20px;
+	}
+	section#recruit{
+		background-size: auto;
+	}
+	section#recruit > div{
+		width: 100%;
+		transform: skew(0deg);
+		right: 0;
+		top: 0;
+	}
+	section#recruit > div > p{
+		top: 50%;
+		left: 50%;
+		transform: skew(0deg) translate(-50%,-50%);
+		font-size: 30px;
+		width: 80%;
+		text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+	}
+	section#recruit a.btn{
+		left: 50%;
+		width: 140px;
+		transform: translateX(-50%);
+	}
+	section#contact > div{
+		flex-flow: column;
+		min-height: 600px;
+	}
+	section#contact > div > div{
+		width: 100%;
+	}
+	section#contact > div > div.right > a.tel{
+		position: relative;
+		left: inherit;
+		top: inherit;
+	}
+	section#contact > div > div.right > a.btn{
+		margin-top: 50px;
+		position: relative;
+		top: inherit;
+		left: inherit;
+		transform: translate(0);
+	}
+}

@@ -1,0 +1,406 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NotoSansJP';
+  src: url(./font/NotoSansJP/NotoSansJP-Regular.otf) format('opentype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NotoSansSC';
+  src: url(./font/NotoSansSC/NotoSansSC-Regular.otf) format('opentype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sawarabi';
+  src: url(./font/SawarabiGothic/SawarabiGothic-Regular.ttf) format('truetype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+	font-family: 'Hannari font';
+	src: url('./font/Hannari/Hannari-Regular.eot'); /* IE9 Compat Modes */
+	src: url('./font/Hannari/Hannari-Regular.eot?#iefix') format('embedded-opentype'),
+	     url('./font/Hannari/Hannari-Regular.woff') format('woff'),
+	     url('./font/Hannari/Hannari-Regular.ttf')  format('truetype')
+}
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://themes.googleusercontent.com/static/fonts/kaushanscript/v1/qx1LSqts-NtiKcLw4N03IFhlQWQpSCpzb2Peu3I-Q34.woff) format('woff');
+}
+/* MATERIAL ICON SET */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/icon/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(./font/icon/MaterialIcons-Regular.woff2) format('woff2'),
+    url(./font/icon/MaterialIcons-Regular.woff) format('woff'),
+    url(./font/icon/MaterialIcons-Regular.ttf) format('truetype');
+}
+/* font-family class set */
+.font-kaushan {
+  font-family:'Kaushan Script';
+  font-size:16px;
+}
+
+.font-hannari {
+	font-family: 'Hannari font';
+	font-size: 16px;
+}
+/* material icon set */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+/* COMMON CSS */
+*{
+	margin:0;
+	padding: 0;
+	color: #707070;
+	font-size: 16px;
+	font-family: YuGothic,'Yu Gothic','NotoSansJP','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック','Sawarabi',sans-serif;
+  box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+ul,ol,li{
+	content: "";
+	list-style: none;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 2px #777; 
+}
+::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+        /*              HEADER,FOOTER               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+header,footer{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  background-color: #ffffff;
+  z-index: 5000;
+  /*border-bottom: 1px dashed #707070;*/
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+header.scroll{
+  box-shadow: 0 2px 2px #707070;
+}
+header > .logo, footer > .logo{
+  width: 260px;
+  height: 50px;
+  display: flex;
+  margin: 50px 10px;
+  cursor: pointer;
+}
+header > .logo > img, footer > .logo > img{
+  width: 50px;
+  height: 50px;
+}
+header > .logo > h1, footer > .logo > h1{
+  width: 250px;
+  padding-left: 10px;
+  font-size: 25px;
+  line-height: 50px;
+}
+header > nav{
+  width: calc(100% - 260px);
+  height: 150px;
+}
+header > nav *{
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+header > nav > ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+header > nav > ul > li{
+  width: calc(100% / 5);
+}
+header > nav > ul > li > a{
+  position: relative;
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  height: 150px;
+  padding: 10px;
+  line-height: 130px;
+}
+header > nav > ul > li > a::before{
+  content: attr(data-item);
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #00A7EA;
+}
+header > nav > ul > li > a:hover::before{
+  color: #ffffff;
+}
+header > nav > ul > li > a:hover{
+  background-color: #00A7EA;
+  color: #fff;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+        /*              MENU               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+#menu_bar{
+  display: none;
+  position: fixed;
+  right: 10px;
+  top: 20px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 5000;
+}
+#menu_bar > span{
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #707070;
+  border-radius: 1px;
+  transition: all .3s ease;
+}
+#menu_bar > span:nth-child(1){
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu_bar > span:nth-child(2){
+  bottom: 0;
+  transform: rotate(0deg);
+}
+#menu_bar.active > span{
+  top: calc(50% - 1px);
+}
+#menu_bar.active > span:nth-child(1){
+  transform: rotate(405deg);
+}
+#menu_bar.active > span:nth-child(2){
+  transform: rotate(-405deg);
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+        /*              FOOTER               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+footer{
+  width: 100%;
+  height: 200px;
+  background-color: #00A7EA;
+}
+footer h1{
+  color: #fff;
+}
+footer > div.foot_nav{
+  width: calc(100% - 260px);
+}
+div.foot_nav > ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+div.foot_nav > ul > li{
+  width: calc(100% / 5);
+}
+div.foot_nav > ul > li{
+}
+div.foot_nav > ul > li > a{
+  font-size: 20px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 2px;
+}
+div.foot_nav > ul > li > a:hover{
+  border-bottom: 1px solid #fff;
+}
+div.foot_nav > ul > li > ul{
+  width: 100%;
+}
+div.foot_nav > ul > li > ul > li{
+  width: 100%;
+  margin-left: 30px;
+}
+div.foot_nav > ul > li > ul > li:hover{
+  border-bottom: 1px dashed #fff;
+}
+div.foot_nav > ul > li > ul > li > a{
+  color: #fff;
+  display: block;
+  padding: 5px;
+  text-align: center;
+}
+
+@media screen and (max-width: 960px){
+  header{
+    height: 100px;
+  }
+  header > .logo{
+    width: calc( 100% - 100px);
+    margin: 25px;
+    margin-right: auto;
+  }
+  header > .logo > img{
+    width: 40px;
+    height: 40px;
+  }
+  header > .logo > h1{
+    line-height: 35px;
+  }
+  #menu_bar{
+    display: block;
+  }
+  header > #menu_bar + nav{
+    width: 0px;
+    height: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  header > #menu_bar.active + nav{
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0;
+  }
+  header > nav{
+    position: fixed;
+  }
+  header > nav > ul{
+    flex-flow: column;
+    height: 100%;
+    justify-content: space-around;
+  }
+  header > nav > ul > li{
+    width: 100%;
+    height: calc(100% / 5);
+  }
+  header > nav > ul > li > a{
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    line-height: 80px;
+    border-bottom: 1px dashed #00A7EA;
+  }
+  header > nav > ul > li > a::before{
+    bottom: -10px;
+  }
+  header > nav > ul > li:first-child > a{
+    border-top: 1px dashed #00A7EA;
+  }
+  footer{
+    flex-flow: column;
+    height: auto;
+    padding-bottom: 60px;
+  }
+  footer > div.foot_nav{
+    width: 100%;
+  }
+  footer > .logo{
+    width: 300px;
+    margin: 30px auto;
+  }
+  div.foot_nav > ul{
+    flex-flow: column;
+  }
+  div.foot_nav > ul > li:first-child{
+    border-top: 1px dashed #fff;
+  }
+  div.foot_nav > ul > li{
+    border-bottom: 1px dashed #fff;
+    padding: 10px 0;
+    width: 100%;
+  }
+  div.foot_nav > ul > li > ul > li{
+    margin: 0;
+    padding: 3px;
+  }
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+        /*              MAIN               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+main{
+  margin-top: 150px;
+}
+main > section{
+  position: relative;
+  width: 100%;
+}
+main > section > div{
+  width: 800px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 960px){
+  main{
+    margin-top: 100px;
+  }
+  main > section > div{
+    width: 100%;
+    padding: 10px;
+  }
+}
