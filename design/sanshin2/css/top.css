@@ -47,6 +47,7 @@ main > section#top > div > h1 > p{
 	transform: translate(-2px, -2px);
 	box-shadow: 2px 2px 2px #000000;
 	transition: all .3s ease;
+	z-index: 2000;
 }
 .btn:hover{
 	transform: translate(0px, 0px);
@@ -70,12 +71,16 @@ main > section#topic > div *{
 main > section#topic > div > h2{
 	text-align: left;
 	font-size: 55px;
+	text-shadow: 0 0 5px #fff;
+	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 main > section#topic > div > p{
 	padding: 30px;
 	width: 600px;
 	margin-left: auto;
 	font-size: 23px;
+	text-shadow: 0 0 10px #fff;
+	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
 /*															COMPANY																	*/
@@ -93,24 +98,27 @@ main > section#company > div{
 main > section#company > div.text{
 	background-color: #ffffff;
 	padding: 50px 20px;
-	width: 40%;
+	width: 600px;
 	min-height: 550px;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -100px;
+	z-index: 1000;
+	transform: skewX(-20deg);
 }
 main > section#company > div.text > h3{
 	position: absolute;
-	left: 20px;
+	left: 50%;
 	top: 50%;
-	transform: translateY(-50%);
-	padding-left: 20px;
-	width: 300px;
+	transform: ;
+	padding-left: 60px;
+	width: 320px;
+	transform: skewX(20deg) translate(-50%,-50%);
 	z-index: 3333;
 }
 main > section#company > div.text > h3 > p{
 	font-size: 30px;
-	font-weight: bold;
+	font-weight: normal;
 	text-shadow: 0 0 2px #ffffff, 0 0 2px #ffffff;
 }
 main > section#company > div.text > h3 > p:first-child{
@@ -120,11 +128,11 @@ main > section#company > div.text > h3 > p:last-child{
 	text-align: right;
 }
 main > section#company > div.image{
-	background-image: url(../img/bg1.png);
+	background-image: url(../img/bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom;
-	min-width: 970px;
+	min-width: 100%;
 	height: 550px;	
 	position: absolute;
 	top: 0;
@@ -175,7 +183,7 @@ section#recruit > div{
 	right: -100px;
 	top: 0;
 	min-height: 550px;
-	transform: skewX(-10deg);
+	transform: skewX(-20deg);
 	background-color: #ffffffd4;
 }
 section#recruit > div > p{
@@ -184,12 +192,12 @@ section#recruit > div > p{
 	left: calc(50% - 30px);
 	text-align: center;
 	font-size: 35px;
-	transform: translate(-50%, -50%) skewX(10deg);
+	transform: translate(-50%, -50%) skewX(20deg);
 }
 section#recruit a.btn{
 	bottom: 30px;
 	right: 30%;
-	transform: translateX(-25%) skewX(10deg);
+	transform: translateX(-25%) skewX(20deg);
 }
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
 /*															RECRUIT																	*/
@@ -207,6 +215,7 @@ section#contact > div > div.left > h3{
 	padding: 30px 0;
 	position: relative;
 	font-size: 35px;
+	line-height: 35px;
 	text-align: center;
 }
 section#contact > div > div.left > h3::after{
@@ -220,7 +229,7 @@ section#contact > div > div.left > h3::after{
 	background-color: #00A7EA;
 }
 section#contact > div > div.left > p{
-	padding: 20px 0;
+	padding: 30px 0;
 	text-align: center;
 	font-size: 20px;
 }
@@ -278,9 +287,29 @@ section#contact > div > div.right > a.btn{
 		font-size: 20px;
 		width: 100%;
 	}
+	main > section#company{
+		min-height: 400px;
+	}
+	main > section#company > div.text{
+		width: 100%;
+		min-height: 400px;
+		left: 0;
+		transform: skew(0);
+		background-color: #0000003b;
+	}
+	main > section#company > div.text > h3{
+		transform: translate(-50%,-50%) skewX(0);
+		padding: 0;
+	}
 	main > section#company > div.text > h3 > p{
 		color: #fff;
 		text-shadow: 0 0 3px #777, 0 0 3px #777;
+	}
+	main > section#company > div.image{
+		min-height: 400px;
+		background-size: cover;
+		background-position: right;
+		right: 0;
 	}
 	main > section#company > a{
 		left: 50%;
@@ -290,10 +319,22 @@ section#contact > div > div.right > a.btn{
 		font-size: 20px;
 	}
 	section#recruit{
-		background-size: auto;
+		background-size: 100%;
+		background-position: center;
+		min-height: 400px;
+		animation: bgimgSize 30s linear infinite alternate;
+	}
+	@keyframes bgimgSize{
+		0%{
+			background-size: 100%;
+		}
+		100%{
+			background-size: 220%;
+		}
 	}
 	section#recruit > div{
 		width: 100%;
+		min-height: 400px;
 		transform: skew(0deg);
 		right: 0;
 		top: 0;
@@ -319,12 +360,13 @@ section#contact > div > div.right > a.btn{
 		width: 100%;
 	}
 	section#contact > div > div.right > a.tel{
-		position: relative;
-		left: inherit;
+		position: absolute;
+		left: 50%;
+		transform: translateX(calc(-50% - 25px));
 		top: inherit;
 	}
 	section#contact > div > div.right > a.btn{
-		margin-top: 50px;
+		margin-top: 100px;
 		position: relative;
 		top: inherit;
 		left: inherit;

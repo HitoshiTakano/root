@@ -1,0 +1,473 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NotoSansJP';
+  src: url(./font/NotoSansJP/NotoSansJP-Regular.otf) format('opentype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NotoSansSC';
+  src: url(./font/NotoSansSC/NotoSansSC-Regular.otf) format('opentype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sawarabi';
+  src: url(./font/SawarabiGothic/SawarabiGothic-Regular.ttf) format('truetype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* --Corbel */
+/* regular */
+@font-face {
+  font-family: 'Corbel';
+  src: local('Corbel'), url(./font/corbel/CORBEL.TTF) format('truetype');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* bold */
+@font-face {
+  font-family: 'Corbel';
+  src: local('CorbelB'), url(./font/corbel/CORBELB.TTF) format('truetype');  
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+/* regular italic */
+@font-face {
+  font-family: 'Corbel';
+  src: local('Corbel Italic'), url(./font/corbel/Corbel Italic.ttf) format('truetype');  
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+/* bold italic */
+@font-face {
+  font-family: 'Corbel';
+  src: local('Corbel Bold Italic'), url(./font/corbel/Corbel Bold Italic.ttf) format('truetype');  
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+/*  //Corbel */
+
+
+@font-face {
+	font-family: 'Hannari font';
+	src: url('./font/Hannari/Hannari-Regular.eot'); /* IE9 Compat Modes */
+	src: url('./font/Hannari/Hannari-Regular.eot?#iefix') format('embedded-opentype'),
+	     url('./font/Hannari/Hannari-Regular.woff') format('woff'),
+	     url('./font/Hannari/Hannari-Regular.ttf')  format('truetype')
+}
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://themes.googleusercontent.com/static/fonts/kaushanscript/v1/qx1LSqts-NtiKcLw4N03IFhlQWQpSCpzb2Peu3I-Q34.woff) format('woff');
+}
+/* MATERIAL ICON SET */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/icon/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(./font/icon/MaterialIcons-Regular.woff2) format('woff2'),
+    url(./font/icon/MaterialIcons-Regular.woff) format('woff'),
+    url(./font/icon/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+/* Segoe */
+@font-face {
+font-family: 'Segoe UI Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Segoe UI Regular'), url('./font/segoe/Segoe_UI.woff') format('woff'), url('./font/segoe/Segoe_UI.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Segoe UI Italic';
+font-style: italic;
+font-weight: normal;
+src: local('Segoe UI Italic'), url('./font/segoe/Segoe_UI_Italic.woff') format('woff'), url('./font/segoe/Segoe_UI_Italic.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Segoe UI Bold';
+font-style: normal;
+font-weight: bold;
+src: local('Segoe UI Bold'), url('./font/segoe/Segoe_UI_Bold.woff') format('woff'), url('./font/segoe/Segoe_UI_Bold.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Segoe UI Bold Italic';
+font-style: italic;
+font-weight: bold;
+src: local('Segoe UI Bold Italic'), url('./font/segoe/Segoe_UI_Bold_Italic.woff') format('woff'), url('./font/segoe/Segoe_UI_Bold_Italic.ttf') format('truetype');
+}
+
+/* font-family class set */
+.font-kaushan {
+  font-family:'Kaushan Script';
+  font-size:16px;
+}
+
+.font-hannari {
+	font-family: 'Hannari font';
+	font-size: 16px;
+}
+/* material icon set */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+
+/* COMMON CSS */
+*{
+	margin:0;
+	padding: 0;
+	color: #777777;
+	/*font-size: 16px;*/
+	font-family: 'Corbel', 'Sawarabi', 'NotoSansJP',YuGothic,'Yu Gothic','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+ul,ol,li{
+	content: "";
+	list-style: none;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar{
+  /*display: none;*/
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 2px #777; 
+}
+::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+html, body{
+  background-color: #E6E6E6;
+  width: 100%;
+}
+
+/* HEADER */
+header{
+  height: 127px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .7);
+  box-shadow: 0 0 0 #000000;
+  transition: all .4s ease;
+  z-index: 2000;
+}
+header.scroll{
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 5px #00000040;
+}
+header.active{
+  background-color: rgba(255, 255, 255, 1);
+}
+header.sub{
+  background-color: rgba(255, 255, 255, 1);
+}
+/* LOGO */
+.logo{
+  display: block;
+  width: 187px;
+  height: calc(100% - 40px);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 72px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+/* NAVIGATION */
+nav{
+  height: 127px;
+  width: calc(100% - 187px);
+  font-size: 30px;
+  color: #144D5A;
+  padding-right: 46px;
+}
+nav > ul{
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+nav > ul > li{
+  height: 100%;
+}
+nav > ul > li > a{
+  padding: 0px 25px;
+  line-height: 127px;
+  display: block;
+}
+nav > ul > li > a:hover{
+  /*background-color: #fff;*/
+}
+/* SP MENU BAR INITIAL SETTINGS */
+.menu_bar{
+  display: none;
+  height: 25px;
+  width: 40px;
+  position: absolute;
+  right: 29px;
+  top: 31px;
+  overflow: hidden;
+}
+.menu_bar > span{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #144D5A;
+  transition: all .4s ease;
+}
+.menu_bar > span:nth-child(1){
+  top: 0;
+}
+.menu_bar > span:nth-child(2){
+  top: 10px;
+  transform: translateX(0);
+}
+.menu_bar > span:nth-child(3){
+  top: 20px;
+}
+.menu_bar.active{
+
+}
+.menu_bar.active > span:nth-child(1){
+  top: 11px;
+  transform: rotate(405deg);
+}
+.menu_bar.active > span:nth-child(2){
+  top: 11px;
+  transform: translateX(-1000px);
+}
+.menu_bar.active > span:nth-child(3){
+  top: 11px;
+  transform: rotate(-405deg);
+}
+
+/* FOOTER */
+footer{
+  height: 270px;
+  width: 100%;
+  display: flex;
+  background-color: #040835;
+  color: #fff;
+  padding: 79px 50px;
+}
+footer > a.logo_w{
+  display: block;
+  background-image: url(../img/logo_white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 286px;
+  height: 113px;
+  margin-left: 50px;
+}
+footer > nav{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+footer > nav > ul > li > a{
+  color: #fff;
+}
+div#cpy{
+  background-color: #000000;
+  padding: 10px;
+  font-size: 10px;
+}
+div#cpy *{
+  font-family: 'Segoe UI Regular', 'Sawarabi', 'NotoSansJP',YuGothic,'Yu Gothic','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+  font-weight: normal;
+  color: #fff;
+}
+div#cpy > p{
+  line-height: 10px;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto;
+}
+div#cpy > p > a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1150px){
+  footer{
+    padding-right: 0;
+    padding-left: 40px;
+  }
+  nav > ul > li > a{
+    font-size: 25px;
+  }
+  footer > nav{
+    padding: 0 12px;
+  }
+}
+@media screen and (max-width: 1000px){
+  nav{
+    padding-right: 0;
+  }
+  nav > ul > li > a{
+    padding: 0px 12px;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 910px){
+  header {
+    height: 87px;
+  }
+  .logo{
+    width: 109px;
+    margin-left: 20px;
+  }
+  .menu_bar{
+    display: block;
+  }
+  nav{
+    position: fixed;
+    /*height: calc( 100vh - 87px );*/
+    top: 86px;
+    left: 0;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .7);
+    overflow: hidden;
+    z-index: 9999;
+  }
+  header.scroll > nav, header.active > nav{
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .menu_bar + nav{
+    height: 0px;
+    padding: 0;
+    transition: all .3s ease;
+  }
+  .menu_bar.active + nav{
+    height: calc( 100vh - 87px );
+    padding: 30px 0;
+  }
+  nav > ul{
+    flex-flow: column;
+    justify-content: space-around;
+  }
+  nav > ul > li{
+    height: calc(100% / 5);
+  }
+  nav > ul > li > a{
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: calc((100vh - 167px) / 5);
+    border-bottom: 2px dashed #fff;
+  }
+  footer{
+    padding: 55px 0;
+    height: 478px;
+    flex-flow: column;
+  }
+  footer > a.logo_w{
+    margin: 0 auto;
+    width: 149px;
+    height: 66px;
+  }
+  footer > nav{
+    background-color: inherit;
+    height: calc(100% - 106px);
+    margin-top: 40px;
+  }
+  footer > nav > ul {
+    height: 100%;
+  }
+  footer > nav > ul > li{
+    height: calc(100% / 5);
+  }
+  footer > nav > ul > li > a{
+    border: none;
+    height: 100%;
+    line-height: 1.5em;
+  }
+  div#cpy > p{
+    font-size: 10px;
+  }
+}
+
+/* COMMON CONTENTS SECTIONS */
+main{
+  width: 100%;
+}
+main > section{
+  width: 100%;
+}
+main > section > h2{
+  width: 100%;
+  padding: 80px 0;
+  text-align: center;
+  font-size: 45px;
+}
+@media screen and (max-width: 910px){
+  main > section > h2{
+    padding: 30px 0;
+    font-size: 22px;
+  }
+}

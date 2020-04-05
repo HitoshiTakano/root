@@ -32,18 +32,18 @@ $url = $_SERVER["REQUEST_URI"];
 //GLOBAL 変数用設定
 $page = 'お問い合わせ';
 $title = $page . '｜三伸工業株式会社';
-$top_page = 'https://riding.co.jp';																			//トップページURL（送信完了後リンク先）
-$title_arr = ['name'=>'氏名','mail'=>'メールアドレス','tel'=>'電話番号','subject'=>'件名','contents'=>'お問い合わせ内容'];	//項目・項目名セット
-$req_items = ['name'=>'req','mail'=>'req','tel'=>'req','subject'=>'req','contents'=>'req'];							//必須項目設定（reqは必須、''は任意
+$top_page = 'https://riding.co.jp/sample/sanshin_hp/';																			//トップページURL（送信完了後リンク先）
+$title_arr = ['name'=>'お名前','mail'=>'メールアドレス','tel'=>'お電話番号','company'=>'御社名','contents'=>'お問い合わせ内容'];	//項目・項目名セット
+$req_items = ['name'=>'req','mail'=>'req','tel'=>'req','company'=>'','contents'=>'req'];							//必須項目設定（reqは必須、''は任意
 $err_message = resetItems($req_items);																				//エラーメッセージ用（！編集非推奨！）
 // text => 記号禁止、mail => メールアドレス形式チェック、tel =>　電話番号形式チェック 
-$val_items = ['name'=>'text','mail'=>'mail','tel'=>'tel','subject'=>'text','contents'=>'text'];						//validate方法選択
+$val_items = ['name'=>'text','mail'=>'mail','tel'=>'tel','company'=>'text','contents'=>'text'];						//validate方法選択
 $hankaku_array = array('tel','mail');																				//半角化に変換処理を行う、POSTデータ（各nameを記述）
 //メール設定
-$to_mail = 'info@riding.co.jp';										//送信先（管理者宛）メールアドレス(to)
+$to_mail = 'y_kondo@riding.co.jp';										//送信先（管理者宛）メールアドレス(to)
 $err_mail = 'develop@riding.co.jp';									//エラーログ・不正パラメータ送信用メールアドレス（デフォルトでは送信先メールアドレスと同じ
 $bcc_mail = 'develop@riding.co.jp';									//BCC送信先メールアドレス
-$cc_mail = 'keiyaku@riding.co.jp';									//CC送信先メールアドレス
+$cc_mail = 'yoheykondo510@gmail.com';									//CC送信先メールアドレス
 $subject = "ホームページからのお問い合わせ";								//件名（管理者受信メール）
 //リファラチェック用
 $referUrl = 'riding.co.jp';
@@ -115,7 +115,7 @@ function sendMail($comm){
 	$from_name = $comm -> h($post['name']);
 	$encodedFrom = mb_convert_encoding($from_name, 'UTF-8', 'AUTO');
 	$fromMail = $comm -> h($post['mail']);
- 	if($bcc_mail!='') $bccMail = 'develop@riding.co.jp';
+ 	if($bcc_mail!='') $bccMail = 'develop@excitingworks.jp';
  	//内容セット（HTMLメール形式）
  	$message = bodySet($comm);
 	$message = "<html><body>". $message ."</body></html>";
@@ -179,37 +179,50 @@ commmonHead();
 		<section id="title" class="form">
 			<div class="text"><?php echo $page; ?></div>
 			<div class="image">
-				<img src="img/sub_title.png" alt="bg_title">
+				<img src="img/contact.png" alt="bg_title">
 			</div>
 		</section>
+		
 		<section id="contents">
-			<h2>入力画面</h2>
 			<div class="form">
+				<p>お問い合わせは、お電話または下記のフォームにて受け付けております。</p>
 				<p class="alert"><?php echo $comm -> h($errmsg); ?></p>
 				<form action="<?php echo $url ?>" method="post" autocomplete="off">
-					<div class="name_div">氏名<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['name']; ?></span></div>
-					<div><input type="text" name="name" id="name" placeholder="(必須)三伸　太郎" maxlength="30" value="<?php if(isset($post['name'])) echo $comm -> h($post['name']); ?>" required></div>
-					<div class="mail_div">メールアドレス<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['mail']; ?></span></div>
-					<div><input type="mail" name="mail" id="mail" placeholder="(必須) sample@mail.com" maxlength="255" value="<?php if(isset($post['mail'])) echo $comm -> h($post['mail']); ?>" required></div>
-					<div class="tel_div">電話<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['tel']; ?></span></div>
-					<div><input type="tel" name="tel" id="tel" placeholder="(必須) 01234567890" maxlength="12" value="<?php if(isset($post['tel'])) echo $comm -> h($post['tel']); ?>" required></div>
-					<div class="subject_div">件名<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['subject']; ?></span></div>
-					<div><input type="text" name="subject" id="subject" placeholder="(必須) 件名" maxlength="100" value="<?php if(isset($post['subject'])) echo $comm -> h($post['subject']); ?>" required></div>
-					<div class="contents_div">お問い合わせ内容<span class="req">（必須）</span><span class="err_msg"><?php echo $errArr['contents']; ?></span></div>
-					<textarea maxlength="500" name="contents" id="contents" placeholder="(必須) お問い合わせ内容&#13;&#10;お問い合わせ内容をご記入ください。"><?php if(isset($post['contents'])) echo $comm -> h($post['contents']); ?></textarea>
-					<div class="submit_btn">
-						<input type="submit" name="submit" value="submit" id="submit" disabled><label for="submit">確認画面へ</label>
+					<div class="company_div">
+						<label for="company">御社名<span class="err_msg"><?php echo $errArr['company']; ?></span></label>
+						<input type="text" name="company" value="<?php if(isset($post['subject'])) echo $comm -> h($post['subject']); ?>" id="company" maxlength="50" placeholder="三伸工業株式会社">
+					</div>
+					<div class="name_div">
+						<label for="name">お名前<span class="err_msg"><?php echo $errArr['name']; ?></span></label>
+						<input type="text" name="name" value="<?php if(isset($post['name'])) echo $comm -> h($post['name']); ?>" id="name" maxlength="50" placeholder="三伸太郎" required>
+					</div>
+					<div class="tel_div">
+						<label for="tel">お電話番号<span class="err_msg"><?php echo $errArr['tel']; ?></span></label>
+						<input type="tel" name="tel" value="<?php if(isset($post['tel'])) echo $comm -> h($post['tel']); ?>" id="tel" maxlength="13" placeholder="0455732399" required>
+					</div>
+					<div class="mail_div">
+						<label for="mail">メールアドレス<span class="err_msg"><?php echo $errArr['mail']; ?></span></label>
+						<input type="email" name="mail" value="<?php if(isset($post['mail'])) echo $comm -> h($post['mail']); ?>" id="mail" maxlength="255" placeholder="info@sanshin.co.jp" required>
+					</div>
+					<div class="contents_div">
+						<label for="contents">お問い合わせ内容<span class="err_msg"><?php echo $errArr['contents']; ?></span></label>
+						<textarea name="contents" placeholder="お問い合わせ内容" maxlength="500" value required><?php if(isset($post['contents'])) echo $comm -> h($post['contents']); ?></textarea>
+					</div>
+					<div class="check_div">
+						<input type="checkbox" name="check" value="1" id="check" required >
+						<label for="check" class="checkbox" <?php if(isset($post['check'])) echo 'checked'; ?> >上記内容で送信いたしますので、問題なければチェックを入れてください。<span class="err_msg"></span></label>
 					</div>
 					<input type="hidden" name="token" value="<?php echo $token; ?>">
-					<input type="hidden" name="verify" value="0">
-					<!-- <a href="javascript:history.back();" style="">BACK</a> -->
+					<div>
+						<input type="submit" name="submit" value="送信" disabled>
+					</div>
 				</form>
 			</div>
 		</section>
+
 	</main>
 	<!-- COMMON FOOTER -->
 	<?php include_once './html/footer.html'; ?>
-	<?php include_once dirname(__FILE__) . '/html/jquery.html'; ?>
 </body>
 	<?php
 closeHTML();
@@ -313,11 +326,22 @@ commmonHead();
 $top_page = $GLOBALS['top_page'];
 ?>
 <body>
-	<div class="form">
-		<p class="heading">完了画面</p>
-		<p>送信完了しました。</p>
-		<a href="<?php echo $top_page ?>">TOPページへ戻る</a>
-	</div>
+	<?php include_once './html/header.html'; ?>
+	<main>
+		<section id="title" class="form">
+			<div class="text">お問い合わせ</div>
+			<div class="image">
+				<img src="img/contact.png" alt="bg_title">
+			</div>
+		</section>
+		<div class="complete">
+			<h4>お問い合わせ完了</h4>
+			<p>送信ありがとうございます。<br><br>この度はお問い合わせメールをお送りいただきありがとうございます。<br>後ほど、担当者よりご連絡をさせていただきます。<br>今しばらくお待ちくださいますようよろしくお願い申し上げます。<br>
+			<br>なお、しばらくたっても返信、返答がない場合は、お手数ですが再度送信いただくか、<br>お電話（ 045-5732-399 ）にてご連絡いただけますと幸いです。</p>
+			<a href="<?php echo $top_page ?>">TOPページへ戻る</a>
+		</div>
+	</main>
+	<?php include_once './html/footer.html'; ?>
 </body>
 <?php
 closeHTML();
@@ -396,9 +420,8 @@ function commmonHead(){
 	<title>問い合わせフォーム</title>
 	<!-- COMMON JS -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="js/validate.js"></script>
-	<!-- <script type="text/javascript" src="js/contact.js"></script> -->
-	<!-- CSS -->
+	<<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/form.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/sub.css">
 	<link rel="stylesheet" type="text/css" href="css/form.css">
@@ -459,7 +482,7 @@ function nullChk($comm, $valid){
 
 	$errCnt = 0;
 	foreach ($reqItems as $key => $value) {
-		if($value='req'){
+		if($value=='req'){
 			//パラメータ設定確認
 			if(!isset($post[$key])){
 				$errmsg = '必須入力項目パラメータの値に不正値があります。ご確認ください。';
@@ -487,6 +510,7 @@ function formatChk($comm, $valid){
 		foreach ($val_items as $k => $v) {
 			if(($key==$k) && isset($post[$k])){
 				$chk = $chk + 1;
+				if($value=='') return true;
 				if(!paramCheck($value, $v, $valid)) return false;
 			}
 		}
@@ -501,7 +525,7 @@ function paramCheck($val, $type, $valid){
 	if($type=='text')	return $valid -> chkSymbol($val);
 	if($type=='tel')	return $valid -> chkTel($val);
 	if($type=='mail')	return $valid -> chkMail($val);
-	return false;
+	return true;
 }
 //サニタイズ処理
 function sanitize($arr){

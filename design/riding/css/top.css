@@ -1,0 +1,521 @@
+section#top{
+	background-image: url(../img/top.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 87vh;
+	position: relative;
+}
+section#top > div.message{
+	background-image: url(../img/topMessage.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 700px;
+	height: 70px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+section#top > a.arrow_down{
+	position: absolute;
+	display: block;
+	bottom: -56px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 112px;
+	height: 112px;
+	border-radius: 50%;
+	background-color: #667E9E;
+}
+section#top > a.arrow_down::after{
+	content: "";
+	position: absolute;
+	top: calc( 50% - 6px);
+	left: 50%;
+	width: 25%;
+	height: 25%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	border-bottom: 5px solid #fff;
+	border-right: 5px solid #fff;
+	animation: arrowDownAnime 1.5s ease infinite;
+}
+@keyframes arrowDownAnime{
+	0%{
+		top: calc( 50% - 12px);
+	}
+	100%{
+		top: calc( 50% - 0px);
+	}
+}
+
+/* MISSION */
+section#mission{
+	padding-top: 13vh;
+	background-color: #fff;
+}
+section#mission > div{
+	padding-top: 30px;
+	text-align: center;
+}
+section#mission > div > h2{
+	font-size: 45px;
+}
+section#mission > div > h3{
+	margin-top: 100px;	
+	font-size: 44px;
+	letter-spacing: -2px;
+	font-family: 'Corbel', 'Sawarabi', 'NotoSansJP',YuGothic,'Yu Gothic','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+}
+section#mission > div > p{
+	margin-top: 150px;
+	font-size: 25px;
+	line-height: 1.8em;
+	padding-bottom: 140px;
+}
+
+/* SERVICE */
+section#service > div, section#recruit > div{
+	width: 100%;
+	padding: 90px 0;
+	padding-bottom: 120px;
+	background-color: #Fff;
+}
+section#service > div > div{
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+}
+section#service > div > div > div{
+	width: calc( 100% / 3);
+	padding: 20px;
+	padding-bottom: 0;
+	border-left: 1px solid #707070;
+	position: relative;
+}
+section#service > div > div > div > h3{
+	font-size: 38px;
+	line-height: 38px;
+}
+section#service > div > div > div > h4{
+	font-size: 25px;
+	line-height: 25px;
+}
+section#service > div > div > div > p{
+	font-size: 20px;
+	padding-bottom: 30px;
+	margin-top: 40px;
+	margin-left: 10px;
+}
+
+section#service > div > div > div > a{
+	display: block;
+	position: absolute;
+	top: calc( 100% + 10px);
+	left: 20px;
+	border-radius: 16px;
+	background-color: #667E9E;
+	font-size: 16px;
+	padding: 8px 50px;
+	color: #fff;
+	text-align: center;
+	width: 147px;
+	transition: all .5s ease;
+}
+section#service > div > div > div > a:hover{
+	transform: translate(-1px, -1px);
+	box-shadow: 2px 2px 2px #000000;
+}
+section#service > div > div > div > a:active{
+	transform: translate(0, 0);
+	box-shadow: 0px 0px 2px #000000;
+}
+
+section#service > div > div > div > a::before{
+	content: "";
+	position: absolute;
+	left: -20px;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	border-left: 1px solid #707070;
+}
+section#service > div > div:nth-of-type(2){
+	margin-top: 20px;
+}
+section#service > div > div:nth-of-type(2) > div{
+	padding: 0 20px;
+}
+
+/* Recruit */
+section#recruit > div{
+	padding: 0;
+	min-height: 520px;
+	height: 520px;
+	overflow: hidden;
+}
+section#recruit > div > div{
+	width: 90%;
+	height: 520px;
+	margin: 0 auto;
+	position: relative;
+}
+section#recruit > div > div > div.image{
+	width: 100%;
+	min-height: 520px;
+	background-image: url(../img/bg_recruit.png);
+	background-size: cover;
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+section#recruit > div > div > div.text{
+	position: absolute;
+	width: 50%;
+	min-height: 520px;
+	top: 0;
+	right: -150px;
+	transform: skew(-25deg);
+	background-color: #fff;
+}
+section#recruit > div > div > div.text > h3{
+	position: absolute;
+	top: 50%;
+	right: 150px;
+	width: 615px;
+	font-size: 35px;
+	color: #000;
+	transform: skew(25deg) translateY(-50%);
+}
+section#recruit > div > div > div.text > h3 > span{
+	color: #000;
+	white-space: nowrap;
+}
+section#recruit > div > div > a.btn{
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 75px;
+	font-size: 33px;
+	color: #fff;
+	text-align: center;
+	background-color: #667E9E;
+	border-radius: 30px;
+	width: 250px;
+	height: 60px;
+	line-height: 60px;
+	transition: all .3s ease;
+}
+section#recruit > div > div > a.btn:hover{
+	transform: translate(-1px, -1px);
+	box-shadow: 2px 2px 2px #000000;
+}
+section#recruit > div > div > a.btn:active{
+	transform: translate(0, 0);
+	box-shadow: 0px 0px 2px #000000;
+}
+/* NEWS */
+section#news > div{
+	width: 100%;
+}
+section#news > div > h2{
+	text-align: center;
+	margin-top: 120px;
+	margin-bottom: 78px;
+	font-size: 45px;
+	color: #000;
+}
+section#news > div > div{
+	width: 100%;
+}
+section#news > div > div > ul{
+	width: 860px;
+	margin: 0 auto;
+	padding-bottom: 120px;
+}
+section#news > div > div > ul > li{
+	height: 70px;
+	display: flex;
+	padding: 10px 40px;
+	width: 100%;
+	border-bottom: 2px solid #90B4BD;
+}
+section#news > div > div > ul > li > span{
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: normal;
+}
+section#news > div > div > ul > li	 > span:nth-of-type(1){
+	width: 200px;
+}
+section#news > div > div > ul > li > span:nth-of-type(2){
+	width: calc(100% - 200px);
+}
+
+/* COMPANY */
+section#company{
+	background-image: url(../img/bg.png);
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+section#company > div{
+	padding: 100px 0;
+	width: 100%;
+}
+section#company > div > h2{
+	width: 100%;
+	font-size: 45px;
+	text-align: center;
+	margin-bottom: 95px;
+	color: #fff;
+}
+section#company > div > div > ul {
+	width: 860px;
+	margin: 0 auto;
+	padding-bottom: 120px;
+}
+section#company > div > div > ul > li{
+	display: flex;
+	width: 100%;
+	padding: 10px 40px;
+	width: 100%;
+	border-bottom: 1px solid #707070;
+}
+section#company > div > div > ul > li > span{
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: normal;
+	color: #fff;
+}
+section#company > div > div > ul > li	 > span:nth-of-type(1){
+	width: 200px;
+}
+section#company > div > div > ul > li > span:nth-of-type(2){
+	width: calc(100% - 200px);
+}
+
+
+
+
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/* RESOPONSIVE */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+@media screen and (max-width: 910px){
+	section#top{
+		background-position: 20%;
+		height: 100vh;
+	}
+	section#top > div.message{
+		width: 80%;
+	}
+	section#top > a.arrow_down{
+		width: 40px;
+		height: 40px;
+		bottom: 120px;
+		background-color: inherit;
+	}
+	section#top > a.arrow_down::before{
+		content:"MISSION";
+		display: block;
+		position: absolute;
+		top: calc( 50% + 12px);
+		left: 50%;
+		color: #fff;
+		font-size: 14px;
+		font-family: 'Corbel', 'Sawarabi', 'NotoSansJP',YuGothic,'Yu Gothic','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+		transform: translate(-50%, -50%);
+		animation: textDownAnime 1.5s ease infinite;
+	}
+	@keyframes textDownAnime{
+		0%{
+			top: calc( 50% + 12px);
+		}
+		100%{
+			top: calc( 50% + 24px);
+		}
+	}
+	section#mission{
+		padding-top: 0;
+	}
+	section#mission > div{
+		padding: 15px;
+	}
+	section#mission > div > h2{
+		margin: 100px auto;
+		font-size: 21px
+	}
+	section#mission > div > h3{
+		position: relative;
+		margin-bottom: 110px;
+		font-size: 20px;
+	}
+	section#mission > div > h3:after{
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: calc( 100% + 5px);
+		height: 100px;
+		width: 1px;
+		background-color: #707070;
+		animation: borderAnime 3s linear infinite;
+	}
+	@keyframes borderAnime{
+		0%{
+			height: 0;
+		}
+		70%, 100%{
+			height: 100px;
+		}
+	}
+	section#mission > div > p{
+		margin-top: 110px;
+		font-size: 14px;
+		line-height: 2.5em;
+	}
+	section#service > div > div{
+		flex-flow: column;
+		width: 90%;
+	}
+	section#service > div > div > div{
+		width: 100%;
+		padding-bottom: 55px;
+		border: none;
+		border-bottom: 1px solid #707070;
+	}
+	section#service > div > div > div > h3{
+		font-size: 20px
+	}
+	section#service > div > div > div > h4{
+		font-size: 12px
+	}
+	section#service > div > div > div > p{
+		font-size: 15px;
+	}
+	section#service > div > div > div > a{
+		top: initial;
+		left: initial;
+		right: 20px;
+		bottom: 20px;
+	}
+	section#service > div > div > div > a:before{
+		display: none;
+	}
+	section#recruit > div{
+		min-height: 520px;
+		height: 80vh;
+	}
+	section#recruit > div > div{
+		width: 100%;
+		min-height: 520px;
+		height: 80vh;
+	}
+	section#recruit > div > div > div.image{
+		min-height: 520px;
+		height: 80vh;
+		width: 100%;
+		background-image: url(../img/bg_recruit_sp.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	section#recruit > div > div > div.text{
+		transform: none;
+		width: 100%;
+		background-color: inherit;
+		right: 0;
+		top: 0;
+		height: 80vh;
+	}
+	section#recruit > div > div > div.text > h3{
+		right: 50%;
+		font-size: 23px;
+		transform: translate(50%, calc(-50% + -80px));
+		width: 80%;
+	}
+	section#recruit > div > div > a.btn{
+		right: 50%;
+		bottom: 25%;
+		font-size: 17px;
+		transform: translateX(50%);
+		width: 119px;
+		height: 31px;
+		line-height: 31px;
+		letter-spacing: .2em;
+	}
+	section#recruit > div > div > a.btn:hover{
+		transform: translate(calc(50% - 1px), calc(50% - 1px));
+		box-shadow: 2px 2px 2px #000000;
+	}
+	section#recruit > div > div > a.btn:active{
+		transform: translate(calc(50% - 0px), calc(50% - 0px));
+		box-shadow: 0px 0px 2px #000000;
+	}
+	section#news > div > h2{
+		font-size: 22px;
+		margin: 40px auto;
+		margin-top: 80px;
+	}
+	section#news > div > div > ul{
+		width: 95%;
+		max-width: 600px;
+	}
+	section#news > div > div > ul > li{
+		height: 40px;
+		padding: 10px;
+	}
+	section#news > div > div > ul > li > span{
+		font-size: 12px;
+		line-height: 20px;
+	}
+	section#news > div > div > ul > li	 > span:nth-of-type(1){
+		min-width: 100px;
+		width: 25%;
+	}
+	section#news > div > div > ul > li > span:nth-of-type(2){
+		max-width: calc(100% - 100px);
+		width: 75%;
+	}
+	section#company{
+		background-image: url(../img/bg_sp.png);
+	}
+	section#company > div > h2{
+		font-size: 22px;
+	}
+	section#company > div > div > ul{
+		max-width: 700px;
+		width: 95%;
+	}
+	section#company > div > div > ul > li{
+		padding: 15px 25px;
+		padding-bottom: 15px;
+	}
+	section#company > div > div > ul > li > span{
+		font-size: 12px;
+		line-height: 14px;
+	}
+	section#company > div > div > ul > li > span:nth-of-type(1){
+		min-width: 100px;
+		width: 25%;
+	}
+	section#company > div > div > ul > li > span:nth-of-type(2){
+		max-width: calc(100% - 100px);
+		width: 75%;
+	}
+}
+@media screen and (max-width: 400px){
+	section#news > div > div > ul > li{
+		height: auto;
+	}
+	section#news > div > div > ul > li > span{
+		line-height: 13px;
+	}
+	section#recruit > div > div > div.text > h3{
+		width: 95%;
+	}
+}
+
+
+

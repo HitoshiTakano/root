@@ -1,0 +1,58 @@
+<main class="sub">
+	<section id="title">
+		<h1>CONTACT</h1>
+	</section>
+	<section id="contact">
+		<div class="form">
+			<p class="alert">test</p>
+			<form action="" method="post" autocomplete="off">
+				<div class="company_div">
+					<label for="company">
+						<p>会社名<span class="err_msg"></span></p>
+						<p>Company name</p>
+					</label>
+					<input type="text" name="company" value="" id="company" maxlength="50" placeholder="株式会社Riding">
+				</div>
+				<div class="name_div">
+					<label for="name">
+						<p>お名前<span class="err_msg"></span></p>
+						<p>First name / Last name</p>
+					</label>
+					<input type="text" name="name" value="" id="name" maxlength="50" placeholder="久保田　淳平" required>
+				</div>
+				<div class="mail_div">
+					<label for="mail">
+						<p>メールアドレス<span class="err_msg"></span></p>
+						<p>Mail address</p>
+					</label>
+					<input type="email" name="mail" value="" id="mail" maxlength="255" placeholder="info@riding.co.jp" required>
+				</div>
+				<div class="tel_div">
+					<label for="tel">
+						<p>電話番号<span class="err_msg"></span></p>
+						<p>Phone number</p>
+					</label>
+					<input type="tel" name="tel" value="" id="tel" maxlength="13" placeholder="0364530197" required>
+				</div>
+				<div class="subject_div">
+					<label for="subject">
+						<p>件名<span class="err_msg"></span></p>
+						<p>Title</p>
+					</label>
+					<input type="text" name="subject" value="" id="subject" maxlength="150" placeholder="件名" required>
+				</div>
+				<div class="contents_div">
+					<label for="contents">
+						<p>お問い合わせ内容<span class="err_msg"></span></p>
+						<p>Message</p>
+					</label>
+					<textarea name="contents" placeholder="お問い合わせ内容" maxlength="500" value required></textarea>
+				</div>
+				<input type="hidden" name="token" value="">
+				<div>
+					<input type="submit" name="submit" value="SEND" disabled>
+				</div>
+			</form>
+		</div>
+	</section>
+</main>

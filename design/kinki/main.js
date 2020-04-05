@@ -10,4 +10,8 @@ $(function(){
 		$('#modal').removeClass('active');
 		$('body').css('overflow','visible');
 	});
+	$('.slide-wrap').slick({
+		autoplay:true,
+		speed:400,
+	});
 });

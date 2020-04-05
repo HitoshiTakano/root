@@ -1,0 +1,457 @@
+main.sub{
+	padding-top: 127px;
+}
+section > h1{
+	padding-top: 79px;
+	padding-bottom: 41px;
+	font-size: 45px;
+	text-align: center;
+	color: #000;
+}
+
+
+/* SERVICE */
+section#service{
+	display: flex;
+	flex-flow: column;
+	background-color: #fff;
+	padding: 100px 0;
+}
+section#service > div{
+	width: 100%;
+	padding: 95px 0;
+	position: relative;
+	/*min-height: 970px;
+	height: 100vh;*/
+}
+section#service > div > a.arrow_down{
+	content:"";
+	display: block;
+	position: absolute;
+	bottom: -56px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 112px;
+	height: 112px;
+	background-color: #667E9E;
+	border-radius: 50%;
+}
+section#service > div > a.arrow_down::after{
+	content: "";
+	position: absolute;
+	top: calc( 50% - 6px);
+	left: 50%;
+	width: 25%;
+	height: 25%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	border-bottom: 5px solid #fff;
+	border-right: 5px solid #fff;
+	animation: arrowDownAnime 1.5s ease infinite;
+}
+@keyframes arrowDownAnime{
+	0%{
+		top: calc( 50% - 12px);
+	}
+	100%{
+		top: calc( 50% - 0px);
+	}
+}
+section#service > div::before{
+	content: "";
+	width: 80%;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	border-bottom: 1px solid #515151;
+}
+section#service > div:last-child::before{
+	display: none;
+}
+section#service > div > h2, section#service > div > h3{
+	width: 80%;
+	margin: 0 auto;
+	color: #000;
+}
+section#service > div > h2{
+	font-size: 38px;
+	line-height: 38px;
+}
+section#service > div > h3{
+	font-size: 26px;
+	line-height: 26px;
+}
+.service_wrap{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+div#ses > div > div.image{
+	background-image: url(../img/ses.png);
+}
+div#develop > div > div.image{
+	background-image: url(../img/develop.png);
+}
+div#education > div > div.image{
+	background-image: url(../img/education.png);
+}
+section#service > div > div > div.image{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: relative;
+	width: 100%;
+	height: 540px;
+	overflow: hidden;
+	margin-left: 0;
+	margin-right: auto;
+}
+section#service > div > div > div.image > div.box{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 360px;
+	height: 540px;
+	transform: translateX(50%) skew(-30deg);
+	background-color: #fff;
+}
+section#service > div > div > div.text{
+	position: absolute;
+	top: 290px;
+	right: calc(20vw - 110px);
+	max-width: 650px;
+	width: 40%;
+	min-width: 520px;
+	padding: 40px 45px;
+	background-color: #F5F5F5;
+}
+section#service > div > div > div.text > h4{
+	font-size: 27px;
+	margin-bottom: 52px;
+	color: #000;
+}
+section#service > div > div > div.text > p{
+	font-size: 21px;
+	line-height: 2.0em;
+}
+
+/* RECRUIT */
+section#recruit{
+	width: 100%;
+	background-color: #fff;
+	padding: 100px 0;
+	display: flex;
+	flex-flow: column;
+}
+section#recruit > div{
+	width: 95%;
+	min-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column;
+	padding: 80px 0;
+}
+section#recruit > div:first-child{
+	border-bottom: 1px solid #515151;
+}
+section#recruit > div > h2{
+	font-size: 30px;
+	margin-bottom: 46px;
+}
+section#recruit > div > h3{
+	font-size: 25px;
+	margin-bottom: 60px;
+}
+section#recruit > div > div{
+	display: flex;
+	width: 100%;
+}
+section#recruit > div > div > div{
+	width: calc(100% / 2);
+	position: relative;
+	/*min-height: 480px;*/
+}
+section#recruit > div > div > div:first-child{
+	padding: 10px;
+}
+section#recruit > div > div > div:first-child > p{
+	font-size: 21px;
+	padding-bottom: 70px;
+}
+section#recruit > div > div > div:first-child > a{
+	position: absolute;
+	display: block;
+	bottom: 0;
+	right: 10px;
+	width: 282px;
+	font-size: 30px;
+	padding: 8px 30px;
+	border-radius: 28px;
+	text-align: center;
+	background-color: #667E9E;
+	color: #fff;
+}
+section#recruit > div > div > div:last-child{
+	overflow: hidden;
+	margin-left: 40px;
+}
+section#recruit > div > div > div:last-child > div{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/develop.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+section#recruit a.links{
+	display: none;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/* RESOPONSIVE */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+@media screen and (max-width: 910px){
+	main.sub{
+		padding-top: 87px;
+	}
+	section > h1{
+		padding-top: 22px;
+		padding-bottom: 16px;
+		font-size: 21px;
+		text-align: center;
+		color: #000;
+	}
+	section#service{
+		padding: 0;
+	}
+	section#service > div{
+		min-height: 100vh;
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		z-index: 0;
+	}
+	section#service > div::before{
+		display: none;
+	}
+	section#service > div#ses{
+		min-height: calc(100vh - 151px);
+		background-image: url(../img/ses.png);
+	}
+	section#service > div#develop{
+		background-image: url(../img/develop.png);
+	}
+	section#service > div#education{
+		background-image: url(../img/develop.png);
+	}
+	section#service > div::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(108, 162, 182, 0.48);
+		width: 100%;
+		height: 100vh;
+		z-index: -10;
+	}
+	section#service > div > h2{
+		font-size: 20px;
+		line-height: 22px;
+		color: #fff;
+	}
+	section#service > div > h3{
+		font-size: 12px;
+		line-height: 14px;
+		color: #fff;
+	}
+	section#service > div > div{
+
+	}
+
+	section#service > div > div > div.image{
+		display: none;
+	}
+	section#service > div > div > div.text{
+		top: 50%;
+		right: 50%;
+		min-width: 90%;
+		width: 90%;
+		max-width: 100%;
+		transform: translate(50%, -50%);
+		background-color: inherit;
+		padding: 10px;
+	}
+	section#service > div > div > div.text > h4{
+		display: none;
+	}
+	section#service > div > div > div.text > p{
+		font-size: 12px;
+		color: #fff;
+	}
+	section#service > div > a.arrow_down{
+		width: 40px;
+		height: 40px;
+		bottom: 120px;
+		background-color: inherit;
+	}
+	section#service > div > a.arrow_down::before{
+		content:attr(data-item);
+		display: block;
+		position: absolute;
+		top: calc( 50% + 12px);
+		left: 50%;
+		color: #fff;
+		font-size: 14px;
+		width: 150px;
+		text-align: center;
+		font-family: 'Corbel', 'Sawarabi', 'NotoSansJP',YuGothic,'Yu Gothic','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+		transform: translate(-50%, -50%);
+		animation: textDownAnime 1.5s ease infinite;
+	}
+	@keyframes textDownAnime{
+		0%{
+			top: calc( 50% + 12px);
+		}
+		100%{
+			top: calc( 50% + 24px);
+		}
+	}
+	section#recruit{
+		flex-flow: column-reverse;
+	}
+	section#recruit > div{
+		min-width: 100%;
+		width: 100%;
+		max-width: 100%;
+		min-height: 100vh;
+		background-size: cover;
+		background-position: top center;
+		background-repeat: no-repeat;
+		position: relative;
+		padding: 80px 30px;
+	}
+	section#recruit > div:first-child{
+		border-bottom: none;
+	}
+	section#recruit a.links{
+		display: block;
+		position: absolute;
+		bottom: 180px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: #fff;
+		font-size: 14px;
+		height: 20px;
+		width: 100%;
+		text-align: center;
+		font-family: 'Corbel', 'Sawarabi', 'NotoSansJP',YuGothic,'Yu Gothic','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+		animation: textDownAnime 1.5s ease infinite;
+	}
+	section#recruit a.links::before{
+		content: "";
+		position: absolute;
+		display: block;
+		left: 50%;
+		top: -20px;
+		transform: translateX(-50%);
+		width: 20px;
+		height: 20px;
+		bottom: 120px;
+		transform: translate(-50%, -50%) rotate(45deg);
+		border-bottom: 5px solid #fff;
+		border-right: 5px solid #fff;
+	}
+	@keyframes textDownAnime{
+		0%{
+			opacity: .4;
+			bottom: 180px;
+		}
+		100%{
+			opacity: 1.0;
+			bottom: 160px;
+		}
+	}
+	section#recruit > div#free{
+		background-image: url(../img/free.png);
+	}
+	section#recruit > div#partner{
+		background-image: url(../img/partner.png);
+	}
+	section#recruit > div > h2{
+		font-size: 20px;
+		line-height: 20px;
+		margin-bottom: 65px;
+		position: relative;
+		color: #fff;
+	}
+	section#recruit > div > h2::after{
+		content: attr(data-item);
+		position: absolute;
+		left: 0;
+		bottom: -12px;
+		font-size: 12px;
+		line-height: 12px;
+	}
+	section#recruit > div > h3{
+		font-size: 17px;
+		line-height: 17px;
+		margin-bottom: 17px;
+		color: #fff;
+	}
+	section#recruit > div > div{
+		flex-flow: column;
+	}
+	section#recruit > div > div > div:first-child{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+	}
+	section#recruit > div > div > div:first-child > p{
+		font-size: 12px;
+		line-height: 2.0em;
+		color: #fff;
+	}
+	section#recruit > div > div > div:last-child{
+		display: none;
+	}
+	section#recruit > div > div > div:first-child > a{
+		font-size: 12px;
+		width: 120px;
+		padding: 8px;
+		bottom: 20px;
+		right: 10px;
+	}
+}
+@media screen and (max-width: 400px){
+	section#recruit > div > h2{
+		margin-bottom: 20px;
+	}
+	@keyframes textDownAnime{
+		0%{
+			opacity: .4;
+			bottom: 80px;
+		}
+		100%{
+			opacity: 1.0;
+			bottom: 60px;
+		}
+	}
+}
+@media screen and (max-width: 325px){
+	section#service > div#ses{
+
+	}
+	section#service > div > a.arrow_down{
+		bottom: 60px;
+	}
+	section#service > div{
+		padding: 50px 0;
+	}
+	section#recruit > div{
+		padding: 50px 5px;
+	}
+}
