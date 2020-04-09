@@ -29,6 +29,8 @@ var service = {
 			var h = $(this).outerHeight();
 			h = h - 540 + 100 + service.textH[i];
 			var id = $(this).parent().parent().attr('id');
+			var defH = $('#' + id).innerHeight();
+			if(h <= defH) return true;
 			$('#' + id).css('height', h);
 		});
 	},

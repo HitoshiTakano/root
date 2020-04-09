@@ -74,7 +74,7 @@ var commonEvent = {
 		return offset;
 	},
 	navEvent:function(y=this.posY){
-		(y>0) ? $('header').addClass('scroll') : $('header').removeClass('scroll');
+		// (y>0) ? $('header').addClass('scroll') : $('header').removeClass('scroll');
 	},
 	menuEvent:function(){
 		$('.menu_bar').toggleClass('active');

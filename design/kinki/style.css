@@ -113,6 +113,7 @@
 html,body{
 	height: 100%;
 	width: 100%;
+	overflow-x: hidden;
 }
 main{
 	background-color: #fff;
@@ -179,7 +180,7 @@ section#top > div.topic{
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: calc( 100vh * (175 / 1000));
+	height: calc( 100vh * (225 / 1000));
 	background-color: #03300380;
 }
 section#top > div.topic > h2{
@@ -192,11 +193,11 @@ section#top > div.topic > h2{
 }
 section#top > div.topic > h2 > p{
 	text-align: center;
-	font-size: 30px;
+	font-size: 25px;
 	line-height: 40px;
 }
 section#top > div.topic > h2 > p > span{
-	font-size: 40px;
+	font-size: 35px;
 	line-height: 40px
 }
 section#top > div.topic > h2 > p:first-child{
@@ -341,11 +342,26 @@ section#plan > div > div{
 	border: 5px solid #75C364;
 	border-radius: 4px;
 }
+section#plan > div > div.hide{
+	display: none;
+}
+section#plan > div > div.top_one{
+	margin: 20px 225px;
+}
 section#plan > div > div > p{
 	padding: 10px;
-	font-size: 18px;
-	text-align: left;
+	font-size: 15px;
+	text-align: center;
 }
+section#plan > div > div:first-child > p:nth-of-type(2){
+	padding-bottom: 26px;
+}
+section#plan > div > div > p:nth-of-type(2){
+	font-size: 13px;
+	line-height: 13px;
+	padding: 5px 10px;
+}
+
 section#plan > div > div > h3{
 	font-size: 30px;
 	padding: 20px 0;
@@ -596,11 +612,11 @@ section#steps > div > div > p{
 	padding: 17px;
 	width: 50%;
 	padding-left: 50px;
-}
+}/*
 section#steps > div > div:first-child > p{
 	padding-top: 10px;
 	padding-bottom: 10px;
-}
+}*/
 section#steps > div > div:last-child > p{
 	line-height: 45px;
 }
@@ -830,6 +846,12 @@ footer > div  div.info p,footer > div  div.info h3{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.armroll{
+	background-image: url(img/armroll.jpg);
+}
+.container{
+	background-image: url(img/container.jpg);
+}
 .slide-content div.slide_text{
 	width: 100%;
 	height: 100%;
@@ -841,12 +863,16 @@ footer > div  div.info p,footer > div  div.info h3{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 70px;
+	color: #fff;
 	font-weight: bold;
-	color: #000;
+	/*color: #000;*/
+}
+.armroll > p{
+	font-size: 45px;
 }
 .slide-content div.slide_text > p{
-	font-size: 70px;
-	color: #000;
+	font-size: 50px;
+	color: #fff;
 }
 .slick-list, .slick-track{
 	height: 500px;
@@ -924,6 +950,12 @@ footer > div  div.info p,footer > div  div.info h3{
 		width: 80%;
 		background-color: #ffffffdd;
 	}
+	.slide-content div.slide_image > *, .slide-content div.slide_text > *{
+		width: 85%;
+	}
+	.slide-content div.slide_text > p{
+		font-size: 40px;
+	}
 	section#plan > div{
 		width: 95%;
 		margin: 0 auto;
@@ -932,7 +964,10 @@ footer > div  div.info p,footer > div  div.info h3{
 	section#plan > div > div{
 		width: 100%;
 		margin: 20px auto;
-	}	
+	}
+	section#plan > div > div.top_one{
+		margin: 20px auto;
+	}
 	section#plan > div.textarea{
 		width: 90%;
 		padding: 20px 10px;

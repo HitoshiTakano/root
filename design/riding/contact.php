@@ -18,8 +18,8 @@
 	<link rel="stylesheet" type="text/css" href="css/contact.css">
 </head>
 <body>
-	<?php include_once './html/common/header.html'; ?>
+	<?php include_once './html/common/sub_header.html'; ?>
 	<?php include_once './html/contact.html'; ?>
-	<?php include_once './html/common/footer.html'; ?>
+	<?php include_once './html/common/sub_footer.html'; ?>
 </body>
 </html>

@@ -1,6 +1,4 @@
-main.sub{
-	padding-top: 127px;
-}
+
 section > h1{
 	padding-top: 79px;
 	padding-bottom: 41px;
@@ -71,6 +69,7 @@ section#service > div:last-child::before{
 }
 section#service > div > h2, section#service > div > h3{
 	width: 80%;
+	max-width: 1050px;
 	margin: 0 auto;
 	color: #000;
 }
@@ -84,6 +83,7 @@ section#service > div > h3{
 }
 .service_wrap{
 	width: 80%;
+	max-width: 1050px;
 	margin: 0 auto;
 	margin-top: 30px;
 }
@@ -145,8 +145,8 @@ section#recruit{
 	flex-flow: column;
 }
 section#recruit > div{
-	width: 95%;
-	min-width: 900px;
+	width: 90%;
+	max-width: 1170px;
 	margin: 0 auto;
 	display: flex;
 	flex-flow: column;
@@ -207,12 +207,49 @@ section#recruit > div > div > div:last-child > div{
 section#recruit a.links{
 	display: none;
 }
+@media screen and (max-width: 1500px){
+	section#recruit > div > div > div:first-child > a{
+		font-size: 27px;
+	}
+	section#service > div > div > div.text > p{
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 1150px){
+	section#recruit > div > div > div:first-child > p{
+		font-size: 18px;
+	}
+	section#recruit > div > div > div:first-child > a{
+		font-size: 24px;
+	}
+	section#service > div > h2{
+		font-size: 32px;
+	}
+	section#service > div > h3{
+		font-size: 24px;
+	}
+	section#service > div > div > div.text > h4{
+		font-size: 20px;
+	}
+	section#service > div > div > div.text > p{
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 1000px){
+	section#recruit > div > div > div:first-child > p{
+		font-size: 16px;
+	}
+	section#recruit > div > div > div:first-child > a{
+		font-size: 22px;
+	}
+	
+}
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /* RESOPONSIVE */
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
-@media screen and (max-width: 910px){
+@media screen and (max-width: 800px){
 	main.sub{
-		padding-top: 87px;
+		/*padding-top: 87px;*/
 	}
 	section > h1{
 		padding-top: 22px;
@@ -225,7 +262,8 @@ section#recruit a.links{
 		padding: 0;
 	}
 	section#service > div{
-		min-height: 100vh;
+		height: 100vh;
+		min-height: 695px;
 		position: relative;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -276,8 +314,8 @@ section#recruit a.links{
 	section#service > div > div > div.text{
 		top: 50%;
 		right: 50%;
-		min-width: 90%;
-		width: 90%;
+		width: 80%;
+		min-width: 70%;
 		max-width: 100%;
 		transform: translate(50%, -50%);
 		background-color: inherit;
@@ -308,16 +346,25 @@ section#recruit a.links{
 		text-align: center;
 		font-family: 'Corbel', 'Sawarabi', 'NotoSansJP',YuGothic,'Yu Gothic','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
 		transform: translate(-50%, -50%);
-		animation: textDownAnime 1.5s ease infinite;
+		animation: serviceDownAnime 1.5s ease infinite;
 	}
-	@keyframes textDownAnime{
+	@keyframes serviceDownAnime{
 		0%{
-			top: calc( 50% + 12px);
+			top: calc( 50% + 78px);
 		}
 		100%{
-			top: calc( 50% + 24px);
+			top: calc( 50% + 90px);
 		}
 	}
+	@keyframes arrowDownAnime{
+		0%{
+			top: calc( 50% + 60px);
+		}
+		100%{
+			top: calc( 50% + 72px);
+		}
+	}
+
 	section#recruit{
 		flex-flow: column-reverse;
 	}
@@ -325,7 +372,8 @@ section#recruit a.links{
 		min-width: 100%;
 		width: 100%;
 		max-width: 100%;
-		min-height: 100vh;
+		min-height: 695px;
+		height: 100vh;
 		background-size: cover;
 		background-position: top center;
 		background-repeat: no-repeat;
@@ -366,11 +414,11 @@ section#recruit a.links{
 	@keyframes textDownAnime{
 		0%{
 			opacity: .4;
-			bottom: 180px;
+			bottom: 120px;
 		}
 		100%{
 			opacity: 1.0;
-			bottom: 160px;
+			bottom: 100px;
 		}
 	}
 	section#recruit > div#free{
@@ -411,7 +459,7 @@ section#recruit a.links{
 		width: 80%;
 	}
 	section#recruit > div > div > div:first-child > p{
-		font-size: 12px;
+		font-size: 14px;
 		line-height: 2.0em;
 		color: #fff;
 	}
@@ -424,6 +472,17 @@ section#recruit a.links{
 		padding: 8px;
 		bottom: 20px;
 		right: 10px;
+	}
+}
+@media screen and (max-width: 600px){
+	section#recruit > div > div > div:first-child > p{
+		font-size: 12px;
+	}
+	section#recruit > div > h2{
+		margin-bottom: 40px;
+	}
+	section#service > div > div > div.text{
+		width: 90%;
 	}
 }
 @media screen and (max-width: 400px){
