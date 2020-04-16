@@ -10,4 +10,8 @@ $(function(){
 		autoplaySpeed:3000,
 		speed:400,
 	});
+	$('a').on('click', function(){
+		alert('現在使用できません。ご了承ください。');
+		return false;
+	})
 });

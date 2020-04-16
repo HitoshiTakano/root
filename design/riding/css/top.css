@@ -5,19 +5,11 @@ section#top{
 	background-repeat: no-repeat;
 	width: 100%;
 	height: calc(100vh - 56px - 127px);
+	min-height: 400px;
 	position: relative;
 }
 
-@media screen and (max-width: 1600px){
-	section#top{
-		height: calc(100vh - 56px - 105px);
-	}
-}
-@media screen and (max-width: 1150px){
-	section#top{
-		height: calc(100vh - 56px - 95px);
-	}
-}
+
 section#top > div.message{
 	background-image: url(../img/topMessage.png);
 	background-size: contain;
@@ -33,11 +25,11 @@ section#top > div.message{
 section#top > a.arrow_down{
 	position: absolute;
 	display: block;
-	bottom: -56px;
+	bottom: -50px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 112px;
-	height: 112px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
 	background-color: #667E9E;
 }
@@ -263,7 +255,15 @@ section#news > div > div > ul > li	 > span:nth-of-type(1){
 section#news > div > div > ul > li > span:nth-of-type(2){
 	width: calc(100% - 200px);
 }
-
+section#news > div > div > ul > li > span > a{
+	font-weight: normal;
+	opacity: 1;
+	transition: all .3s ease;
+}
+section#news > div > div > ul > li > span > a:hover{
+	opacity: .8;
+	text-decoration: underline;
+}
 /* COMPANY */
 section#company{
 	background-image: url(../img/bg.png);
@@ -308,9 +308,37 @@ section#company > div > div > ul > li > span:nth-of-type(2){
 }
 
 
-
-
+@media screen and (max-width: 1600px){
+	section#top{
+		height: calc(100vh - 56px - 105px);
+	}
+}
+@media screen and (max-width: 1500px){
+	section#top > a.arrow_down{
+		bottom: -45px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 90px;
+		height: 90px;
+	}
+	section#service > div > div > div > h3{
+		font-size: 32px;
+	}
+	section#service > div > div > div > h4{
+		font-size: 26px;
+	}
+	section#recruit > div > div > div.text > h3{
+		right: 130px;
+		font-size: 32px;
+	}
+	section#service > div > div > div > p{
+		font-size: 18px;
+	}
+}
 @media screen and (max-width: 1150px){
+	section#top{
+		height: calc(100vh - 56px - 95px);
+	}
 	section#mission > div > h2{
 		font-size: 32px;
 	}
@@ -336,7 +364,7 @@ section#company > div > div > ul > li > span:nth-of-type(2){
 		width: 100%;
 	}
 	section#recruit > div > div > div.text > h3{
-		font-size: 30px;
+		font-size: 28px;
 	}
 	section#recruit > div > div > a.btn{
 		width: 210px;
@@ -362,9 +390,11 @@ section#company > div > div > ul > li > span:nth-of-type(2){
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /* RESOPONSIVE */
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+
 @media screen and (max-width: 910px){
 	section#top{
 		background-position: 20%;
+		min-height: 400px;
 		height: 100vh;
 	}
 	section#top > div.message{

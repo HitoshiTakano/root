@@ -60,13 +60,13 @@ section#top_slide{
 	background-position: center;
 }
 .slide_wrapper .slide_one{
-	background-image: url(../img/slide1.png);
+	background-image: url(../img/forest.jpg);
 }
 .slide_wrapper .slide_two{
 	background-image: url(../img/slide2.png);
 }
 .slide_wrapper .slide_thr{
-	background-image: url(../img/slide3.png);
+	background-image: url(../img/river1.jpg);
 }
 .slide_wrapper .slide > h1{
 	position: absolute;

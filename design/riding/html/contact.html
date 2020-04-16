@@ -5,19 +5,19 @@
 	<section id="contact">
 		<div class="form">
 			<p class="alert">server side error message</p>
-			<form action="" method="post" autocomplete="off">
+			<form action="contact.php" method="post" autocomplete="off">
 				<div class="company_div">
-					<label for="company">
+					<label>
 						<p>会社名</p>
 						<p>
 							<span>Company name</span>
-							<span class="err_msg">入力エラー</span>
+							<span class="err_msg"></span>
 						</p>
 					</label>
 					<input type="text" name="company" value="" id="company" maxlength="50" placeholder="株式会社Riding">
 				</div>
 				<div class="name_div">
-					<label for="name">
+					<label>
 						<p>お名前</p>
 						<p>
 							<span>First name / Last name</span>
@@ -27,27 +27,27 @@
 					<input type="text" name="name" value="" id="name" maxlength="50" placeholder="久保田　淳平" required>
 				</div>
 				<div class="mail_div">
-					<label for="mail">
+					<label>
 						<p>メールアドレス</p>
 						<p>
-							<span>Mail address</span>
+							<span>E-Mail address</span>
 							<span class="err_msg"></span>
 						</p>
 					</label>
 					<input type="email" name="mail" value="" id="mail" maxlength="255" placeholder="info@riding.co.jp" required>
 				</div>
 				<div class="tel_div">
-					<label for="tel">
+					<label>
 						<p>電話番号</p>
 						<p>
 							<span>Phone number</span>
-							<span class="err_msg">error text</span>
+							<span class="err_msg"></span>
 						</p>
 					</label>
 					<input type="tel" name="tel" value="" id="tel" maxlength="13" placeholder="0364530197" required>
 				</div>
 				<div class="subject_div">
-					<label for="subject">
+					<label>
 						<p>件名</p>
 						<p>
 							<span>Title</span>
@@ -57,7 +57,7 @@
 					<input type="text" name="subject" value="" id="subject" maxlength="150" placeholder="件名" required>
 				</div>
 				<div class="contents_div">
-					<label for="contents">
+					<label>
 						<p>お問い合わせ内容</p>
 						<p>
 							<span>Message</span>
@@ -66,8 +66,9 @@
 					</label>
 					<textarea name="contents" placeholder="お問い合わせ内容" id="contents" maxlength="500" value required></textarea>
 				</div>
-				<input type="hidden" name="token" value="">
-				<div>
+				<input type="hidden" name="token" value="test">
+				<input type="hidden" name="verify" value="0">
+				<div class="submit_div">
 					<input type="submit" name="submit" value="SEND" disabled>
 				</div>
 			</form>

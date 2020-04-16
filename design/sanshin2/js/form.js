@@ -22,14 +22,16 @@ var validate = {
 		 	$('input, textarea').each(function(i,e){
 		 		var _this = $(this);
 		 		var name = _this.attr('name');
-		 		console.log(validate.reqArr.indexOf(name), name);
+		 		// console.log(validate.reqArr.indexOf(name), name);
 		 		if(validate.reqArr.indexOf(name) >= 0){
 		 			validate.actionEvent(_this);
+		 		}else{
+		 			return;
 		 		}
 		 	});
-
 		 	var arr = validate.chkArr;
 			var cnt = 0;
+			// console.log(arr);
 			for (key in arr) {
 				if(!arr[key]) cnt++;
 			}
@@ -83,7 +85,17 @@ var validate = {
 	 		$('#'+id).removeClass('error');
 	 	}
 	 	//入力チェック更新
-	 	validate.chkArr[id] = chk;
+	 	if(id=='company'){
+	 		if(val=='' || val==null) {
+	 			delete validate.chkArr['company'];
+	 			return;
+	 		}else{
+	 			validate.chkArr[id] = true;
+	 		}
+	 	}else{
+	 		validate.chkArr[id] = chk;
+	 	}
+	 	
 	 	// 送信ボタンのアクティブ化判定
 	 	// validate.activateBtn();
 	},

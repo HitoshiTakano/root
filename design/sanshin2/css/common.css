@@ -315,7 +315,8 @@ div.foot_nav > ul > li > ul > li > a{
   color: #fff;
   display: block;
   padding: 5px;
-  text-align: center;
+  text-align: left;
+  padding-left: 40px;
 }
 
 @media screen and (max-width: 960px){
@@ -335,6 +336,8 @@ div.foot_nav > ul > li > ul > li > a{
     line-height: 35px;
   }
   #menu_bar{
+    right: 20px;
+    top: 28px;
     display: block;
   }
   header > #menu_bar + nav{
@@ -399,6 +402,10 @@ div.foot_nav > ul > li > ul > li > a{
   div.foot_nav > ul > li > ul > li{
     margin: 0;
     padding: 3px;
+  }
+  div.foot_nav > ul > li > ul > li > a{
+    text-align: center;
+    padding-left: 5px;
   }
 }
 

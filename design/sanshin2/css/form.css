@@ -152,7 +152,7 @@ input[type="submit"]{
 input[type="submit"]:disabled{
 	background-color: #fff;
 	border: 1px solid #00A7EA;
-	color: #707070;
+    color: #7070706b;
 }
 
 .complete > h4{
@@ -202,5 +202,11 @@ input[type="submit"]:disabled{
 		font-size: 16px;
 		padding-left: 30px;
 		line-height: 50px;
+	}
+	form > div > label{
+		line-height: 18px;
+	}
+	.checkbox:after{
+	    margin-top: -17px;
 	}
 }

@@ -10,6 +10,7 @@ main > section#top > div{
 	height: auto;
 	margin: 0;
 	padding: 0;
+	position: relative;
 }
 main > section#top video{
 	min-width: 100%;
@@ -21,15 +22,116 @@ main > section#top video{
 }
 main > section#top > div > h1{
 	position: absolute;
-	bottom: 50px;
-	right: 40px;
-	width: 500px
+	top: calc(100vh - 150px - 180px - 30px);
+	right: 0px;
+	width: 550px;
+	height: 180px;
+	overflow: hidden;
 }
 main > section#top > div > h1 > p{
+	display: block;
+	position: relative;
+	background-color: #fff;
+	color: #00A7EA;
+	width: 500px;
+	transform: translateX(1000px);
 	font-size: 55px;
-	color: #ffffff;
 	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
+main > section#top > div > h1 > p:nth-child(1){
+	width: 495px;
+	animation: slideRightIn 0.5s ease;
+	animation-fill-mode: forwards;
+}
+main > section#top > div > h1 > p:nth-child(2){
+	margin-left: 100px;
+	width: 440px;
+	animation: slideRightIn 0.5s ease;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+}
+@keyframes slideRightIn{
+	from{
+		transform: translateX(1000px);
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+/*															SLIDE																	*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
+main > section#top > div > div.slide_wrapper{
+	min-width: 100%;
+	min-height: calc(100vh - 150px);
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+}
+.slick-list, .slick-track{
+	min-width: 100%;
+	min-height: calc(100vh - 150px);
+}
+.slide_wrapper .slide{
+	width: 100%;
+	min-height: calc(100vh - 150px);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.slide_wrapper .slide.one{
+	background-image: url(../img/slide/1.png);
+}
+.slide_wrapper .slide.two{
+	background-image: url(../img/slide/2.png);
+}
+.slide_wrapper .slide.thr{
+	background-image: url(../img/slide/3.png);
+}
+.slide_wrapper .slide.fou{
+	background-image: url(../img/slide/4.png);
+}
+.slide_wrapper .slide.fiv{
+	background-image: url(../img/slide/5.png);
+}
+.slick-dotted.slick-slider{
+	margin: 0;
+}
+.slick-dots{
+	position: absolute;
+	bottom: inherit;
+	top: calc(100vh - 150px - 30px);
+}
+.slick-dots li.slick-active button:before{
+	color: #ffffffaa;
+}
+.slick-arrow{
+	z-index: 1;
+	display: none;
+}
+.slick-prev{
+	left: 10px;
+}
+.slick-next{
+	right: 10px;
+}
+/*.slide_wrapper > div.slide:nth-of-type(1){
+	background-image: url(../img/slide/1.png);
+}
+.slide_wrapper > div.slide:nth-of-type(2){
+	background-image: url(../img/slide/2.png);
+}
+.slide_wrapper > div.slide:nth-of-type(3){
+	background-image: url(../img/slide/3.png);
+}
+.slide_wrapper > div.slide:nth-of-type(4){
+	background-image: url(../img/slide/4.png);
+}
+.slide_wrapper > div.slide:nth-of-type(5){
+	background-image: url(../img/slide/5.png);
+}*/
+
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
 /*															COMMON																	*/
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
@@ -57,10 +159,13 @@ main > section#top > div > h1 > p{
 /*															TOPIC																	*/
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
 main > section#topic{
-	background-image: url(../img/bg_gra.png);
+	/*background-image: url(../img/bg_gra.png);*/
+	background-color: #00A7EA;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	overflow: hidden;
+	position: relative;
 }
 main > section#topic > div{
 	padding: 50px 0;
@@ -81,6 +186,44 @@ main > section#topic > div > p{
 	font-size: 23px;
 	text-shadow: 0 0 10px #fff;
 	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+main > section#topic > div.lines{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.line{
+	width: 1px;
+	height: 400px;
+	position: absolute;
+	background-color: #ffffffaa;
+}
+.line:nth-child(1){
+	top: -54px;
+	right: 150px;
+	transform: rotate(-67deg);
+}
+.line:nth-child(2){
+	top: 10px;
+	right: 64px;
+    transform: rotate(-20deg);
+}
+.line:nth-child(3){
+	top: 46px;
+    left: 20px;
+    transform: rotate(-40deg);
+}
+.line:nth-child(4){
+	bottom: -130px;
+	left: 205px;
+	transform: rotate(105deg);
+}
+.line:nth-child(5){
+	top: -1px;
+	left: 45px;
+	transform: rotate(15deg);
 }
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
 /*															COMPANY																	*/
@@ -110,14 +253,13 @@ main > section#company > div.text > h3{
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: ;
 	padding-left: 60px;
-	width: 320px;
+	width: 370px;
 	transform: skewX(20deg) translate(-50%,-50%);
 	z-index: 3333;
 }
 main > section#company > div.text > h3 > p{
-	font-size: 30px;
+	font-size: 36px;
 	font-weight: normal;
 	text-shadow: 0 0 2px #ffffff, 0 0 2px #ffffff;
 }
@@ -130,8 +272,8 @@ main > section#company > div.text > h3 > p:last-child{
 main > section#company > div.image{
 	background-image: url(../img/bg.png);
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: bottom;
+	background-size: contain;
+	background-position: right bottom;
 	min-width: 100%;
 	height: 550px;	
 	position: absolute;
@@ -204,7 +346,8 @@ section#recruit a.btn{
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
 section#contact > div{
 	display: flex;
-	min-height: 370px;
+	min-height: 300px;
+	margin-top: 100px;
 }
 section#contact > div > div{
 	width: calc(100% / 2);
@@ -263,8 +406,39 @@ section#contact > div > div.right > a.btn{
 }
 
 @media screen and (max-width: 800px){
+	main > section#top{
+		height: calc(100vh - 100px);
+	}
 	main > section#top video{
 		height: 100vh;
+	}
+	main > section#top > div > div.slide_wrapper{
+		min-height: calc(100vh - 100px);
+	}
+	.slick-list, .slick-track{
+		min-height: calc(100vh - 100px);
+	}
+	.slide_wrapper .slide{
+		min-height: calc(100vh - 100px);
+	}
+	.slide_wrapper img{
+		min-height: calc(100vh - 100px);
+		min-width: auto;
+		width: auto;
+		max-width: auto;
+	}
+	.slick-next{
+		right: 15px;
+	}
+	.slick-prev{
+		left: 15px;
+	}
+	.slick-prev:before, .slick-next:before{
+		color: #333333;
+		font-size: 30px;
+	}
+	.slick-prev, .slick-next{
+		top: calc(50% - 10px);
 	}
 	main > section#top > div > h1{
 		width: 100%;
@@ -273,9 +447,18 @@ section#contact > div > div.right > a.btn{
 		transform: translate(-50%,-50%);
 	}
 	main > section#top > div > h1 > p{
+		display: block;
 		font-size: 30px;
 		text-align: center;
+		background-color: #ffffffcc;
 		text-shadow: 0 0 3px #777777, 0 0 3px #777777;
+	}
+	main > section#top > div > h1 > p:nth-child(1){
+		width: 100%;
+	}
+	main > section#top > div > h1 > p:nth-child(2){
+		width: 100%;
+		margin: 0;
 	}
 	main > section#topic > div > h2{
 		padding-left: 20px;
@@ -315,6 +498,9 @@ section#contact > div > div.right > a.btn{
 		left: 50%;
 		transform: translateX(-50%);
 	}
+	section#else{
+		padding: 10px 0;
+	}
 	section#else > div > a{
 		font-size: 20px;
 	}
@@ -324,6 +510,29 @@ section#contact > div > div.right > a.btn{
 		min-height: 400px;
 		animation: bgimgSize 30s linear infinite alternate;
 	}
+	.line{
+		height: 250px;
+	}
+	.line:nth-child(1){
+		top: -70px;
+		right: 70px;
+	}
+    .line:nth-child(2){
+		top: -10px;
+		right: 25px;
+    }
+    .line:nth-child(3){
+		top: 117px;
+		left: 9px;
+    }
+    .line:nth-child(4){
+		bottom: -80px;
+		left: 60px;
+    }
+    .line:nth-child(5){
+		top: 0px;
+		left: -20px;
+    }
 	@keyframes bgimgSize{
 		0%{
 			background-size: 100%;

@@ -139,6 +139,19 @@ section#top{
 	height: 100vh;
 	position: relative;
 }
+section#top::before{
+	content:"";
+	background-image: url(img/toppic.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
 section#top *{
 	color: #fff;
 }
@@ -161,8 +174,11 @@ section#top > h1{
 }
 .info > p.tel{
 	font-size: 25px;
-	letter-spacing: 1.5px;
+	letter-spacing: 0.3px;
 	text-align: left;
+}
+_::-webkit-full-page-media, _:future, :root .info > p.tel {
+	letter-spacing: 0px;
 }
 .info > p.time{
 	font-size: 20px;
@@ -954,7 +970,7 @@ footer > div  div.info p,footer > div  div.info h3{
 		width: 85%;
 	}
 	.slide-content div.slide_text > p{
-		font-size: 40px;
+		font-size: 34px;
 	}
 	section#plan > div{
 		width: 95%;
@@ -971,6 +987,13 @@ footer > div  div.info p,footer > div  div.info h3{
 	section#plan > div.textarea{
 		width: 90%;
 		padding: 20px 10px;
+	}
+	section#plan > div > div > div > span:first-child{
+		font-size: 14px;
+	}
+	section#plan > div > div > div > span:last-child{
+		font-size: 32px;
+		line-height: 50px;
 	}
 	section#compare > div{
 		width: 100%;

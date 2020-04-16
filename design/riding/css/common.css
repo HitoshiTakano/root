@@ -270,6 +270,7 @@ nav > ul > li > a{
   padding: 0px 25px;
   line-height: 127px;
   display: block;
+  color: #144D5A;
 }
 nav > ul > li > a:hover{
   /*background-color: #fff;*/
@@ -377,7 +378,8 @@ div#cpy > p > a:hover{
   }
   nav{
     height: 100%;
-    padding-right: 40px;
+    padding-right: 30px;
+    font-size: 26px;
   }
   nav > ul > li > a{
     line-height: 105px;
