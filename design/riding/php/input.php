@@ -69,7 +69,8 @@
 				<input type="hidden" name="token" value="<?php echo $token; ?>">
 				<input type="hidden" name="mode" value="<?php echo $mode; ?>">
 				<div class="submit_div">
-					<input type="submit" name="verify" value="SEND" disabled>
+					<input id="submit" type="submit" name="verify" value="SEND" disabled>
+					<label for="submit">CONFIRM<label>
 				</div>
 			</form>
 		</div>

@@ -49,12 +49,12 @@
 				$mode = 1;
 			}
 			if($mode==3){
-				var_dump('test');
 				$message = shapeMessage();
 				// exit();
 				if(!$comm->sendMail($to, $cc, $bcc, $from, $subject, $message)){
 					$mode = 4;
 				}
+				$_POST=[];
 				$comm->delToken();
 			}
 		}else{
@@ -114,8 +114,8 @@
 	<script type="text/javascript" src="js/validate.js"></script>
 	<?php } ?>
 	
-	<link rel="stylesheet" type="text/css" href="css/sub.css">
-	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<link rel="stylesheet" type="text/css" href="css/sub.css?202004113">
+	<link rel="stylesheet" type="text/css" href="css/contact.css?202004113">
 </head>
 <body>
 	<?php include_once './html/common/sub_header.html'; ?>

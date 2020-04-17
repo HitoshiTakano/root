@@ -29,6 +29,7 @@ class commonClass{
 	public function genToken(){
 		$str = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPUQRSTUVWXYZ';
 		$csrf_token = substr(str_shuffle($str), 0, 15);
+		$_SESSION['TOKEN'] = '';
 		$_SESSION['TOKEN'] = $csrf_token;
 		return $csrf_token;
 	}

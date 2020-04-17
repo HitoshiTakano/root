@@ -23,7 +23,8 @@
 					echo '<input type="hidden" name="token" value="'. $token . '">';
 					?>
 					<input type="hidden" name="mode" value="1">
-					<input class="reinput" type="submit" name="reinput" value="MODIFY">
+					<input id="reinput" class="reinput" type="submit" name="reinput" value="MODIFY">
+					<label for="reinput">MODIFY</label>
 				</form>
 				<form action="./contact.php" method="post" accept-charset="utf-8">
 					<?php
@@ -33,7 +34,8 @@
 					echo '<input type="hidden" name="token" value="'. $token . '">';
 					?>
 					<input type="hidden" name="mode" value="3">
-					<input type="submit" name="send" value="SEND">
+					<input id="send" type="submit" name="send" value="SEND">
+					<label for="send">SEND</label>
 				</form>
 			</div>
 		</div>

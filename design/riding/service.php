@@ -15,7 +15,7 @@
 		});
 	</script>
 	<script type="text/javascript" src="js/service.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/sub.css">
+	<link rel="stylesheet" type="text/css" href="css/sub.css?2020041011">
 </head>
 <body>
 	<?php include_once './html/common/sub_header.html'; ?>
