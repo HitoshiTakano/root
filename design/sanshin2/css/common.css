@@ -170,8 +170,9 @@ header > .logo > h1, footer > .logo > h1{
   line-height: 50px;
 }
 header > nav{
-  width: 900px  ;
+  width: 710px  ;
   height: 150px;
+  padding-right: 10px;
 }
 header > nav *{
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
@@ -180,7 +181,6 @@ header > nav > ul{
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 10px;
 }
 header > nav > ul > li{
   width: calc(100% / 5);
@@ -192,7 +192,7 @@ header > nav > ul > li > a{
   width: 100%;
   text-align: center;
   height: 150px;
-  padding: 10px;
+  padding: 10px 0;
   line-height: 105px;
 }
 header > nav > ul > li > a::before{
@@ -215,7 +215,8 @@ header.scroll{
   height: 80px;
 }
 header.scroll > .logo{
-  margin: 15px 10px;
+  margin: 15px 0px;
+  margin-left: 30px;
 }
 header.scroll > nav{
   height: 80px;
@@ -357,6 +358,7 @@ div.foot_nav > ul > li > ul > li > a{
   header > nav > ul{
     flex-flow: column;
     height: 100%;
+    padding-bottom: 50px;
     justify-content: space-around;
   }
   header > nav > ul > li{
@@ -375,6 +377,13 @@ div.foot_nav > ul > li > ul > li > a{
   }
   header > nav > ul > li:first-child > a{
     border-top: 1px dashed #00A7EA;
+  }
+  header.scroll > nav > ul > li > a{
+    height: 100%;
+    line-height: 80px;
+  }
+  header.scroll > nav > ul > li > a::before{
+    bottom: -10px;
   }
   footer{
     flex-flow: column;

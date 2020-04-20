@@ -164,6 +164,7 @@ section#content > div > div > p{
 	font-size: 23px;
 	position: relative;
 	border-left: 3px solid #00A7EA;
+	margin-top: 20px;
 }
 .map_wrapper > address{
 	font-style: normal;
@@ -324,6 +325,10 @@ section#works > div > div > a + div > p{
 
 section#works > div > div > a + div > p >span:nth-child(1){
 	padding-right: 30px;
+	width: calc(100% / 3);
+}
+section#works > div > div > a + div > p >span:nth-child(2){
+	width: calc(100% * 2 / 3);
 }
 main > section#contact{
 	width: 800px;
@@ -432,6 +437,23 @@ section#content > div > div.slider_wrapper{
 .thumbnail_wrapper > .thumb_item.active{
 	filter: brightness(1);
 }
+.slick-arrow{
+	z-index: 1;
+	display: none;
+}
+.slick-prev{
+	left: -50px;
+}
+.slick-next{
+	right: -20px;
+}
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before{
+	opacity: 0;
+}
+.slick-prev:before, .slick-next:before{
+	font-size: 50px;
+	color: #60c8f2;
+}
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
 /*														RESPONSIVE																	*/
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
@@ -441,9 +463,9 @@ section#content > div > div.slider_wrapper{
 		margin-bottom: 50px;
 	}
 	section#title > div.text{
-		width: 130px;
-		font-size: 20px;
-		padding: 35px 15px;
+		width: 240px;
+		font-size: 26px;
+		padding: 30px 15px;
 	}
 	section#title > div.text::after{
 		width: 65px;
@@ -457,11 +479,11 @@ section#content > div > div.slider_wrapper{
 		margin-left: 20px;
 		font-size: 28px;
 	}
-	section#works > div > div > a + div > p >span:nth-child(1){
-		padding-right: 15px;
-	}
 	section#works > div > div > a + div > p >span{
 		width: 50%;
+	}
+	section#works > div > div > a + div > p >span:nth-child(1){
+		padding-right: 15px;
 	}
 	section#content > div > div{
 		padding-right: 30px;
@@ -486,6 +508,9 @@ section#content > div > div.slider_wrapper{
 		padding-right: 10px;
 		font-size: 22px;
 		left: 0;
+	}
+	section#content > div > div > p{
+		font-size: 20px;
 	}
 	.col_two{
 		flex-flow: column;
@@ -521,7 +546,7 @@ section#content > div > div.slider_wrapper{
 		left: 16px;
 	}
 	section#title.form > div.text{
-		font-size: 16px;
+		font-size: 26px;
 		z-index: 3000;
 	}
 	section#title.form > div.text:after{
@@ -543,7 +568,7 @@ section#content > div > div.slider_wrapper{
 		display: none;
 	}
 	.slick-prev{
-		left: 20px;
+		left: 5px;
 	}
 	.slick-next{
 		right: 20px;
@@ -551,6 +576,12 @@ section#content > div > div.slider_wrapper{
 	.slick-prev:before, .slick-next:before{
 		font-size: 35px;
 		color: #ffffffb8;
+	}
+	.list > li{
+		font-size: 20px;
+	}
+	.thumbnail_wrapper > .thumb_item{
+		width: calc(100% / 3 - 20px);
 	}
 }
 

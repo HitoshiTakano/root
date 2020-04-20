@@ -425,9 +425,9 @@ function commmonHead(){
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/form2.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/common.css?20202">
+	<link rel="stylesheet" type="text/css" href="css/common.css?2022202">
 	<link rel="stylesheet" type="text/css" href="css/sub.css">
-	<link rel="stylesheet" type="text/css" href="css/form.css?20202">
+	<link rel="stylesheet" type="text/css" href="css/form.css?202004131420">
 </head>
 	<?php
 }

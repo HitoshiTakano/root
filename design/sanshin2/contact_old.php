@@ -56,7 +56,6 @@ $referCheck = 0;
 //----------------------------------------------------------------------------------------------------------------------------------------------
 //画面遷移経路図（入力・再入力画面：initHtml、確認画面：verifyHtml、完了画面：finishHtml、（入力画面が別ページである場合、入力内容エラー画面：errorHtml()にinitHtml()を変更）
 if(isset($post['submit'])){
-	// var_dump($post);
 	if(!empty($post['token'] && isset($post['token']))){
 		if(validate($comm)) {
 			finishHtml($comm); //完了画面
@@ -81,7 +80,7 @@ if(isset($post['submit'])){
 // 送信内容セット
 function bodySet($comm){
 	global $encode;
-	$adminBody= "URL (<br>" . $_SERVER['HTTP_REFERER'] . ")<br>からお問い合わせ<br>";
+	$adminBody= "URL (" . $_SERVER['HTTP_REFERER'] . ")からお問い合わせ<br>";
 	$adminBody .="＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br>";
 	$adminBody.= postToMail($comm) . "<br>";//POSTデータを関数からセット
 	$adminBody.="<br>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br>";
@@ -167,7 +166,6 @@ if($post==null || !isset($post['token'])){
 }else{
 	$token = $post['token'];
 }
-// var_dump($token);
 $token = $comm -> h($token);
 //エラーメッセージセット
 $errArr = $GLOBALS['err_message'];
@@ -424,10 +422,10 @@ function commmonHead(){
 	<!-- COMMON JS -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
-	<script type="text/javascript" src="js/form2.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/common.css?2022202">
+	<script type="text/javascript" src="js/form.js?202004"></script>
+	<link rel="stylesheet" type="text/css" href="css/common.css?20020">
 	<link rel="stylesheet" type="text/css" href="css/sub.css">
-	<link rel="stylesheet" type="text/css" href="css/form.css?202004131420">
+	<link rel="stylesheet" type="text/css" href="css/form.css?202020">
 </head>
 	<?php
 }

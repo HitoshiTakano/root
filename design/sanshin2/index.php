@@ -12,7 +12,7 @@
 		$(function(){
 			$('.slide_wrapper').slick({
 				autoplay:true,
-				autoplaySpeed:5000,
+				autoplaySpeed:7500,
 				speed:700,
 				dots: true,
 			});

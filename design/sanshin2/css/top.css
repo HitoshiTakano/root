@@ -24,7 +24,7 @@ main > section#top > div > h1{
 	position: absolute;
 	top: calc(100vh - 150px - 180px - 30px);
 	right: 0px;
-	width: 550px;
+	width: 600px;
 	height: 180px;
 	overflow: hidden;
 }
@@ -40,14 +40,14 @@ main > section#top > div > h1 > p{
 }
 main > section#top > div > h1 > p:nth-child(1){
 	width: 495px;
-	animation: slideRightIn 0.5s ease;
+	animation: slideRightIn 0.8s ease;
 	animation-fill-mode: forwards;
 }
 main > section#top > div > h1 > p:nth-child(2){
 	margin-left: 100px;
 	width: 440px;
-	animation: slideRightIn 0.5s ease;
-	animation-delay: .5s;
+	animation: slideRightIn 0.8s ease;
+	animation-delay: .7s;
 	animation-fill-mode: forwards;
 }
 @keyframes slideRightIn{
@@ -198,7 +198,7 @@ main > section#topic > div.lines{
 	width: 1px;
 	height: 400px;
 	position: absolute;
-	background-color: #ffffffaa;
+	background-color: rgba(255, 255, 255, 0.65);
 }
 .line:nth-child(1){
 	top: -54px;
@@ -326,7 +326,7 @@ section#recruit > div{
 	top: 0;
 	min-height: 550px;
 	transform: skewX(-20deg);
-	background-color: #ffffffd4;
+	background-color: rgba(255, 255, 255, 0.85);
 }
 section#recruit > div > p{
 	position: absolute;
@@ -352,6 +352,7 @@ section#contact > div{
 section#contact > div > div{
 	width: calc(100% / 2);
 	padding: 30px 10px;
+	padding-top: 0;
 	position: relative;
 }
 section#contact > div > div.left > h3{
@@ -419,13 +420,16 @@ section#contact > div > div.right > a.btn{
 		min-height: calc(100vh - 100px);
 	}
 	.slide_wrapper .slide{
-		min-height: calc(100vh - 100px);
+		min-height: calc(90vh - 100px);
 	}
 	.slide_wrapper img{
 		min-height: calc(100vh - 100px);
 		min-width: auto;
 		width: auto;
 		max-width: auto;
+	}
+	.slick-dots li.slick-active button:before{
+		color: #0805a7;
 	}
 	.slick-next{
 		right: 15px;
@@ -436,9 +440,11 @@ section#contact > div > div.right > a.btn{
 	.slick-prev:before, .slick-next:before{
 		color: #333333;
 		font-size: 30px;
+		display: none;
 	}
 	.slick-prev, .slick-next{
 		top: calc(50% - 10px);
+		display: none;
 	}
 	main > section#top > div > h1{
 		width: 100%;
@@ -451,7 +457,7 @@ section#contact > div > div.right > a.btn{
 		font-size: 30px;
 		text-align: center;
 		background-color: #ffffffcc;
-		text-shadow: 0 0 3px #777777, 0 0 3px #777777;
+		text-shadow: 0 0 3px #fff, 0 0 3px #fff;
 	}
 	main > section#top > div > h1 > p:nth-child(1){
 		width: 100%;
@@ -486,6 +492,7 @@ section#contact > div > div.right > a.btn{
 	}
 	main > section#company > div.text > h3 > p{
 		color: #fff;
+		font-size: 30px;
 		text-shadow: 0 0 3px #777, 0 0 3px #777;
 	}
 	main > section#company > div.image{
@@ -505,10 +512,10 @@ section#contact > div > div.right > a.btn{
 		font-size: 20px;
 	}
 	section#recruit{
-		background-size: 100%;
+		background-size: 130%;
 		background-position: center;
 		min-height: 400px;
-		animation: bgimgSize 30s linear infinite alternate;
+		/*animation: bgimgSize 30s linear infinite alternate;*/
 	}
 	.line{
 		height: 250px;
