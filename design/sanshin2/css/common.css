@@ -326,15 +326,18 @@ div.foot_nav > ul > li > ul > li > a{
   }
   header > .logo{
     width: calc( 100% - 100px);
-    margin: 25px;
+    margin-bottom: 25px;
+    margin-left: 30px;
     margin-right: auto;
+    margin-top: 15px;
   }
   header > .logo > img{
     width: 40px;
     height: 40px;
+    margin: 5px 0;
   }
   header > .logo > h1{
-    line-height: 35px;
+    line-height: 50px;
   }
   #menu_bar{
     right: 20px;
@@ -369,21 +372,21 @@ div.foot_nav > ul > li > ul > li > a{
     width: 100%;
     text-align: center;
     height: 100%;
-    line-height: 80px;
+    line-height: calc(100% + 30px);
     border-bottom: 1px dashed #00A7EA;
   }
   header > nav > ul > li > a::before{
-    bottom: -10px;
+    bottom: 10px;
   }
   header > nav > ul > li:first-child > a{
     border-top: 1px dashed #00A7EA;
   }
   header.scroll > nav > ul > li > a{
     height: 100%;
-    line-height: 80px;
+    line-height: calc(100% + 30px);
   }
   header.scroll > nav > ul > li > a::before{
-    bottom: -10px;
+    bottom: 10px;
   }
   footer{
     flex-flow: column;

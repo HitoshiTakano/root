@@ -212,7 +212,7 @@ commmonHead();
 					</div>
 					<div class="check_div">
 						<input type="checkbox" name="check" value="1" id="check" required >
-						<label for="check" class="checkbox" <?php if(isset($post['check'])) echo 'checked'; ?> >上記内容で送信いたしますので、問題なければチェックを入れてください。<span class="err_msg"></span></label>
+						<label for="check" class="checkbox" <?php if(isset($post['check'])) echo 'checked'; ?> >上記内容で送信いたしますので、問題なければチェックを入れてください。</label>
 					</div>
 					<input type="hidden" name="token" value="<?php echo $token; ?>">
 					<div>
@@ -425,9 +425,9 @@ function commmonHead(){
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/form2.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/common.css?2022202">
+	<link rel="stylesheet" type="text/css" href="css/common.css?20200420">
 	<link rel="stylesheet" type="text/css" href="css/sub.css">
-	<link rel="stylesheet" type="text/css" href="css/form.css?202004131420">
+	<link rel="stylesheet" type="text/css" href="css/form.css?20200420">
 </head>
 	<?php
 }

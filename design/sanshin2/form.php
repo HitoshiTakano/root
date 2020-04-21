@@ -11,7 +11,7 @@
 	<title></title>
 	<?php include_once 'html/file.html'; ?>
 	<link rel="stylesheet" type="text/css" href="css/sub.css">
-	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css?20200420">
 	<script src="js/form.js" type="text/javascript"></script>
 </head>
 <body>
