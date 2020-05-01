@@ -9,9 +9,8 @@
 <head>
 	<?php include_once 'html/meta.html'; ?>
 	<title></title>
-	<?php include_once 'html/file.html'; ?>
-	<link rel="stylesheet" type="text/css" href="css/sub.css">
-	<link rel="stylesheet" type="text/css" href="css/form.css?20200420">
+	<?php include_once 'html/file_usb.html'; ?>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
 	<script src="js/form.js" type="text/javascript"></script>
 </head>
 <body>

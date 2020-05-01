@@ -234,3 +234,16 @@ input[type="submit"]:disabled + label{
 		margin-top: -15px;
 	}
 }
+@media screen and (max-width: 350px){
+	form > div > label{
+		font-size: 12px;
+	}
+	label > span.err_msg{
+		font-size: 12px;
+	}
+	input, textarea{
+		height: 36px;
+		font-size: 16px;
+		padding: 10px 5px;
+	}
+}

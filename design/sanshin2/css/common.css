@@ -162,6 +162,7 @@ header > .logo{
 header > .logo > img, footer > .logo > img{
   width: 50px;
   height: 50px;
+  flex-shrink: 0;
 }
 header > .logo > h1, footer > .logo > h1{
   width: 250px;
@@ -278,7 +279,7 @@ footer h1{
   color: #fff;
 }
 footer > div.foot_nav{
-  width: calc(100% - 260px);
+  width: calc(90% - 260px);
 }
 div.foot_nav > ul{
   width: 100%;
@@ -295,7 +296,7 @@ div.foot_nav > ul > li > a{
   font-size: 20px;
   display: block;
   color: #fff;
-  text-align: center;
+  text-align: left;
   width: 100%;
   padding: 2px;
 }
@@ -307,7 +308,6 @@ div.foot_nav > ul > li > ul{
 }
 div.foot_nav > ul > li > ul > li{
   width: 100%;
-  margin-left: 30px;
 }
 div.foot_nav > ul > li > ul > li:hover{
   border-bottom: 1px dashed #fff;
@@ -317,7 +317,7 @@ div.foot_nav > ul > li > ul > li > a{
   display: block;
   padding: 5px;
   text-align: left;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 960px){
@@ -411,6 +411,9 @@ div.foot_nav > ul > li > ul > li > a{
     padding: 10px 0;
     width: 100%;
   }
+  div.foot_nav > ul > li > a{
+    text-align: center;
+  }
   div.foot_nav > ul > li > ul > li{
     margin: 0;
     padding: 3px;
@@ -447,5 +450,52 @@ main > section > div{
   main > section > div{
     width: 100%;
     padding: 10px;
+  }
+}
+@media screen and (min-height: 810px) and (max-width: 800px){
+  header > nav > ul > li > a{
+    padding-top: 25px;
+  }
+  header > nav > ul > li > a::before{
+    bottom: 25px;
+  }
+  header.scroll > nav > ul > li > a{
+    padding-top: 25px;
+  }
+  header.scroll > nav > ul > li > a::before{
+    bottom: 25px;
+  }
+}
+@media screen and (min-height: 1000px) and (max-width: 800px){
+  header > nav > ul > li > a{
+    padding-top: 45px;
+  }
+  header > nav > ul > li > a::before{
+    bottom: 45px;
+  }
+  header.scroll > nav > ul > li > a{
+    padding-top: 45px;
+  }
+  header.scroll > nav > ul > li > a::before{
+    bottom: 45px;
+  }
+}
+@media screen and (max-height: 580px) and (max-width: 800px){
+  header > nav > ul > li > a{
+    line-height: 45px;
+  }
+  header > nav > ul > li > a::before{
+    bottom: 0px;
+  }
+  header.scroll > nav > ul > li > a{
+    line-height: 45px;
+  }
+  header.scroll > nav > ul > li > a::before{
+    bottom: 0px;
+  }
+}
+@media screen and (max-width: 320px){
+  header > .logo > h1{
+    font-size: 21px;
   }
 }

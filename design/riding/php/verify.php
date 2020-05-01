@@ -15,7 +15,7 @@
 				}
 			?>
 			<div class="verify_btn">
-				<form action="./contact.php" method="post" accept-charset="utf-8">
+				<form action="./" method="post" accept-charset="utf-8">
 					<?php
 					foreach ($inputArray as $key => $value) {
 						echo '<input type="hidden" name="' . $key .'" value="'. h($post[$key]) .'"">';
@@ -26,7 +26,7 @@
 					<input id="reinput" class="reinput" type="submit" name="reinput" value="MODIFY">
 					<label for="reinput">MODIFY</label>
 				</form>
-				<form action="./contact.php" method="post" accept-charset="utf-8">
+				<form action="./" method="post" accept-charset="utf-8">
 					<?php
 					foreach ($inputArray as $key => $value) {
 						echo '<input type="hidden" name="' . $key .'" value="'. h($post[$key]) .'"">';

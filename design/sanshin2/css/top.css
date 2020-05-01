@@ -31,33 +31,33 @@ main > section#top > div > h1{
 main > section#top > div > h1 > p{
 	display: block;
 	position: relative;
-	background-color: #fff;
-	color: #00A7EA;
+	color: #fff;
+	text-shadow: 0 0 2px #025576, 0 0 2px #025576;
 	width: 500px;
-	transform: translateX(1000px);
+	transform: translateX(0px);
 	font-size: 55px;
 	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 main > section#top > div > h1 > p:nth-child(1){
 	width: 495px;
-	animation: slideRightIn 0.8s ease;
-	animation-fill-mode: forwards;
+	/*animation: slideRightIn 0.8s ease;
+	animation-fill-mode: forwards;*/
 }
 main > section#top > div > h1 > p:nth-child(2){
 	margin-left: 100px;
 	width: 440px;
-	animation: slideRightIn 0.8s ease;
+/*	animation: slideRightIn 0.8s ease;
 	animation-delay: .7s;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards;*/
 }
-@keyframes slideRightIn{
+/*@keyframes slideRightIn{
 	from{
 		transform: translateX(1000px);
 	}
 	to{
 		transform: translateX(0);
 	}
-}
+}*/
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
 /*															SLIDE																	*/
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
@@ -169,6 +169,8 @@ main > section#topic{
 }
 main > section#topic > div{
 	padding: 50px 0;
+	width: 800px;
+	margin: 0 auto;
 }
 main > section#topic > div *{
 	color: #fff;
@@ -305,6 +307,11 @@ section#else > div > a{
 	text-align: center;
 	color: #fff;
 	border: 5px solid #ffffff;
+	transition: all .3s ease;
+}
+section#else > div > a:hover{
+	background-color: #fff;
+	color: #707070;
 }
 /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+	*/
 /*															RECRUIT																	*/
@@ -387,6 +394,10 @@ section#contact > div > div.right > a.tel{
 	font-size: 40px;
 	text-align: center;
 	margin-left: 40px;
+	transition: all .3s ease;
+}
+section#contact > div > div.right > a.tel:hover{
+	opacity: .7;
 }
 section#contact > div > div.right > a.tel::before{
 	content: "";
@@ -408,19 +419,19 @@ section#contact > div > div.right > a.btn{
 
 @media screen and (max-width: 800px){
 	main > section#top{
-		height: calc(75vh - 100px);
+		height: 500px;
 	}
 	main > section#top > div{
-		min-height: calc(75vh - 100px);
+		min-height: 500px;
 	}
 	main > section#top > div > div.slide_wrapper{
-		min-height: calc(75vh - 100px);
+		min-height: 500px;
 	}
 	.slick-list, .slick-track{
-		min-height: calc(75vh - 100px);
+		min-height: 500px;
 	}
 	.slide_wrapper .slide{
-		min-height: calc(75vh - 100px);
+		min-height: 500px;
 	}
 	.slide_wrapper img{
 		min-height: calc(100vh - 100px);
@@ -456,8 +467,7 @@ section#contact > div > div.right > a.btn{
 		display: block;
 		font-size: 30px;
 		text-align: center;
-		background-color: #ffffffcc;
-		text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+		/*text-shadow: 0 0 3px #fff, 0 0 3px #fff;*/
 	}
 	main > section#top > div > h1 > p:nth-child(1){
 		width: 100%;
@@ -465,6 +475,9 @@ section#contact > div > div.right > a.btn{
 	main > section#top > div > h1 > p:nth-child(2){
 		width: 100%;
 		margin: 0;
+	}
+	main > section#topic > div{
+		width: 100%;
 	}
 	main > section#topic > div > h2{
 		padding-left: 20px;

@@ -4,6 +4,7 @@ $(function(){
 	
 	var url = location.href;
 	var param = url.split('#');
+
 	// Footer Menu Scroll Event
 	if(param[1]!=undefined && param[1]!=null && param[1]!='' ){
 		var top = $(window).scrollTop();
@@ -29,7 +30,6 @@ $(function(){
 	$('.slide').each(function(i,e){
 		var h = $(this).height();
 		var id = '#' + $(this).attr('id');
-		// console.log(h,id);
 		$(this).css('height','0px');
 		slideArr.push({id:id,h:h});
 	});

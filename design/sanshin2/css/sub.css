@@ -506,7 +506,7 @@ section#content > div > div.slider_wrapper{
 	section#content > div > h3{
 		padding-left: 10px;
 		padding-right: 10px;
-		font-size: 22px;
+		font-size: 25px;
 		left: 0;
 	}
 	section#content > div > div > p{
@@ -584,4 +584,8 @@ section#content > div > div.slider_wrapper{
 		width: calc(100% / 3 - 20px);
 	}
 }
-
+@media screen and (max-width: 350px){
+	section#title > div.text{
+		width: 95%;
+	}
+}

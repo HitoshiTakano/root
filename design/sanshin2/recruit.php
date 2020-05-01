@@ -7,8 +7,7 @@
 <head>
 	<?php include_once 'html/meta.html'; ?>
 	<title><?php echo $title; ?></title>
-	<?php include_once 'html/file.html'; ?>
-	<link rel="stylesheet" type="text/css" href="css/sub.css">
+	<?php include_once 'html/file_sub.html'; ?>
 </head>
 <body>
 	<?php include_once 'html/header.html' ?>

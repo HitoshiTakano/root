@@ -45,7 +45,7 @@
 	</script>
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-	<link rel="stylesheet" type="text/css" href="css/sub.css">
+	<link rel="stylesheet" type="text/css" href="css/sub.css?202004221800">
 </head>
 <body>
 	<?php include_once 'html/header.html' ?>

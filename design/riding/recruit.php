@@ -14,7 +14,7 @@
 			$('header').addClass('sub');
 		});
 	</script>
-	<link rel="stylesheet" type="text/css" href="css/sub.css?2020041011">
+	<link rel="stylesheet" type="text/css" href="css/sub.css">
 </head>
 <body>
 	<?php include_once './html/common/sub_header.html'; ?>

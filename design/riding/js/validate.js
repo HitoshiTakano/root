@@ -110,7 +110,7 @@ var validation = {
 		return true;
 	},
 	symbolCheck:function(name, val){
-		let reg = new RegExp(/[!"#$%&'()\*\+\-,;<=>\[\\\]^`{|}~]/g);
+		let reg = new RegExp(/["#$%&'()\*\+,;<=>\[\\\]^`{|}~]/g);
 		validation.inputData[name].error = false;
 		this.resetMessage(name);
 		if(reg.test(val)) {	
