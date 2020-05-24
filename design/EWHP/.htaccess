@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+#ファイル一覧機能を無効にする命令
+Options -Indexes
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# インデックスファイルを表示しない
+# index.html無しのURLに統一
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://excitingworks.jp/$1 [R=301,L]
+# index.php無のURLに統一
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ https://excitingworks.jp/$1 [R=301,L]
+
+
+
+#.html を非表示にする
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.(html|php)[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+</IfModule>

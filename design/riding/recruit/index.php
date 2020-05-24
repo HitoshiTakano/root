@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$file = 'recruit';
 	$title = '採用情報 | RECRUIT';
 	$page = '株式会社Riding';

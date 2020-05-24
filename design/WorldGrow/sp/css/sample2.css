@@ -1,0 +1,328 @@
+﻿
+body{
+	margin:0;
+	padding:0;
+	font:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background:none;
+	z-index:100;
+	position:relative;
+}
+.wrap{
+	width:100%;
+	margin:0;
+	padding:0;
+	z-index:150;
+	position:relative;
+}
+
+h1{
+	text-align:center;
+	font-weight:bold;
+	margin:0 auto;
+	padding:5px 0;
+	font-size:1.2em;
+}
+h2{
+	text-align:center;
+	font-weight:bold;
+	margin:0 auto;
+	padding:10px 0;
+	font-size:0.9em;
+}
+h3{
+	text-align:center;
+	font-weight:bold;
+	margin:0 auto;
+	padding:10px 0;
+	font-size:1.0em;
+}
+	
+h4{
+	text-align:center;
+	font-weight:bold;
+	margin:0 auto;
+	padding:10px 0;
+	font-size:0.9em;
+}
+h5{
+	text-align:center;
+	font-weight:bold;
+	margin:0 auto;
+	padding:10px 0;
+	font-size:0.6em;
+}
+
+a{
+	text-decoration:none;
+	text-align:center;
+}
+p{
+	text-align:center;
+	font-size:0.8em;
+	
+}
+img{
+	text-align:center;
+}
+hr{
+	width:100%;
+}
+
+
+
+
+#topic{
+	widows:100%;
+	margin:0 auto;
+	padding:10px 5px;
+	text-align:center;
+}
+#topic p{
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-size:1.2em;
+}
+/*DROPDOWN MENU BAR */
+#header {
+    height: 30px;
+}
+#header #nav-open {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    z-index: 900;
+    margin: 0;
+    background-color:#999999;
+}
+#header #nav-open a {
+    position: absolute;
+	text-align:center;
+	color:#FFFFFF;
+}
+#menuBar {
+    width: 100%;
+    position: absolute;
+    top: -180px;
+    z-index: 100;
+    transition: top 1s;
+    -webkit-transition: top 1s;
+    -moz-transition: top 1s;
+    text-align: center;
+    background:#999;
+}
+#menuBar:target {
+    top: 30px;
+}
+#menuBar ul{
+	list-style:none;
+	margin-left:0;
+    padding-left:0;
+}
+#menuBar ul li{
+	list-style:none;
+
+}
+
+#menuBar ul li a{
+	color:#FFFFFF;
+}
+
+/*背景画像スクロールアニメーション*/
+#window {
+background-image:url(../../img/program_logo_edit.png);
+background-position:center center;
+background-size:250px 160px;
+width:100%;
+height:300%;
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+	-webkit-animation:infinitescroll 5s linear infinite;
+	-moz-animation:infinitescroll 5s linear infinite;
+	-ms-animation:infinitescroll 5s linear infinite;
+	-o-animation:infinitescroll 5s linear infinite;
+	animation:infinitescroll 5s linear infinite;
+z-index:0;
+}
+
+@-webkit-keyframes infinitescroll {
+	0% {-webkit-transform:translate3d(0, 0, 0);}
+	100% {-webkit-transform:translate3d(0, -320px, 0);}
+}
+@-moz-keyframes infinitescroll {
+	0% {-moz-transform:translate3d(0, 0, 0);}
+	100% {-moz-transform:translate3d(0, -320px, 0);}
+}
+@-ms-keyframes infinitescroll {
+	0% {-ms-transform:translate3d(0, 0, 0);}
+	100% {-ms-transform:translate3d(0, -320px, 0);}
+}
+@-o-keyframes infinitescroll {
+	0% {-o-transform:translate3d(0, 0, 0);}
+	100% {-o-transform:translate3d(0, -320px, 0);}
+}
+@keyframes infinitescroll {
+	0% {transform:translate3d(0, 0, 0);}
+	100% {transform:translate3d(0, -320px, 0);}
+}	
+		
+
+		
+
+
+/*--ページ、ヘッダー、コンテンツ--*/
+.ui-page{
+	/*background:#ffffff;*/
+}
+.ui-header{
+	background:#ffffff;
+	border:1px solid #ffffff;
+}
+.ui-header img{
+	width:100%;
+}
+.ui-header .ui-title{
+	color:#ffffff;
+	text-align:center;
+	margin:1.0em 5% 0.8em;
+}
+.ui-header .ui-btn-icon-notext{
+	top:10px;
+	width:60px;
+	position:fixed;
+	z-index:999;
+	
+}
+.ui-header .ui-btn-right{
+	right:10px;
+	position:fixed;
+}
+.ui-content{
+	background:none;
+}
+
+/*---スライドショー---*/
+.flexslider{
+    border:none;
+    box-shadow:none;
+}
+
+/*---下層ページの画像---*/
+.img_w{
+	width:100%;
+}
+
+/*--ページトップへ--*/
+.pagetop{
+	padding:10px 5px;
+	text-align:right;
+	background:#efefef;
+}
+/*--フッター--*/
+#footer{
+	text-align:center;
+	padding:20px 0px;
+	font-size:11px;
+	background:#efefef;
+}
+
+
+
+/*------------リスト・ボタン系-----------------*/
+/*--文字省略なし(ヘッダー・フッター含む)---*/
+.ui-header .ui-title,
+.ui-footer .ui-title,
+.ui-btn-inner,
+.ui-li-heading,
+.ui-li .ui-btn-text a.ui-link-inherit,
+.ui-li-desc
+{
+	overflow: visible;
+	white-space: normal;
+}
+
+/*-ボタンコーナー部分-*/
+.ui-btn-corner-all{
+	border-radius:25px;
+}
+/*-ボタンサイズ-*/
+.ui-btn-inner{
+	padding:5px 20px;
+}
+/*-ヘッダー ボタンコーナー部分-*/
+.ui-header .ui-btn-corner-all{
+	border-radius:15px;
+}
+/*-リストビュー リスト名部分-*/
+.ui-li .ui-btn-text a.ui-link-inherit{
+	font-size:13px;
+}
+.ui-li-has-thumb .ui-btn-inner a.ui-link-inherit{
+	min-height: 20px;
+	padding-left:60px;
+}
+/*-リストビュー サムネイル部分-*/
+.ui-listview .ui-li-thumb {
+	max-height: 36px;
+	max-width: 36px;
+	left: 8px;
+	top:  12px; 
+}
+
+/*--トップ　リストビュー(ニュース)--*/
+li.toplist_news{
+	/*background:#ffffff;*/
+	font-size:13px;
+	line-height:13px;
+}
+li.toplist_news:hover{
+	font-weight:normal;
+}
+li.toplist_news.ui-btn-active{
+	border-color:#c0c0c0;
+	text-shadow:none;
+}
+li.toplist_news.ui-btn-active:visited,
+li.toplist_news.ui-btn-active:hover,
+li.toplist_news.ui-btn-active a.ui-link-inherit{
+	color:#5994bf;
+}
+li.toplist_news p{
+	font-size:11px;
+	font-weight:bold;
+}
+li.toplist_news.ui-btn-up-c{
+	font-weight:100;
+}
+
+/*--トップ　リストビュー(メニュー)の背景色、タップ時--*/
+li.toplist_menu1{
+	background:#dcdcdc;
+}
+li.toplist_menu2{
+	background:#efefef;
+}
+
+.toplist_menu1.ui-btn-active{
+	border-color:#c0c0c0;
+	text-shadow:none;
+}
+li.toplist_menu1.ui-btn-active:visited,
+li.toplist_menu1.ui-btn-active:hover,
+li.toplist_menu1.ui-btn-active a.ui-link-inherit{
+	color:#5994bf;
+}
+li.toplist_menu2.ui-btn-active{
+	border-color:#c0c0c0;
+	text-shadow:none;
+}
+li.toplist_menu2.ui-btn-active:visited,
+li.toplist_menu2.ui-btn-active:hover,
+li.toplist_menu2.ui-btn-active a.ui-link-inherit{
+	color:#5994bf;
+}
+
+

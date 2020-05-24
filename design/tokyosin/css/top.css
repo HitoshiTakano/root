@@ -1,0 +1,232 @@
+
+/* SECTION */
+main{
+	width: 100%;
+}
+main .wrapper{
+	width: 1024px;
+	margin: 0 auto;
+}
+section{
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+section h2{
+	font-size: 34px;
+	padding: 10px 0;
+}
+/* NEWS */
+section > div{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+section > div > div{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	margin-top: 20px;
+}
+section > div > div > h3{
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	font-size: 30px;
+	color: #555555;
+}
+section > div > div > img{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+section > div > div > p{
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	font-size: 20px;
+}
+/* ABOUT SECTION */
+section > div.about{
+	display: inherit;
+}
+div.aboutus > div {
+	width: 100%;
+	overflow: hidden;
+	text-shadow: 1px 1px 3px #000000;
+}
+div.aboutus > div > img{
+	width: 100%;
+	object-fit: cover;
+}
+div.aboutus > div > h3{
+	color: #ffffff;
+}
+div.aboutus > div > p{
+	text-align: left;
+	padding-left: 50px;
+	color: #ffffff;
+}
+/*FOOTER*/
+footer{
+	width: 100%;
+	background-color: #333333;
+	color: #FFFFFF;
+	padding: 30px 0 0;
+}
+footer > div{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+footer > div > a{
+	color: #ffffff;
+	font-size: 12px;
+}
+footer > div > h2{
+	padding-top: 20px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #ffffff;
+	vertical-align: bottom;
+	padding-bottom: 10px;
+}
+
+/* RESPONSIVE CSS FOR SP*/
+
+/* RESPONSIVE CSS FOR SP*/
+@media only screen and (max-width: 1023px) {
+	img.logo{
+		display: none;
+		width: 100%;
+		height: auto;
+	}
+	#ham, #ham span{
+		display: inline-block;
+		transition: all .4s;
+		box-sizing: border-box;
+	}
+	header{
+		position: fixed;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    z-index: 5000;
+	    background-color: #ffffff;
+	}
+	header > h1{
+		padding: 6px 0;
+	}
+	#ham{
+		position: absolute;
+	    top: 13px;
+	    left: 16px;
+	    width: 40px;
+	    height: 40px;
+	    border-radius: 5px;
+	    background-color: #FFFFFF;
+	    z-index: 99999;
+	}
+	#ham span{
+	    position: absolute;
+	    left: 7px;
+	    width: 80%;
+	    height: 2px;
+	    background-color: #858383;
+	    border-radius: 11px;
+	}
+	#ham span:nth-of-type(1) {
+		top: 8px;
+	}
+	#ham span:nth-of-type(2) {
+		top: 19px;
+	}
+	#ham span:nth-of-type(3) {
+		bottom: 7px;
+	}
+	/* MENU BUTTON CSS ANIMATION */
+	#ham.clicked span:nth-of-type(1) {
+	  -webkit-transform: translateY(20px) rotate(-315deg);
+	  transform: translateY(20px) rotate(-315deg);
+	  top : -1px;
+	}
+	#ham.clicked span:nth-of-type(2) {
+	  opacity: 0;
+	}
+	#ham.clicked span:nth-of-type(3) {
+	  -webkit-transform: translateY(-20px) rotate(315deg);
+	  transform: translateY(-20px) rotate(315deg);
+	  bottom: -1px;
+	}
+	#ham.clicked{
+		box-shadow: 0px 0px 0px #000000;	
+	}
+	.topImage{
+		height: auto;
+		margin-top: 64px;
+	}
+	nav{
+		display: none;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		margin-top: 60px;
+		top: 0px;
+		left: 0;
+		right: 0;
+		background-color: #ffffffee;
+		z-index: 9900;
+		overflow: hidden;
+	}
+	nav ul{
+		width: 100%;
+		margin-top: 10px;
+	}
+	nav ul{
+		margin: 0 auto;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-around;
+	}
+	nav ul li{
+		vertical-align: middle;
+		padding-bottom: 10px;
+		height: 40px;
+		border-bottom: 1px dashed #000000;
+		z-index: 99990;
+	}
+	nav ul li a{
+		width: 120px;
+		display: block;
+		margin:0 auto; 
+	    padding: 20px 0px;
+	    z-index: 99999;
+	}
+	nav ul li a:hover{
+		padding-bottom: 5px;
+		border-bottom: 1px solid #cccccc;
+	}
+
+	main .wrapper{
+		width: 100%;
+	}
+	.wrapper > section:first-child{
+		padding-top: 0;
+	}
+	div.aboutus > div > p{
+		padding: 5px 10px;
+	}
+	section > div.about{
+		text-align: left;
+	}
+	header.fixed{
+		box-shadow: 1px 0px 3px #777777;
+	}
+}

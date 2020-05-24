@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+
+
+<head>
+<meta charset="UTF-8">
+<title>お申し込み</title>
+
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/inquiry.css" />
+
+
+<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="./js/form.js"></script>
+</head>
+
+<body>
+
+<header>
+<div class="headWrap">
+<h1><span id="list"></span>へお申し込み</h1>
+</div>
+</header>
+
+<div class="wrapper">
+<div class="wrap">
+
+<h2>お客様情報入力</h2>
+<div id="inquiry">
+<form action="" method="post" autocomplete="off">
+
+<div id="name"><label for="inputName">氏名</label><br>
+<input id="inputName" name="inputName" type="text" placeholder="NAME(ex. YAMADA TARO) 最大20文字" maxlength="20" required/>
+<p class="error hidden">氏名が正しく入力されていません</p></div>
+
+<div id="birth"><label for="inputBirth">生年月日</label><br>
+<input id="inputBirth" name="inputBirth" type="text" placeholder="BIRTHDAY(ex. 19890101) 最大8文字" maxlength="8" required/>
+<p class="error hidden">生年月日が正しく入力されていません</p></div>
+
+<div id="address"><label for="inputAddress">住所</label><br>
+<input id="inputAddress" name="inputAddress" type="text" placeholder="ADDRESS 最大200文字" maxlength="200" required/>
+<p class="error hidden">住所が正しく入力されていません</p></div>
+
+<div id="tel"><label for="inputTel">電話番号</label><br>
+<input id="inputTel" name="inputTel" type="tel" placeholder="TELPHONE NUMBER(ex. 01234567890) 最大13文字" maxlength="13" required/>
+<p class="error hidden">電話番号が正しく入力されていません</p></div>
+
+<div id="mail"><label for="inputMail">メールアドレス</label><br>
+<input id="inputMail" name="inputMail" type="mail" placeholder="MAIL ADDRESS(ex. sample@mail.com) 最大200文字" maxlength="200" required/>
+<p class="error hidden">メールアドレスが正しく入力されていません</p></div>
+
+<div id="consent">
+<p>各項目を入力後</p>
+<p><a href="javascript:void(0);" >同意書に関する注意事項</a>をお読みの上、</p>
+<p>下記チェックボックスをチェックした後、</p>
+<p>「支払方法へ」へおすすみください。</p>
+</div>
+
+<div id="checkBtn" class="center">
+<input type="checkbox" name="check" value="Yes" id="lp" />
+<label for="lp" class="check_css">同意する</label>
+
+</div>
+
+<div class="center">
+<p style="color:#F00; text-align:center">↓↓システム開発中（選択不可）↓↓</p>
+</div>
+<div class="center">
+<button id="submit" name="submit" type="submit" disabled/><label>支払方法へ</label></button>
+</div>
+<div class="center">
+<p style="color:#F00; text-align:center">↑↑システム開発中（選択不可）↑↑</p>
+</div>
+
+
+</form>
+</div>
+
+<div>
+<a href="confirm.html" style="font-size:25px;">送信後へ</a>
+<br><br><br>
+</div>
+
+</div>
+</div>
+
+
+</body>
+</html>

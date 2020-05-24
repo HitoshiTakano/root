@@ -1,0 +1,62 @@
+
+
+body {
+	font-family:Helvetica, Arial, sans-serif;
+	margin:0;
+	padding:0;
+	font-size:100%;
+}
+
+
+	
+#menuBar{
+	width:100%;
+	margin:0 auto;
+	padding:20px 0;
+}
+
+#menuBar ul{
+list-style: none; 
+padding:10px 0;
+margin:0 auto;
+position:relative;
+}
+#menuBar li{
+padding: 0; 
+margin: 0;
+float: left;
+}
+#menuBar li a{
+display: block;
+width: 200px;
+
+text-decoration: none;
+color: #555;
+padding: 0;
+margin: 0;
+text-align: center;
+font-size: 20px;
+font-weight:bolder;
+color:#FFFFFF;
+
+}
+#menuBar li a:hover{
+border-bottom: 1px dotted #555;
+border-bottom-color:#FFFFFF;
+}
+
+
+.slicknav_menu {
+	display:none;
+}
+
+@media screen and (max-width: 40em) {
+	.js #menu {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+}
+

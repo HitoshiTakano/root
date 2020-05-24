@@ -91,9 +91,7 @@ class commonClass{
 	public function sendMail($to, $cc, $bcc, $from, $subject, $message){
 		mb_language("Japanese");
 		mb_internal_encoding("UTF-8");
-		// $to = 'develop@riding.co.jp';
-		// $subject = "TEST";
-		// $message = "This is TEST.\r\nHow are you?";$_SERVER['HTTP_USER_AGENT']
+		$firstAccess = (isset($_SESSION['ACCESS'])) ? $_SESSION['ACCESS'] : '';
 		$body = "ホームページから問い合わせ\r\n";
 		$body .= $message;
 		$message = $body;
@@ -103,6 +101,7 @@ class commonClass{
 		$message.="送信者のホスト名：".getHostByAddr(getenv('REMOTE_ADDR'))."\r\n";
 		$message.="問い合わせのページURL：".@$_SERVER['HTTP_REFERER']."\r\n";
 		$message.="問い合わせデバイス：".@$_SERVER['HTTP_USER_AGENT']."\r\n";
+		$message.="訪問先URL：".$firstAccess."\r\n";
 		
 		$header="From: " . $from;
 		$header.="\n";

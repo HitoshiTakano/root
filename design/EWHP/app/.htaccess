@@ -1,0 +1,5 @@
+AuthUserFile /home/users/2/boy.jp-ryoukiteki/web/EWHP/app/.htpasswd
+AuthGroupFile /dev/null
+AuthName "ユーザー認証テスト"
+AuthType Basic
+require valid-user

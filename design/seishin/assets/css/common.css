@@ -67,9 +67,10 @@ footer,
 main{ text-align:left;}
 
 
-footer{ display: flex; text-align: left; color: #666; background: #fff; padding: 40px 20px; border-radius: 8px 8px 0 0; box-shadow: 0 0 4px 4px rgba(0,0,0,0.2); }
-footer div{ margin: 0 180px 20px 0; }
-footer h5{ font-size: 24px; }
+footer{text-align: left; color: #666; background: #fff; padding: 40px 20px; border-radius: 8px 8px 0 0; box-shadow: 0 0 4px 4px rgba(0,0,0,0.2); }
+footer > div{display: flex;width:100%;}
+footer > div > div{ width:50%; }
+footer h5, footer h3{ font-size: 24px; color:#666; text-shadow:none;}
 footer p{ font-size: 14px; }
 
 
@@ -89,8 +90,8 @@ footer p{ font-size: 14px; }
 
 
 /*------*/
-.discList { margin: 1em; font-size: 14px; }
-.discList li{ list-style: disc; text-align: left; }
+.discList { margin: 1em; font-size: 14px; width: 100%;}
+.discList li{ list-style: disc; text-align: left; width: 100%;}
 .list2C li{ width: 45%; display: inline-block;}
 
 li i{ color: #24a45a; }
@@ -106,8 +107,9 @@ span.PC{ display: inline-block; }
     content:"."; display: block; height:0px; clear:both; line-height:0; visibility:hidden;}
 .cf {zoom:1;/*for IE 5.5-7*/}
 
-
-
+.company{ text-align: center; }
+.company ul{ margin: 0 auto; }
+.company ul li a{ color: #666; }
 @media screen and (max-width: 1020px) {
 .PC,
 span.PC{ display: none; }
@@ -115,9 +117,11 @@ span.PC{ display: none; }
 main,
 footer,
 .wrapBox{ width:auto; margin: 0 10px;}
-footer{ display: block; }
-footer div{ margin: 0 0 20px 0; }
-
+footer > div{ display: block; }
+footer > div > div{ width: 100%; }
+footer > div > div:last-child{
+	margin-right: 15px;
+}
 .contentsBox{ margin-bottom: 20px; padding: 40px 20px 5px;}
 
 h1{ font-size: 10px; }

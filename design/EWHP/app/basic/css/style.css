@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/*web font */
+/*@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&subset=japanese');*/
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('Noto_Sans_JP/NotoSansJP.eot');
+    src: url('NotoSansJP-Regular.otf') format('otf');
+}
+
+body,a,div,p{
+	padding:0;
+	margin:0;
+	font-family: 'Noto Sans JP', sans-serif;
+	color:#FFFFFF;
+}
+
+
+body{
+	background: -moz-radial-gradient(rgba(255,255,255,0.3), rgba(100,100,255, 0.8)); 
+	background: -webkit-radial-gradient(rgba(255,255,255,0.3), rgba(100,100,255, 0.8)); 
+	background: radial-gradient(rgba(255,255,255,0.3), rgba(100,100,255, 0.8)); 
+	background-size:cover;
+	background-attachment:fixed;
+	/*overflow:hidden;*/
+	z-index:-1;
+}
+a{
+	text-decoration:none;
+}
+p{
+	font-size:18px;
+}
+#consent p{
+	font-size:14px;
+}
+
+header{
+	width:100%;
+	background: -moz-radial-gradient(#FFF, #00C); 
+	background: -webkit-radial-gradient(#FFF, #00C); 
+	background: radial-gradient(#FFF, #00C); 
+	text-align:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	/* border-bottom:solid 1px rgba(51,51,200,0.5); */
+	z-index:100;
+	box-shadow:0px 5px 2px rgba(255,255,255,0.5);
+}
+.qrcode{
+	margin-bottom:30px;
+}
+#particleBG{
+	width:200%;
+	height:150%;
+	position:fixed;
+	z-index:-1000;
+}
+
+h1{
+	text-align:center;
+	padding:10px 0px;
+	margin:0 auto;
+	font-size:35px;
+	font-weight:bold;
+	color:#333333;
+	text-shadow:0px 0px 10px #FFF; /*横の位置　たての位置　ぼかし　カラー*/ 
+}
+h2{
+	text-align:center;
+	padding:10px 0px;
+	margin:0 auto;
+	font-size:22px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+h3{
+	text-align:center;
+	padding:10px 0px;
+	margin:0 auto;
+	font-size:20px;
+}
+
+/* PC VER */
+.wrapper{
+	width:1024px;
+	margin:30px auto;
+	background-color:rgba(0,0,51,0.6);
+	padding:10px;
+}
+.wrap{
+	width:650px;
+	margin:0 auto;
+	text-align:center;
+	
+}
+
+.headWrap{
+	background:url(../img/headBg.png) cover no-repeat;
+	width:1024px;
+	margin:0 auto;
+	z-index:10;
+}
+.topMenu{
+	margin-top:50px;
+}
+.iconWrap{
+	margin:0 auto;
+	padding:0;
+	display:inline-block;
+}
+.iconMenu{
+	position:relative;
+	margin:0;
+	padding:0;
+}
+.iconMenu a img{
+	width:300px;
+}
+
+.menuText{
+	position:absolute;
+	bottom:30%;
+	left:30%;
+	color:#333333;
+	font-size:40px;
+	font-weight:bold;
+}
+#goform{
+	background-color:#0066FF;
+	margin:16px auto;
+	color:#FFFFFF;
+	padding:15px;
+	font-size:20px;
+}
+.fontL{
+	font-size:20px;
+	font-weight:bolder;
+}
+#wrapQR{
+	width:300px;
+	height:300px;
+	padding:10px;
+	margin:0 auto;
+	text-align:center;
+	margin-bottom:50px;
+}
+.hidden{
+	display:none;
+}
+.error{
+	color:#F03;
+}
+button{
+	width:150px;
+	height:35px;
+	border-radius:10px;
+	background-color:#33F;
+	color:#FFFFFF;
+	margin:0 auto;
+}
+button label{
+	font-size:15px;
+}
+@media screen and (max-width: 1023px) {
+h1{
+	font-size:25px;
+}
+h2{
+	font-size:18px;
+	font-weight:bold;
+}
+h3{
+	font-size:15px;
+}
+.wrapper{
+	width:95%;
+	margin:0 auto;
+}
+.wrap{
+	width:100%;
+	margin:0 auto;
+	text-align:center;
+}
+
+.headWrap{
+	background:url(../img/headBg.png) cover no-repeat;
+	width:100%;
+	margin:0 auto;
+	z-index:10;
+}
+.topMenu{
+	margin-top:50px;
+}
+.iconWrap{
+	margin:0 auto;
+	padding:0;
+	display:inline-block;
+}
+.iconMenu{
+	position:relative;
+	margin:0;
+	padding:0;
+	width:45%;
+}
+.iconMenu a img{
+	width:100%;
+}
+
+.menuText{
+	text-align:center;
+	width:86%;
+	position:absolute;
+	padding:6% 4%;
+	margin:0 3%;
+	bottom:35%;
+	left:0;
+	color:#333333;
+	font-size:22px;
+	vertical-align:middle;
+	background-color:rgba(255,255,153,0.6);
+
+}
+#goform{
+	font-size:18px;
+}
+#wrapQR{
+	width:256px;
+	height:256px;
+	padding:10px;
+	margin:0 auto;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+}
+

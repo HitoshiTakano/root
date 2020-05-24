@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#inquiry{
+	text-align:left;
+	float:left;
+}
+#inquiry div{
+	text-align:left;
+	float:left;
+}
+#inquiry input{
+	width:50px;
+}
+

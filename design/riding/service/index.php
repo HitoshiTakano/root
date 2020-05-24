@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$file = 'service';
 	$title = '事業内容 | SERVICE';
 	$page = '株式会社Riding';

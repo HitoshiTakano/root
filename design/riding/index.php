@@ -1,7 +1,12 @@
 <?php
+	session_start();
 	$file = 'index';
 	$title = '';
 	$page = '株式会社Riding';
+	if(empty($_SESSION["ACCESS"]) && isset($_SERVER['HTTP_REFERER'])  && $_SERVER['SERVER_NAME']=='riding.co.jp'){
+		$_SESSION["ACCESS"] = $_SERVER['HTTP_REFERER'];	
+	}
+	var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html>
