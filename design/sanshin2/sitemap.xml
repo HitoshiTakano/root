@@ -11,35 +11,35 @@
 <!-- recruit -->
 <url>
   <loc>https://sanshin-inds.com/recruit.php</loc>
-  <priority>0.7</priority> 
+  <priority>0.8</priority> 
   <lastmod>2020-05-24T18:17:11+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <!-- service -->
 <url>
   <loc>https://sanshin-inds.com/service.php</loc>
-  <priority>0.7</priority> 
+  <priority>0.8</priority> 
   <lastmod>2020-05-24T18:17:11+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <!-- works -->
 <url>
   <loc>https://sanshin-inds.com/works.php</loc>
-  <priority>0.7</priority> 
+  <priority>0.8</priority> 
   <lastmod>2020-05-24T18:17:11+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <!-- company -->
 <url>
   <loc>https://sanshin-inds.com/company.php</loc>
-  <priority>0.7</priority> 
+  <priority>0.8</priority> 
   <lastmod>2020-05-24T18:17:11+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
 <!-- contact -->
 <url>
   <loc>https://sanshin-inds.com/contact.php</loc>
-  <priority>0.7</priority> 
+  <priority>0.8</priority> 
   <lastmod>2020-05-24T18:17:11+00:00</lastmod>
   <changefreq>always</changefreq>
 </url>
