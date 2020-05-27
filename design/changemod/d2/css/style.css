@@ -627,26 +627,32 @@ section#voice .scrollWindow > div{
 	margin: 30px auto;
 	color: #333333;
 }
+section#voice .scrollWindow > div:nth-of-type(odd){
+	flex-direction: row;
+}
+section#voice .scrollWindow > div:nth-of-type(even){
+	flex-direction: row-reverse;
+}
 
 section#voice .scrollWindow > div > div{
 	/*height: 350px;*/
 }
 section#voice .scrollWindow > div > div.person{
-	width: 40%;
+	width: 300px;
 	background-color: #fff;
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: bottom;
+	background-position: top center;
 }
-section#voice .scrollWindow > div > div.person.lady{
+.image01{
 	background-image: url(../img/chara/lady.png);
 }
-section#voice .scrollWindow > div > div.person.gentle{
+.image02{
 	background-image: url(../img/chara/gentle.png);
-	background-size: 80%;
 }
+
 section#voice .scrollWindow > div > div.voice{
-	width: 60%;
+	width: calc(100% - 300px);
 	padding: 10px 25px;
 }
 section#voice .scrollWindow > div > div.voice > h4{
@@ -999,18 +1005,19 @@ a#appLink:hover > img{
 	section#voice .scrollWindow > div > div{
 		/*height: 200px;*/
 	}
+	section#voice .scrollWindow > div > div.person{
+		width: 165px;
+	}
 	section#voice .scrollWindow > div > div.voice{
-		padding: 5px;
+		width: calc(100% - 165px);
+		padding: 5px 25px;
+
 	}
 	section#voice .scrollWindow > div > div.voice > h4{
 		font-size: 16px;
 	}
 	section#voice .scrollWindow > div > div.voice > p{
 		font-size: 12px;
-	}
-	section#voice .scrollWindow > div > div.person.gentle{
-		background-size: 70%;
-		background-position: center bottom;
 	}
 	section#faq > div:nth-of-type(1){
 		width: 95%;
@@ -1022,9 +1029,8 @@ a#appLink:hover > img{
 	}
 }
 @media screen and (max-width: 500px){
-	section#voice .scrollWindow > div > div.person.gentle{
-		background-size: 240px;
-		background-position: 75% 100%;
+	section#voice .scrollWindow > div > div.voice{
+		padding: 5px;
 	}
 }
 @media screen and (max-width: 400px){
@@ -1033,5 +1039,11 @@ a#appLink:hover > img{
 	}
 	header > nav > ul > li > a{
 		font-size: 18px;
+	}
+	section#voice .scrollWindow > div > div.person{
+		width: 45%;
+	}
+	section#voice .scrollWindow > div > div.voice{
+		width: 65%;
 	}
 }
