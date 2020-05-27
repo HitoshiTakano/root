@@ -60,8 +60,8 @@ header{
 header.opened{
 	min-width: 500px;
 	min-height: 475px;
-	width: 50vw;
-	height: 50vh;
+	width: 510px;
+	height: 490px;
 	box-shadow: 2px 2px 4px #777777;
 }
 header > #menu_btn{
@@ -123,7 +123,7 @@ header > nav{
 }
 header.opened > nav{
 	top: 60px;
-	left: 100px;
+	left: 50px;
 }
 header > nav > ul{
 	display: flex;
