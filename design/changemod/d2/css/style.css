@@ -817,6 +817,10 @@ div.copy > span{
 }
 div.copy > span > a{
 	color: #777777;
+	opacity: 1;
+}
+div.copy > span > a:hover{
+	opacity: 0.7;
 }
 /* BOTTOM LINK */
 a#appLink{
@@ -905,6 +909,9 @@ a#appLink:hover > img{
 	}
 	section#top > div#slider div.slider_cell > img{
 		width: 80%;
+	}
+	section#top > div#slider div.slider_cell.bgimage2{
+		background-position: 80% 50%;
 	}
 	.slider_bg3{
 		width: 85%;
