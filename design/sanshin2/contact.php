@@ -40,9 +40,9 @@ $err_message = resetItems($req_items);																				//エラーメッセ�
 $val_items = ['name'=>'text','mail'=>'mail','tel'=>'tel','company'=>'text','contents'=>'text'];						//validate方法選択
 $hankaku_array = array('tel','mail');																				//半角化に変換処理を行う、POSTデータ（各nameを記述）
 //メール設定
-$to_mail = 'info@sanshin-inds.com';										//送信先（管理者宛）メールアドレス(to)
-$err_mail = 'develop@riding.co.jp';									//エラーログ・不正パラメータ送信用メールアドレス（デフォルトでは送信先メールアドレスと同じ
-$bcc_mail = 'info@sanshin-inds.com';									//BCC送信先メールアドレス
+$to_mail = 'support.yokohama@sanshin-inds.com';										//送信先（管理者宛）メールアドレス(to)
+$err_mail = 'error@sanshin-inds.com';									//エラーログ・不正パラメータ送信用メールアドレス（デフォルトでは送信先メールアドレスと同じ
+$bcc_mail = 'info@anshin-inds.com';									//BCC送信先メールアドレス
 $cc_mail = 'info@sanshin-inds.com';									//CC送信先メールアドレス
 $subject = "ホームページからのお問い合わせ";								//件名（管理者受信メール）
 //リファラチェック用

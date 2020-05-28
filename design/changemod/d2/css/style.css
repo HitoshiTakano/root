@@ -645,10 +645,10 @@ section#voice .scrollWindow > div > div.person{
 	background-position: top center;
 }
 .image01{
-	background-image: url(../img/chara/lady.png);
+	background-image: url(../img/chara/lady.png?20200527);
 }
 .image02{
-	background-image: url(../img/chara/gentle.png);
+	background-image: url(../img/chara/gentle.png?20200527);
 }
 
 section#voice .scrollWindow > div > div.voice{
